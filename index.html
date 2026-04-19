@@ -426,7 +426,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
   <div class="nav-r">
     <a href="#how" class="nav-link" id="nav-how-txt">Slik fungerer det</a>
     <a href="#filosofi" class="nav-link" id="nav-filosofi-txt">Filosofi</a>
-    <a href="#superhuman" class="nav-link" id="nav-super-txt">Superhuman</a>
+    <a href="#superhuman" class="nav-link" id="nav-super-txt">Kokkens Visjon</a>
     <a href="#pakker" class="nav-link" id="nav-pakker-txt">Pakker</a>
     <a href="#meny" class="nav-link" id="nav-meny-txt">Meny</a>
     <a href="#bestill" class="nav-link" id="nav-bestill-txt">Bestill</a>
@@ -454,7 +454,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
 <div class="mobile-menu" id="mobileMenu">
   <a href="#how" onclick="closeMobileMenu()" id="mob-how-txt">Slik fungerer det</a>
   <a href="#filosofi" onclick="closeMobileMenu()" id="mob-filosofi-txt">Filosofi</a>
-  <a href="#superhuman" onclick="closeMobileMenu()" id="mob-super-txt">Superhuman</a>
+  <a href="#superhuman" onclick="closeMobileMenu()" id="mob-super-txt">Kokkens Visjon</a>
   <a href="#pakker" onclick="closeMobileMenu()" id="mob-pakker-txt">Pakker</a>
   <a href="#meny" onclick="closeMobileMenu()" id="mob-meny-txt">Meny</a>
   <a href="#bestill" onclick="closeMobileMenu()" id="mob-bestill-txt" style="color:var(--terra);font-weight:700">Bestill nå →</a>
@@ -694,7 +694,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
 <section class="superhuman" id="superhuman">
   <div class="superhuman-inner">
     <div class="superhuman-hero">
-      <div class="superhuman-kicker">⚡ <span id="super-kicker-txt">Superhuman kosthold</span></div>
+      <div class="superhuman-kicker">⚡ <span id="super-kicker-txt">Kokkens Visjon</span></div>
       <h2 id="super-h2-txt">Spis som en <em>maskin bygget for å yte.</em></h2>
       <p id="super-p-txt">Vi tror ikke på halvhjertet mat. Vi tror på et kosthold som gir deg energi, fokus og styrke — hele dagen, hele uken. Det er filosofien bak hvert eneste måltid vi lager.</p>
     </div>
@@ -1142,7 +1142,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         </svg>
         Kokkens Takeout Meal
       </div>
-      <p>Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.</p>
+      <p id="footer-brand-txt">Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com" target="_blank" class="social-btn" title="Instagram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -1209,6 +1209,7 @@ const translations = {
     'order-tag':'Bestilling','order-h2':'Klar for en uke med god mat?','order-p':'Fyll ut skjemaet så tar vi kontakt for å bekrefte levering og betaling via Vipps.',
     'del-tag':'Hjemlevering','del-h2':'Vi kommer til deg.','del-p':'Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.',
     'footer-p':'Hjemmelaget ukentlig takeout · Strømmen, Norge',
+    'footer-brand':'Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.',
     'form-fname':'Fornavn','form-lname':'Etternavn','form-phone':'Telefon','form-email':'E-post',
     'form-addr':'Leveringsadresse','form-pkg':'Velg pakke','form-day':'Ønsket leveringsdag','form-comment':'Kommentar',
     'form-comment-opt':'(valgfritt)','form-ph-fname':'Ola','form-ph-lname':'Nordmann',
@@ -1291,12 +1292,12 @@ const translations = {
     'pkg-custom':'Du velger selv hvilke retter og hvor mange av hver. Fiskesuppen koster 50 kr ekstra per måltid pga. ren kokosmelk uten tilsetningsstoffer.',
     'form-ph-comment':'Allergier, ønsket fordeling av retter (f.eks. 4× fiskesuppe, 5× biff, 5× laks)...',
     'future4':'Shilajit — uralt mineral-resin for energi & vitalitet',
-    'nav-super-t':'Superhuman',
+    'nav-super-t':'Kokkens Visjon',
     'sel-opt0':'— Velg din Kokkens Kasse —',
     'sel-opt1':'Prøveboks — 3 dager, 6 måltider',
     'sel-opt2':'Kokkens Kasse — 7 dager, 14 måltider (1 450 kr)',
     'sel-opt3':'Familieboks — 7 dager, 14 × 2 porsjoner',
-    'super-kicker':'Superhuman kosthold',
+    'super-kicker':'Kokkens Visjon',
     'super-h2':'Spis som en maskin bygget for å yte.',
     'super-p':'Et kosthold som gir deg energi, fokus og styrke — hele dagen, hele uken.',
     'sp1-h':'Premium protein',
@@ -1334,6 +1335,7 @@ const translations = {
     'order-tag':'Order','order-h2':'Ready for a week of great food?','order-p':'Fill in the form and we will contact you to confirm delivery and payment via Vipps.',
     'del-tag':'Home delivery','del-h2':'We come to you.','del-p':'No car trip, no queue. We pack, drive and deliver Kokkens Kassen straight to your door in Strømmen.',
     'footer-p':'Homemade weekly takeout · Strømmen, Norway',
+    'footer-brand':'Fresh, homemade meals delivered to your door in Strømmen. 2 meals a day, 7 days a week.',
     'form-fname':'First name','form-lname':'Last name','form-phone':'Phone','form-email':'Email',
     'form-addr':'Delivery address','form-pkg':'Choose package','form-day':'Preferred delivery day','form-comment':'Comment',
     'form-comment-opt':'(optional)','form-ph-fname':'John','form-ph-lname':'Smith',
@@ -1416,12 +1418,12 @@ const translations = {
     'pkg-custom':'You choose which dishes and how many of each. The fish soup costs 50 kr extra per meal due to pure coconut milk with no additives.',
     'form-ph-comment':'Allergies, preferred dish split (e.g. 4× fish soup, 5× beef, 5× salmon)...',
     'future4':'Shilajit — ancient mineral resin for energy & vitality',
-    'nav-super-t':'Superhuman',
+    'nav-super-t':'The Chef's Vision',
     'sel-opt0':'— Choose your Kokkens Kasse —',
     'sel-opt1':'Trial Box — 3 days, 6 meals',
     'sel-opt2':'Kokkens Kasse — 7 days, 14 meals (1,450 kr)',
     'sel-opt3':'Family Box — 7 days, 14 × 2 portions',
-    'super-kicker':'Superhuman diet',
+    'super-kicker':'The Chef's Vision',
     'super-h2':'Eat like a machine built to perform.',
     'super-p':'A diet that gives you energy, focus and strength — all day, all week.',
     'sp1-h':'Premium protein',
@@ -1459,6 +1461,7 @@ const translations = {
     'order-tag':'Dalbo','order-h2':'Ma diyaar tahay usbuuc cunto fiican?','order-p':'Buuxi foomka, waxaanna kula xiriiri si loo xaqiijiyo gaadhsiinta iyo lacag bixinta Vipps.',
     'del-tag':'Gaadhsiinta guriga','del-h2':'Waxaan kuu imaanaa.','del-p':'Ma jirto socdaal baabuur. Waxaan sindinaa oo wadnaa Kokkens Kassen albaabkaaga Strømmen.',
     'footer-p':'Cunto guriga lagu sameeyo · Strømmen, Norway',
+    'footer-brand':'Cuntooyiin cusub oo guriga lagu sameeyo oo laguu keena albaabkaaga Strømmen. 2 cunto maalinba, 7 maalin usbuucii.',
     'form-fname':'Magaca hore','form-lname':'Magaca dambe','form-phone':'Telefon','form-email':'Iimeel',
     'form-addr':'Cinwaanka gaadhsiinta','form-pkg':'Dooro xidmada','form-day':'Maalinta gaadhsiinta','form-comment':'Faallo',
     'form-comment-opt':'(ikhtiyaari)','form-ph-fname':'Cali','form-ph-lname':'Maxamed',
@@ -1541,12 +1544,12 @@ const translations = {
     'pkg-custom':'Adiga ayaa doorta cuntooyinka iyo tirooyinka. Maraqda kalluunka waxay ku kacday 50 kr dheeraad ah caano qumbe nadiif ah.',
     'form-ph-comment':'Xasaasiyadda, qaybsanaanta cuntada (tusaale 4× maraq, 5× hilib, 5× kalluun)...',
     'future4':'Shilajit — macdanta dabiiciga ah ee tamarta & xoogga',
-    'nav-super-t':'Caafimaad Sare',
+    'nav-super-t':'Aragtida Khabiirka',
     'sel-opt0':'— Dooro Kokkens Kasse —',
     'sel-opt1':'Sanduuqa Tijaabada — 3 maalin, 6 cunto',
     'sel-opt2':'Kokkens Kasse — 7 maalin, 14 cunto (1,450 kr)',
     'sel-opt3':'Sanduuqa Qoyska — 7 maalin, 14 × 2 qayb',
-    'super-kicker':'Cuntada Superhuman',
+    'super-kicker':'Aragtida Khabiirka',
     'super-h2':'Cun si aad ugu shaqeyso si fiican.',
     'super-p':'Cunto siinaysa tamarta, xoogga iyo garashada — maalintii oo dhan.',
     'sp1-h':'Borotiiin heer sare',
@@ -1584,6 +1587,7 @@ const translations = {
     'order-tag':'الطلب','order-h2':'مستعد لأسبوع من الطعام الجيد؟','order-p':'املأ النموذج وسنتواصل معك لتأكيد التوصيل والدفع عبر Vipps.',
     'del-tag':'توصيل منزلي','del-h2':'نأتي إليك.','del-p':'لا سيارة، لا طابور. نعبئ ونوصّل كوكنز كاسه مباشرة إلى بابك.',
     'footer-p':'وجبات منزلية أسبوعية · ستروميـن، النرويج',
+    'footer-brand':'وجبات طازجة منزلية تُوصَّل إلى بابك في ستروميـن. وجبتان يومياً، ٧ أيام في الأسبوع.',
     'form-fname':'الاسم الأول','form-lname':'اسم العائلة','form-phone':'الهاتف','form-email':'البريد الإلكتروني',
     'form-addr':'عنوان التوصيل','form-pkg':'اختر الباقة','form-day':'يوم التوصيل المفضل','form-comment':'تعليق',
     'form-comment-opt':'(اختياري)','form-ph-fname':'محمد','form-ph-lname':'علي',
@@ -1666,12 +1670,12 @@ const translations = {
     'pkg-custom':'تختار الأطباق وعدد كل منها بنفسك. شوربة السمك تكلف ٥٠ كرون إضافية بسبب حليب جوز الهند النقي بدون إضافات.',
     'form-ph-comment':'الحساسية، توزيع الأطباق المطلوب (مثلاً ٤× شوربة، ٥× لحم، ٥× سلمون)...',
     'future4':'Shilajit — راتنج معدني قديم للطاقة والحيوية',
-    'nav-super-t':'إنسان خارق',
+    'nav-super-t':'رؤية الشيف',
     'sel-opt0':'— اختر كوكنز كاسه —',
     'sel-opt1':'صندوق تجريبي — ٣ أيام، ٦ وجبات',
     'sel-opt2':'كوكنز كاسه — ٧ أيام، ١٤ وجبة (١٤٥٠ كرون)',
     'sel-opt3':'صندوق العائلة — ٧ أيام، ١٤ × ٢ حصة',
-    'super-kicker':'نظام الإنسان الخارق',
+    'super-kicker':'رؤية الشيف',
     'super-h2':'كُل كآلة مصممة للأداء.',
     'super-p':'نظام غذائي يمنحك الطاقة والتركيز والقوة — طوال اليوم، طوال الأسبوع.',
     'sp1-h':'بروتين ممتاز',
@@ -1709,6 +1713,7 @@ const translations = {
     'order-tag':'Zamówienie','order-h2':'Gotowy na tydzień pysznego jedzenia?','order-p':'Wypełnij formularz, a my skontaktujemy się, aby potwierdzić dostawę i płatność przez Vipps.',
     'del-tag':'Dostawa do domu','del-h2':'Przyjeżdżamy do Ciebie.','del-p':'Bez jazdy samochodem, bez kolejki. Pakujemy i dowozimy Kokkens Kassen prosto pod Twoje drzwi.',
     'footer-p':'Domowe jedzenie co tydzień · Strømmen, Norwegia',
+    'footer-brand':'Świeże, domowe posiłki dostarczone pod Twoje drzwi w Strømmen. 2 posiłki dziennie, 7 dni w tygodniu.',
     'form-fname':'Imię','form-lname':'Nazwisko','form-phone':'Telefon','form-email':'E-mail',
     'form-addr':'Adres dostawy','form-pkg':'Wybierz pakiet','form-day':'Preferowany dzień dostawy','form-comment':'Komentarz',
     'form-comment-opt':'(opcjonalnie)','form-ph-fname':'Jan','form-ph-lname':'Kowalski',
@@ -1791,12 +1796,12 @@ const translations = {
     'pkg-custom':'Sam wybierasz dania i ile każdego. Zupa rybna kosztuje 50 kr więcej za posiłek z powodu czystego mleka kokosowego bez dodatków.',
     'form-ph-comment':'Alergie, podział dań (np. 4× zupa, 5× wołowina, 5× łosoś)...',
     'future4':'Shilajit — starożytna żywica mineralna dla energii i witalności',
-    'nav-super-t':'Superczłowiek',
+    'nav-super-t':'Wizja Szefa',
     'sel-opt0':'— Wybierz Kokkens Kasse —',
     'sel-opt1':'Pudełko próbne — 3 dni, 6 posiłków',
     'sel-opt2':'Kokkens Kasse — 7 dni, 14 posiłków (1 450 kr)',
     'sel-opt3':'Pudełko rodzinne — 7 dni, 14 × 2 porcje',
-    'super-kicker':'Dieta superczłowieka',
+    'super-kicker':'Wizja Szefa',
     'super-h2':'Jedz jak maszyna stworzona do działania.',
     'super-p':'Dieta, która daje Ci energię, skupienie i siłę — przez cały dzień, cały tydzień.',
     'sp1-h':'Premium białko',
@@ -1834,6 +1839,7 @@ const translations = {
     'order-tag':'Замовлення','order-h2':'Готові до тижня смачної їжі?','order-p':'Заповніть форму і ми зв\'яжемось для підтвердження доставки та оплати через Vipps.',
     'del-tag':'Доставка додому','del-h2':'Ми приїдемо до вас.','del-p':'Без поїздок, без черг. Ми пакуємо та доставляємо Kokkens Kassen прямо до ваших дверей у Стрьоммен.',
     'footer-p':'Домашній щотижневий тейкаут · Стрьоммен, Норвегія',
+    'footer-brand':'Свіжі, домашні страви доставлені до вашого порогу в Стрьоммен. 2 страви на день, 7 днів на тиждень.',
     'form-fname':'Ім\'я','form-lname':'Прізвище','form-phone':'Телефон','form-email':'Ел. пошта',
     'form-addr':'Адреса доставки','form-pkg':'Оберіть пакет','form-day':'Бажаний день доставки','form-comment':'Коментар',
     'form-comment-opt':'(необов\'язково)','form-ph-fname':'Іван','form-ph-lname':'Петренко',
@@ -1916,12 +1922,12 @@ const translations = {
     'pkg-custom':'Ви самі обираєте страви та кількість кожної. Рибний суп коштує на 50 кр більше через чисте кокосове молоко без добавок.',
     'form-ph-comment':'Алергії, бажаний розподіл страв (напр. 4× суп, 5× яловичина, 5× лосось)...',
     'future4':'Shilajit — стародавня мінеральна смола для енергії та життєвої сили',
-    'nav-super-t':'Надлюдина',
+    'nav-super-t':'Бачення Шефа',
     'sel-opt0':'— Оберіть Kokkens Kasse —',
     'sel-opt1':'Пробний набір — 3 дні, 6 страв',
     'sel-opt2':'Kokkens Kasse — 7 днів, 14 страв (1 450 кр)',
     'sel-opt3':'Сімейна коробка — 7 днів, 14 × 2 порції',
-    'super-kicker':'Надлюдське харчування',
+    'super-kicker':'Бачення Шефа',
     'super-h2':'Їж як машина, створена для результатів.',
     'super-p':'Харчування, що дає вам енергію, фокус і силу — цілий день, цілий тиждень.',
     'sp1-h':'Преміум білок',
@@ -2090,6 +2096,7 @@ function setLang(lang){
   set('nav-meny-txt', t['nav-meny-t']||t['nav-meny']);
   set('nav-bestill-txt', t['nav-bestill-t']||t['nav-bestill']);
   set('footer-copy', t['footer-p']);
+  set('footer-brand-txt', t['footer-brand']);
   set('hero-eyebrow-txt', t['hero-eyebrow']);
   set('hero-h1-txt', t['hero-h1']); set('hero-h1-em-txt', t['hero-h1-em']); set('hero-h1-end-txt', t['hero-h1-end']);
   set('hero-sub-txt', t['hero-sub']); set('hero-btn1-txt', t['hero-btn1']); set('hero-btn2-txt', t['hero-btn2']);
