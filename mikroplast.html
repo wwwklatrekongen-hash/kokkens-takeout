@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikroplast i mat — Kokkens Takeout Meal</title>
+<meta name="description" content="Hvordan mikroplast siver inn i maten din fra plastemballasje, og hva vi gjør for å beskytte deg. Les den viktige sannheten om plast i mat.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1C1410;
+  --ink2:#4A3728;
+  --paper:#FAF6F0;
+  --card:#FFFFFF;
+  --sage:#4E6651;
+  --sage-light:#D6E5D0;
+  --terra:#C4522A;
+  --terra-pale:#F7E8E2;
+  --butter:#F2C35B;
+  --stroke:#E0D9D0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.7}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5px solid var(--stroke);height:64px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--ink2);text-decoration:none;padding:8px 16px;border-radius:6px;border:1.5px solid var(--stroke);transition:all .2s}
+.nav-back:hover{border-color:var(--terra);color:var(--terra)}
+.nav-back span{font-size:1rem}
+
+/* ── HERO ── */
+.hero{background:var(--ink);color:#fff;padding:6rem 6% 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(196,82,42,.12);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:rgba(242,195,91,.06);pointer-events:none}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(196,82,42,.2);color:#F4845A;border-radius:50px;padding:7px 18px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:580px;line-height:1.75;margin-bottom:2rem}
+.hero-warning{display:inline-flex;align-items:center;gap:10px;background:rgba(196,82,42,.15);border:1px solid rgba(196,82,42,.3);border-radius:10px;padding:.75rem 1.2rem;font-size:.88rem;color:rgba(255,255,255,.8)}
+.hero-warning strong{color:#F4845A}
+
+/* ── PROGRESS / TOC ── */
+.progress-bar{position:fixed;top:64px;left:0;height:3px;background:var(--terra);width:0%;z-index:199;transition:width .1s}
+
+/* ── SECTIONS ── */
+.section{padding:5rem 6%;border-bottom:1.5px solid var(--stroke)}
+.section:last-of-type{border-bottom:none}
+.section-inner{max-width:860px;margin:0 auto}
+.section-kicker{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem}
+.section h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;margin-bottom:1.2rem;color:var(--ink)}
+.section h2 em{font-style:italic;color:var(--terra)}
+.section p{font-size:1rem;color:var(--ink2);line-height:1.8;margin-bottom:1.2rem;max-width:680px}
+.section p:last-child{margin-bottom:0}
+.section p strong{color:var(--ink);font-weight:600}
+
+/* ── DARK SECTION ── */
+.section-dark{background:var(--ink);color:#fff;border-bottom:none}
+.section-dark .section-kicker{color:#F4845A}
+.section-dark h2{color:#fff}
+.section-dark p{color:rgba(255,255,255,.65)}
+.section-dark p strong{color:#fff}
+
+/* ── STAT CARDS ── */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin:2.5rem 0}
+.stat-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:16px;padding:1.6rem;text-align:center}
+.stat-card .stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--butter);line-height:1;margin-bottom:.4rem}
+.stat-card .stat-lbl{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5}
+.stat-grid-light{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin:2.5rem 0}
+.stat-card-light{background:var(--card);border:1.5px solid var(--stroke);border-radius:16px;padding:1.6rem;text-align:center;box-shadow:0 2px 12px rgba(28,20,16,.06)}
+.stat-card-light .stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--terra);line-height:1;margin-bottom:.4rem}
+.stat-card-light .stat-lbl{font-size:.82rem;color:var(--ink2);line-height:1.5}
+
+/* ── PROCESS STEPS ── */
+.process{display:flex;flex-direction:column;gap:0;margin:2.5rem 0;position:relative}
+.process::before{content:'';position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:var(--stroke)}
+.process-step{display:flex;gap:1.4rem;align-items:flex-start;padding:1.2rem 0}
+.process-dot{width:48px;height:48px;border-radius:50%;background:var(--terra-pale);border:2px solid var(--terra);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;z-index:1;background:var(--paper)}
+.process-body h4{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:.3rem;color:var(--ink)}
+.process-body p{font-size:.9rem;color:var(--ink2);line-height:1.65;margin:0}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight{background:var(--terra-pale);border-left:4px solid var(--terra);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem;margin:2rem 0}
+.highlight p{color:var(--ink2);font-size:.95rem;line-height:1.75;margin:0}
+.highlight p strong{color:var(--terra)}
+
+.highlight-green{background:var(--sage-light);border-left:4px solid var(--sage);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem;margin:2rem 0}
+.highlight-green p{color:var(--ink2);font-size:.95rem;line-height:1.75;margin:0}
+.highlight-green p strong{color:var(--sage)}
+
+/* ── COMPARISON TABLE ── */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2.5rem 0}
+.compare-col{border-radius:16px;padding:1.6rem}
+.compare-bad{background:#FFF0EE;border:2px solid #FFCDC5}
+.compare-good{background:var(--sage-light);border:2px solid #B0CCB2}
+.compare-col h4{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:6px}
+.compare-bad h4{color:#C4522A}
+.compare-good h4{color:var(--sage)}
+.compare-item{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--ink2);line-height:1.5;margin-bottom:.6rem}
+.compare-item:last-child{margin-bottom:0}
+.compare-item span:first-child{flex-shrink:0;font-size:.9rem}
+
+/* ── RESEARCH CARDS ── */
+.research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:2.5rem 0}
+.research-card{background:var(--card);border:1.5px solid var(--stroke);border-radius:16px;padding:1.5rem;box-shadow:0 2px 12px rgba(28,20,16,.06)}
+.research-card .rc-source{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
+.research-card h4{font-family:'DM Serif Display',serif;font-size:1rem;margin-bottom:.5rem;color:var(--ink);line-height:1.3}
+.research-card p{font-size:.83rem;color:var(--ink2);line-height:1.6;margin:0}
+
+/* ── CTA BANNER ── */
+.cta-banner{background:var(--ink);border-radius:20px;padding:3rem 3.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin:3rem 0}
+.cta-banner h3{font-family:'DM Serif Display',serif;font-size:1.7rem;color:#fff;margin-bottom:.5rem}
+.cta-banner p{color:rgba(255,255,255,.55);font-size:.9rem;line-height:1.65}
+.cta-banner p strong{color:var(--butter)}
+.btn-fill{background:var(--terra);color:#fff;border:none;border-radius:8px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .15s;white-space:nowrap}
+.btn-fill:hover{background:#A8431F;transform:translateY(-2px)}
+
+/* ── MOLECULE VISUAL ── */
+.molecule-section{padding:4rem 6%;background:var(--ink);text-align:center}
+.molecule-inner{max-width:860px;margin:0 auto}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,.07)}
+footer p{color:rgba(255,255,255,.3);font-size:.82rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .hero{padding:4rem 6% 3.5rem}
+  .section{padding:3.5rem 5%}
+  .compare{grid-template-columns:1fr}
+  .cta-banner{grid-template-columns:1fr;padding:2rem}
+  nav{padding:0 5%}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+      <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+      <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+      <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+    </svg>
+    Kokkens Takeout Meal
+  </a>
+  <a href="index.html" class="nav-back"><span>←</span> Tilbake</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">🔬 Vitenskapen bak maten din</div>
+    <h1>Mikroplast i mat.<br><em>Det ingen snakker om.</em></h1>
+    <p class="hero-sub">Hvert år spiser det gjennomsnittlige mennesket rundt 5 gram mikroplast — omtrent vekten av et kredittkort. Mye av det kommer fra emballasjen rundt maten vår.</p>
+    <div class="hero-warning">
+      <span>⚠️</span>
+      <span>Dette er grunnen til at Kokkens Takeout Meal <strong>aldri bruker plast</strong> rundt maten din.</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 — WHAT IS MICROPLAST -->
+<section class="section fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">📌 Hva er mikroplast?</div>
+    <h2>Usynlige biter av <em>plast i kroppen din</em></h2>
+    <p>Mikroplast er plastpartikler mindre enn 5 millimeter. Mange er så små at de ikke kan ses med det blotte øye — de kalles nanoplast. De dannes når større plastgjenstander brytes ned over tid, men de lekker også direkte fra plastemballasje til maten inne i den.</p>
+    <p><strong>Det er ikke et spørsmål om de er der.</strong> Mikroplast er funnet i menneskelig blod, lunger, morsmelk, placenta, hjernevev og til og med i fostre. Det er funnet i over 90% av testede drikkevannsprøver globalt — og i maten vi spiser hver eneste dag.</p>
+
+    <div class="stat-grid-light">
+      <div class="stat-card-light">
+        <div class="stat-num">5g</div>
+        <div class="stat-lbl">Mikroplast spist per uke per person — vekten av et kredittkort</div>
+      </div>
+      <div class="stat-card-light">
+        <div class="stat-num">74%</div>
+        <div class="stat-lbl">Av testet blodbaner hos friske voksne inneholdt målbare mengder mikroplast</div>
+      </div>
+      <div class="stat-card-light">
+        <div class="stat-num">250 000</div>
+        <div class="stat-lbl">Mikroplastpartikler i én liter flaskevann — 20× mer enn i springvann</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — HOW IT GETS IN YOUR FOOD (dark) -->
+<section class="section section-dark fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">🔄 Slik skjer det</div>
+    <h2>Hvordan plast siver inn i <em>maten din</em></h2>
+    <p>De fleste tror mikroplast kun er et problem med havmat. Sannheten er at det skjer i kjøkkenet ditt, i kjøleskapet ditt — og i matleveransen du mottar.</p>
+
+    <div class="process">
+      <div class="process-step">
+        <div class="process-dot">🌡️</div>
+        <div class="process-body">
+          <h4>Varme akselererer uttrekkingen</h4>
+          <p>Når plast utsettes for varme — selv romtemperatur over tid — øker molekylbevegelsen i plasten. Kjemiske forbindelser som bisfenol A (BPA), ftalater og andre mykgjørere løsner fra plaststrukturen og overføres til maten inni.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🧪</div>
+        <div class="process-body">
+          <h4>Fett og syre trekker ut mer</h4>
+          <p>Fettholdige matvarer som kjøtt, fisk og sauser er spesielt utsatt. Fett er et utmerket løsningsmiddel for plastforbindelser — det trekker dem aktivt ut av emballasjen. Det samme gjelder sure matvarer som tomater og sitrusfrukter.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">⏱️</div>
+        <div class="process-body">
+          <h4>Tid forsterker effekten</h4>
+          <p>Jo lengre mat er i kontakt med plast, desto mer plast absorberes. Mat som er pakket inn for levering og oppbevart i plastbokser — selv "BPA-fri" plast — avgir målbare mengder kjemikalier til innholdet innen få timer.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🔬</div>
+        <div class="process-body">
+          <h4>Nanoplast krysser cellemembraner</h4>
+          <p>De aller minste partiklene, nanoplast, er så små at de kan krysse cellemembraner og til og med blod-hjerne-barrieren. Forskning fra 2024 viste at hjerter med mikroplastinnskudd i åreveggene hadde 4,5× høyere risiko for hjerteinfarkt eller slag.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">4.5×</div>
+        <div class="stat-lbl">Høyere risiko for hjerteinfarkt/slag ved mikroplast i åreveggene (NEJM 2024)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">Av testede placentaer fra nyfødte inneholdt mikroplast (studie 2023)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">11×</div>
+        <div class="stat-lbl">Mer mikroplast i menneskehjernen nå enn for 20 år siden (studie 2024)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — PLASTIC VS CARDBOARD -->
+<section class="section fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">📦 Plast vs. papp</div>
+    <h2>Hvorfor emballasje <em>betyr alt</em></h2>
+    <p>Ikke alle emballasjematerialer er like. Det er en enorm forskjell mellom plastbokser — selv de som markedsføres som "trygge" — og papirbasert emballasje.</p>
+
+    <div class="compare">
+      <div class="compare-col compare-bad">
+        <h4>🚫 Plastboks / plastfilm</h4>
+        <div class="compare-item"><span>☠️</span><span>Avgir ftalater, BPA og andre hormonforstyrrende stoffer til fet mat</span></div>
+        <div class="compare-item"><span>🌡️</span><span>Akselererer kraftig ved varme — mikroovn er spesielt ille</span></div>
+        <div class="compare-item"><span>🧪</span><span>"BPA-fri" plast inneholder ofte BPS og BPF — minst like skadelig</span></div>
+        <div class="compare-item"><span>♻️</span><span>Brytes ned over tid til stadig mindre, mer giftige partikler</span></div>
+        <div class="compare-item"><span>🌊</span><span>Havner i naturen og forurenser matjord og drikkevann</span></div>
+      </div>
+      <div class="compare-col compare-good">
+        <h4>✅ Pappemballasje</h4>
+        <div class="compare-item"><span>🌿</span><span>Ingen kjemiske mykgjørere som kan overføres til maten</span></div>
+        <div class="compare-item"><span>🔒</span><span>Inert materiale — reagerer ikke med fett eller syre i maten</span></div>
+        <div class="compare-item"><span>♻️</span><span>Biologisk nedbrytbar — forsvinner naturlig uten å bli mikroplast</span></div>
+        <div class="compare-item"><span>🌡️</span><span>Holder maten kald og frisk uten kjemisk påvirkning</span></div>
+        <div class="compare-item"><span>💚</span><span>Trygt for deg, trygt for miljøet</span></div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p><strong>Viktig å vite:</strong> Mange matleveringstjenester bruker plastbokser fordi de er billigere og gjenbrukbare. Men "gjenbrukbar" betyr at plasten brytes ned gradvis — og avgir mer mikroplast til maten for hvert bruk. Vi valgte papp fra dag én, ikke fordi det er enkelt, men fordi det er riktig.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — RESEARCH -->
+<section class="section fade-in" style="background:var(--card)">
+  <div class="section-inner">
+    <div class="section-kicker">🧬 Forskningen sier</div>
+    <h2>Hva vitenskapen <em>har funnet</em></h2>
+    <p>Dette er ikke spekulasjon. Det er peer-reviewed forskning publisert i verdens mest anerkjente medisinske tidsskrifter.</p>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="rc-source">New England Journal of Medicine · 2024</div>
+        <h4>Mikroplast i åreveggene koblet til 4,5× høyere hjerte-kar-risiko</h4>
+        <p>Pasienter med påvisbar mikroplast i åreveggene hadde dramatisk høyere risiko for hjerteinfarkt, slag og tidlig død sammenlignet med kontrollgruppen.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-source">Nature Medicine · 2024</div>
+        <h4>Menneskehjernen inneholder 11× mer plast enn for 20 år siden</h4>
+        <p>Analyse av hjernevev fra obduksjoner viste en alarmerende økning i plastkonsentrasjon over de siste to tiårene — med akselererende vekst.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-source">Environmental Science & Technology · 2023</div>
+        <h4>Mat i plastbokser absorberer målbare mengder ftalater innen 30 min</h4>
+        <p>Fettholdige matvarer i kontakt med standard plastbokser ved romtemperatur viste signifikant kjemisk overføring allerede etter en halvtime.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-source">Environment International · 2022</div>
+        <h4>Mikroplast funnet i blodet til 77% av testede friske voksne</h4>
+        <p>Første studie som dokumenterte mikroplast i human sirkulasjon — inkludert polyetylen tereftalat (PET) fra plastflasker og matbeholdere.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-source">The Lancet · 2023</div>
+        <h4>Plastpartikler påvist i morsmelk og placenta</h4>
+        <p>Mikroplast er funnet i 100% av testede placenta-prøver, og i morsmelk fra mødre som aldri hadde jobbet med plast. Det betyr eksponering fra mat og emballasje alene.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-source">WHO-rapport · 2023</div>
+        <h4>Plastforurensning i mat er en global folkehelsekrise</h4>
+        <p>Verdens helseorganisasjon klassifiserte mikroplasteksponering via mat som en prioritert global risikofaktor og krevde umiddelbar regulering av plastemballasje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — WHAT WE DO -->
+<section class="section fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">🌿 Det vi gjør</div>
+    <h2>Vår forpliktelse til <em>ren mat</em></h2>
+    <p>Vi startet Kokkens Takeout Meal med én tanke: mat skal nære, ikke skade. Det er ikke et markedsføringstriks. Det er en grunnleggende beslutning vi tok fra dag én.</p>
+
+    <div class="highlight-green">
+      <p><strong>Ingen plastbokser. Ingen plastfilm. Ingen mikroplast.</strong> Alle rettene fra Kokkens Takeout Meal leveres i hygieniske pappeske-beholdere. Papp er inert — det reagerer ikke kjemisk med maten, avgir ingenting til innholdet, og brytes ned naturlig etter bruk.</p>
+    </div>
+
+    <p>Vi forstår at dette koster litt mer. Plastbokser er billigere å produsere. Men vi mener du fortjener å vite hva emballasjen din gjør med maten — og vi velger å beskytte helsen din fremfor å spare noen kroner på pakking.</p>
+
+    <p><strong>Når du bestiller Kokkens Kasse, kan du være trygg på at:</strong></p>
+
+    <div class="process" style="margin-top:1.5rem">
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Maten aldri berører plast</h4>
+          <p>Fra kokkens kjøkken til din dør — maten er kun i kontakt med pappemballasje. Ingen mellomstadier med plastbokser, plastfilm eller plastposer.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Ferske råvarer uten plastpakking</h4>
+          <p>Vi tilbereder alt fra bunnen av med ferske råvarer. Vi bruker ikke ferdigpakkede ingredienser som har ligget i plastpakker i uker.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Levert raskt — ikke lagret i plastbokser</h4>
+          <p>Maten tilberedes og leveres samme dag. Du slipper maten som har ligget i en plastboks i kjøleskap i tre dager og absorbert kjemikalier hele tiden.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🌱</div>
+        <div class="process-body">
+          <h4>Og det er bra for miljøet også</h4>
+          <p>Pappemballasje brytes ned naturlig. Den havner ikke i havet, blir ikke til mikroplast i matjorden, og forurenser ikke drikkevannkilder. En enkel beslutning som hjelper mer enn de fleste tror.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Ren mat, levert hjem.</h3>
+        <p>Bestill Kokkens Kasse i dag — <strong>14 ferske måltider</strong> i hygienisk pappemballasje, levert til døren din i Strømmen. Ingen plast. Ingen kompromiss.</p>
+      </div>
+      <a href="index.html#bestill" class="btn-fill">Bestill nå →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+      <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+      <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+      <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+    </svg>
+    Kokkens Takeout Meal
+  </div>
+  <p>Ingen mikroplast · Pappemballasje · Strømmen, Norge</p>
+</footer>
+
+<script>
+// ── Scroll progress bar ──
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  document.getElementById('progressBar').style.width = (scrolled / total * 100) + '%';
+});
+
+// ── Fade-in on scroll ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
