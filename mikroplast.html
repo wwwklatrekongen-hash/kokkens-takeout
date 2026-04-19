@@ -435,9 +435,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// ── Restore saved language ──
-const savedLang = localStorage.getItem('kokkens-lang');
-if (savedLang && savedLang !== 'no') setLang(savedLang);
+// ── Restore saved language (also fires on bfcache restore) ──
+window.addEventListener('pageshow', function() {
+  const savedLang = localStorage.getItem('kokkens-lang');
+  if (savedLang && savedLang !== 'no') setLang(savedLang);
+});
 
 // ── Language switcher ──
 const flags  = { no:'🇳🇴', en:'🇬🇧', uk:'🇺🇦', so:'🇸🇴', ar:'🇸🇦', pl:'🇵🇱' };
