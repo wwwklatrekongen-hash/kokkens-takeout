@@ -1949,6 +1949,10 @@ let currentLang = 'no';
 // ── Auto year ──
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+// ── Restore saved language ──
+const savedLang = localStorage.getItem('kokkens-lang');
+if (savedLang && savedLang !== 'no') setLang(savedLang);
+
 // ── Scroll-to-top visibility ──
 const scrollBtn = document.getElementById('scrollTop');
 window.addEventListener('scroll', () => {
@@ -2061,6 +2065,7 @@ document.addEventListener('click', function(e){
 
 function setLang(lang){
   currentLang = lang;
+  localStorage.setItem('kokkens-lang', lang);
   const t = translations[lang];
   document.getElementById('langBtn').innerHTML = '<span class="flag">'+flags[lang]+'</span><span class="lang-code">'+labels[lang]+'</span> ▾';
   document.getElementById('langDropdown').classList.remove('open');
