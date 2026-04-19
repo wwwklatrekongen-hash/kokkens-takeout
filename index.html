@@ -1156,27 +1156,27 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
       </div>
     </div>
     <div class="footer-col">
-      <h6>Navigasjon</h6>
-      <a href="#how">Slik fungerer det</a>
-      <a href="#filosofi">Filosofi</a>
-      <a href="#superhuman">Superhuman</a>
-      <a href="#pakker">Pakker</a>
-      <a href="#meny">Meny</a>
+      <h6 id="ft-nav-h">Navigasjon</h6>
+      <a href="#how" id="ft-nav-1">Slik fungerer det</a>
+      <a href="#filosofi" id="ft-nav-2">Filosofi</a>
+      <a href="#superhuman" id="ft-nav-3">Kokkens Visjon</a>
+      <a href="#pakker" id="ft-nav-4">Pakker</a>
+      <a href="#meny" id="ft-nav-5">Meny</a>
     </div>
     <div class="footer-col">
-      <h6>Pakker</h6>
-      <a href="#pakker">Prøveboks</a>
+      <h6 id="ft-pkg-h">Pakker</h6>
+      <a href="#pakker" id="ft-pkg-1">Prøveboks</a>
       <a href="#pakker">Kokkens Kasse</a>
-      <a href="#pakker">Familieboks</a>
-      <a href="#filosofi">Sea Moss · Snart</a>
-      <a href="#filosofi">Shilajit · Snart</a>
+      <a href="#pakker" id="ft-pkg-3">Familieboks</a>
+      <a href="#filosofi" id="ft-pkg-4">Sea Moss · Snart</a>
+      <a href="#filosofi" id="ft-pkg-5">Shilajit · Snart</a>
     </div>
     <div class="footer-col">
-      <h6>Kontakt</h6>
-      <a href="#bestill">Bestill nå</a>
+      <h6 id="ft-contact-h">Kontakt</h6>
+      <a href="#bestill" id="ft-contact-1">Bestill nå</a>
       <a href="mailto:post@kokkenstakeout.no">post@kokkenstakeout.no</a>
-      <a href="#levering">📍 Strømmen, Norge</a>
-      <a href="https://vipps.no" target="_blank">💳 Vipps-betaling</a>
+      <a href="#levering" id="ft-contact-3">📍 Strømmen, Norge</a>
+      <a href="https://vipps.no" target="_blank" id="ft-contact-4">💳 Vipps-betaling</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1210,6 +1210,9 @@ const translations = {
     'del-tag':'Hjemlevering','del-h2':'Vi kommer til deg.','del-p':'Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.',
     'footer-p':'Hjemmelaget ukentlig takeout · Strømmen, Norge',
     'footer-brand':'Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.',
+    'ft-nav-h':'Navigasjon','ft-nav-1':'Slik fungerer det','ft-nav-2':'Filosofi','ft-nav-3':'Kokkens Visjon','ft-nav-4':'Pakker','ft-nav-5':'Meny',
+    'ft-pkg-h':'Pakker','ft-pkg-1':'Prøveboks','ft-pkg-3':'Familieboks','ft-pkg-4':'Sea Moss · Snart','ft-pkg-5':'Shilajit · Snart',
+    'ft-contact-h':'Kontakt','ft-contact-1':'Bestill nå','ft-contact-3':'📍 Strømmen, Norge','ft-contact-4':'💳 Vipps-betaling',
     'form-fname':'Fornavn','form-lname':'Etternavn','form-phone':'Telefon','form-email':'E-post',
     'form-addr':'Leveringsadresse','form-pkg':'Velg pakke','form-day':'Ønsket leveringsdag','form-comment':'Kommentar',
     'form-comment-opt':'(valgfritt)','form-ph-fname':'Ola','form-ph-lname':'Nordmann',
@@ -1336,6 +1339,9 @@ const translations = {
     'del-tag':'Home delivery','del-h2':'We come to you.','del-p':'No car trip, no queue. We pack, drive and deliver Kokkens Kassen straight to your door in Strømmen.',
     'footer-p':'Homemade weekly takeout · Strømmen, Norway',
     'footer-brand':'Fresh, homemade meals delivered to your door in Strømmen. 2 meals a day, 7 days a week.',
+    'ft-nav-h':'Navigation','ft-nav-1':'How it works','ft-nav-2':'Philosophy','ft-nav-3':'The Chef\'s Vision','ft-nav-4':'Packages','ft-nav-5':'Menu',
+    'ft-pkg-h':'Packages','ft-pkg-1':'Trial Box','ft-pkg-3':'Family Box','ft-pkg-4':'Sea Moss · Soon','ft-pkg-5':'Shilajit · Soon',
+    'ft-contact-h':'Contact','ft-contact-1':'Order now','ft-contact-3':'📍 Strømmen, Norway','ft-contact-4':'💳 Vipps payment',
     'form-fname':'First name','form-lname':'Last name','form-phone':'Phone','form-email':'Email',
     'form-addr':'Delivery address','form-pkg':'Choose package','form-day':'Preferred delivery day','form-comment':'Comment',
     'form-comment-opt':'(optional)','form-ph-fname':'John','form-ph-lname':'Smith',
@@ -1462,6 +1468,9 @@ const translations = {
     'del-tag':'Gaadhsiinta guriga','del-h2':'Waxaan kuu imaanaa.','del-p':'Ma jirto socdaal baabuur. Waxaan sindinaa oo wadnaa Kokkens Kassen albaabkaaga Strømmen.',
     'footer-p':'Cunto guriga lagu sameeyo · Strømmen, Norway',
     'footer-brand':'Cuntooyiin cusub oo guriga lagu sameeyo oo laguu keena albaabkaaga Strømmen. 2 cunto maalinba, 7 maalin usbuucii.',
+    'ft-nav-h':'Xiriirka','ft-nav-1':'Sida u shaqeyso','ft-nav-2':'Falsafad','ft-nav-3':'Aragtida Khabiirka','ft-nav-4':'Xidmooyinka','ft-nav-5':'Cuntooyinka',
+    'ft-pkg-h':'Xidmooyinka','ft-pkg-1':'Sanduuqa Tijaabada','ft-pkg-3':'Sanduuqa Qoyska','ft-pkg-4':'Sea Moss · Dhow','ft-pkg-5':'Shilajit · Dhow',
+    'ft-contact-h':'Xiriir','ft-contact-1':'Dalbo hada','ft-contact-3':'📍 Strømmen, Noorweey','ft-contact-4':'💳 Lacag bixinta Vipps',
     'form-fname':'Magaca hore','form-lname':'Magaca dambe','form-phone':'Telefon','form-email':'Iimeel',
     'form-addr':'Cinwaanka gaadhsiinta','form-pkg':'Dooro xidmada','form-day':'Maalinta gaadhsiinta','form-comment':'Faallo',
     'form-comment-opt':'(ikhtiyaari)','form-ph-fname':'Cali','form-ph-lname':'Maxamed',
@@ -1588,6 +1597,9 @@ const translations = {
     'del-tag':'توصيل منزلي','del-h2':'نأتي إليك.','del-p':'لا سيارة، لا طابور. نعبئ ونوصّل كوكنز كاسه مباشرة إلى بابك.',
     'footer-p':'وجبات منزلية أسبوعية · ستروميـن، النرويج',
     'footer-brand':'وجبات طازجة منزلية تُوصَّل إلى بابك في ستروميـن. وجبتان يومياً، ٧ أيام في الأسبوع.',
+    'ft-nav-h':'التنقل','ft-nav-1':'كيف يعمل','ft-nav-2':'فلسفتنا','ft-nav-3':'رؤية الشيف','ft-nav-4':'الباقات','ft-nav-5':'القائمة',
+    'ft-pkg-h':'الباقات','ft-pkg-1':'صندوق تجريبي','ft-pkg-3':'صندوق العائلة','ft-pkg-4':'Sea Moss · قريباً','ft-pkg-5':'Shilajit · قريباً',
+    'ft-contact-h':'تواصل','ft-contact-1':'اطلب الآن','ft-contact-3':'📍 ستروميـن، النرويج','ft-contact-4':'💳 دفع Vipps',
     'form-fname':'الاسم الأول','form-lname':'اسم العائلة','form-phone':'الهاتف','form-email':'البريد الإلكتروني',
     'form-addr':'عنوان التوصيل','form-pkg':'اختر الباقة','form-day':'يوم التوصيل المفضل','form-comment':'تعليق',
     'form-comment-opt':'(اختياري)','form-ph-fname':'محمد','form-ph-lname':'علي',
@@ -1714,6 +1726,9 @@ const translations = {
     'del-tag':'Dostawa do domu','del-h2':'Przyjeżdżamy do Ciebie.','del-p':'Bez jazdy samochodem, bez kolejki. Pakujemy i dowozimy Kokkens Kassen prosto pod Twoje drzwi.',
     'footer-p':'Domowe jedzenie co tydzień · Strømmen, Norwegia',
     'footer-brand':'Świeże, domowe posiłki dostarczone pod Twoje drzwi w Strømmen. 2 posiłki dziennie, 7 dni w tygodniu.',
+    'ft-nav-h':'Nawigacja','ft-nav-1':'Jak to działa','ft-nav-2':'Filozofia','ft-nav-3':'Wizja Szefa','ft-nav-4':'Pakiety','ft-nav-5':'Menu',
+    'ft-pkg-h':'Pakiety','ft-pkg-1':'Pudełko próbne','ft-pkg-3':'Pudełko rodzinne','ft-pkg-4':'Sea Moss · Wkrótce','ft-pkg-5':'Shilajit · Wkrótce',
+    'ft-contact-h':'Kontakt','ft-contact-1':'Zamów teraz','ft-contact-3':'📍 Strømmen, Norwegia','ft-contact-4':'💳 Płatność Vipps',
     'form-fname':'Imię','form-lname':'Nazwisko','form-phone':'Telefon','form-email':'E-mail',
     'form-addr':'Adres dostawy','form-pkg':'Wybierz pakiet','form-day':'Preferowany dzień dostawy','form-comment':'Komentarz',
     'form-comment-opt':'(opcjonalnie)','form-ph-fname':'Jan','form-ph-lname':'Kowalski',
@@ -1840,6 +1855,9 @@ const translations = {
     'del-tag':'Доставка додому','del-h2':'Ми приїдемо до вас.','del-p':'Без поїздок, без черг. Ми пакуємо та доставляємо Kokkens Kassen прямо до ваших дверей у Стрьоммен.',
     'footer-p':'Домашній щотижневий тейкаут · Стрьоммен, Норвегія',
     'footer-brand':'Свіжі, домашні страви доставлені до вашого порогу в Стрьоммен. 2 страви на день, 7 днів на тиждень.',
+    'ft-nav-h':'Навігація','ft-nav-1':'Як це працює','ft-nav-2':'Філософія','ft-nav-3':'Бачення Шефа','ft-nav-4':'Пакети','ft-nav-5':'Меню',
+    'ft-pkg-h':'Пакети','ft-pkg-1':'Пробний набір','ft-pkg-3':'Сімейна коробка','ft-pkg-4':'Sea Moss · Незабаром','ft-pkg-5':'Shilajit · Незабаром',
+    'ft-contact-h':'Контакт','ft-contact-1':'Замовити зараз','ft-contact-3':'📍 Стрьоммен, Норвегія','ft-contact-4':'💳 Оплата Vipps',
     'form-fname':'Ім\'я','form-lname':'Прізвище','form-phone':'Телефон','form-email':'Ел. пошта',
     'form-addr':'Адреса доставки','form-pkg':'Оберіть пакет','form-day':'Бажаний день доставки','form-comment':'Коментар',
     'form-comment-opt':'(необов\'язково)','form-ph-fname':'Іван','form-ph-lname':'Петренко',
@@ -2097,6 +2115,9 @@ function setLang(lang){
   set('nav-bestill-txt', t['nav-bestill-t']||t['nav-bestill']);
   set('footer-copy', t['footer-p']);
   set('footer-brand-txt', t['footer-brand']);
+  set('ft-nav-h', t['ft-nav-h']); set('ft-nav-1', t['ft-nav-1']); set('ft-nav-2', t['ft-nav-2']); set('ft-nav-3', t['ft-nav-3']); set('ft-nav-4', t['ft-nav-4']); set('ft-nav-5', t['ft-nav-5']);
+  set('ft-pkg-h', t['ft-pkg-h']); set('ft-pkg-1', t['ft-pkg-1']); set('ft-pkg-3', t['ft-pkg-3']); set('ft-pkg-4', t['ft-pkg-4']); set('ft-pkg-5', t['ft-pkg-5']);
+  set('ft-contact-h', t['ft-contact-h']); set('ft-contact-1', t['ft-contact-1']); set('ft-contact-3', t['ft-contact-3']); set('ft-contact-4', t['ft-contact-4']);
   set('hero-eyebrow-txt', t['hero-eyebrow']);
   set('hero-h1-txt', t['hero-h1']); set('hero-h1-em-txt', t['hero-h1-em']); set('hero-h1-end-txt', t['hero-h1-end']);
   set('hero-sub-txt', t['hero-sub']); set('hero-btn1-txt', t['hero-btn1']); set('hero-btn2-txt', t['hero-btn2']);
