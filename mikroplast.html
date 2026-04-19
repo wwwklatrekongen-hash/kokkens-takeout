@@ -439,13 +439,6 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 const flags  = { no:'🇳🇴', en:'🇬🇧', uk:'🇺🇦', so:'🇸🇴', ar:'🇸🇦', pl:'🇵🇱' };
 const labels = { no:'NO', en:'EN', uk:'UA', so:'SO', ar:'AR', pl:'PL' };
 
-// ── Restore saved language ──
-function restoreLang() {
-  const savedLang = localStorage.getItem('kokkens-lang');
-  if (savedLang && savedLang !== 'no') setLang(savedLang);
-}
-restoreLang();
-window.addEventListener('pageshow', restoreLang);
 
 function toggleLang() {
   document.getElementById('langDropdown').classList.toggle('open');
@@ -877,6 +870,13 @@ const translations = {
     footer:'Bez mikroplastiku · Opakowanie kartonowe · Strømmen, Norwegia'
   }
 };
+// ── Restore saved language ──
+function restoreLang() {
+  const savedLang = localStorage.getItem('kokkens-lang');
+  if (savedLang && savedLang !== 'no') setLang(savedLang);
+}
+restoreLang();
+window.addEventListener('pageshow', restoreLang);
 </script>
 </body>
 </html>
