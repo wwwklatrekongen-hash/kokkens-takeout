@@ -30,6 +30,19 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .nav-back:hover{border-color:var(--terra);color:var(--terra)}
 .nav-back span{font-size:1rem}
 
+/* ── LANG SWITCHER (identical to index.html) ── */
+.lang-switcher{position:relative;display:flex;align-items:center}
+.lang-btn{display:flex;align-items:center;gap:6px;background:transparent;border:1.5px solid var(--stroke);border-radius:6px;padding:7px 12px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;color:var(--ink2);cursor:pointer;transition:border-color .2s,color .2s}
+.lang-btn:hover{border-color:var(--terra);color:var(--terra)}
+.lang-btn .flag{font-size:1.2rem;line-height:1}
+.lang-btn .lang-code{font-size:.82rem;font-weight:700}
+.lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1.5px solid var(--stroke);border-radius:10px;padding:.4rem;min-width:150px;z-index:500;display:none;box-shadow:0 8px 24px rgba(28,20,16,.12)}
+.lang-dropdown.open{display:block}
+.lang-option{display:flex;align-items:center;gap:10px;padding:.55rem .8rem;border-radius:6px;font-size:.88rem;font-weight:500;color:var(--ink2);cursor:pointer;transition:background .15s}
+.lang-option:hover{background:var(--paper)}
+.lang-option.active{background:var(--terra-pale);color:var(--terra);font-weight:600}
+.lang-option .flag{font-size:1.1rem}
+
 /* ── HERO ── */
 .hero{background:var(--ink);color:#fff;padding:6rem 6% 5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(196,82,42,.12);pointer-events:none}
@@ -117,10 +130,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .btn-fill{background:var(--terra);color:#fff;border:none;border-radius:8px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .15s;white-space:nowrap}
 .btn-fill:hover{background:#A8431F;transform:translateY(-2px)}
 
-/* ── MOLECULE VISUAL ── */
-.molecule-section{padding:4rem 6%;background:var(--ink);text-align:center}
-.molecule-inner{max-width:860px;margin:0 auto}
-
 /* ── FOOTER ── */
 footer{background:var(--ink);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,.07)}
 footer p{color:rgba(255,255,255,.3);font-size:.82rem}
@@ -157,18 +166,33 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
     </svg>
     Kokkens Takeout Meal
   </a>
-  <a href="index.html" class="nav-back"><span>←</span> Tilbake</a>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a href="index.html" class="nav-back"><span>←</span> <span id="mp-back">Tilbake</span></a>
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">
+        <span class="flag">🇳🇴</span><span class="lang-code">NO</span> ▾
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option active" onclick="setLang('no')"><span class="flag">🇳🇴</span> Norsk</div>
+        <div class="lang-option" onclick="setLang('en')"><span class="flag">🇬🇧</span> English</div>
+        <div class="lang-option" onclick="setLang('uk')"><span class="flag">🇺🇦</span> Українська</div>
+        <div class="lang-option" onclick="setLang('so')"><span class="flag">🇸🇴</span> Somali</div>
+        <div class="lang-option" onclick="setLang('ar')"><span class="flag">🇸🇦</span> العربية</div>
+        <div class="lang-option" onclick="setLang('pl')"><span class="flag">🇵🇱</span> Polski</div>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-kicker">🔬 Vitenskapen bak maten din</div>
-    <h1>Mikroplast i mat.<br><em>Det ingen snakker om.</em></h1>
-    <p class="hero-sub">Hvert år spiser det gjennomsnittlige mennesket rundt 5 gram mikroplast — omtrent vekten av et kredittkort. Mye av det kommer fra emballasjen rundt maten vår.</p>
+    <div class="hero-kicker" id="mp-kicker">🔬 Vitenskapen bak maten din</div>
+    <h1><span id="mp-h1">Mikroplast i mat.</span><br><em id="mp-h1-em">Det ingen snakker om.</em></h1>
+    <p class="hero-sub" id="mp-sub">Hvert år spiser det gjennomsnittlige mennesket rundt 5 gram mikroplast — omtrent vekten av et kredittkort. Mye av det kommer fra emballasjen rundt maten vår.</p>
     <div class="hero-warning">
       <span>⚠️</span>
-      <span>Dette er grunnen til at Kokkens Takeout Meal <strong>aldri bruker plast</strong> rundt maten din.</span>
+      <span id="mp-warning">Dette er grunnen til at Kokkens Takeout Meal <strong>aldri bruker plast</strong> rundt maten din.</span>
     </div>
   </div>
 </section>
@@ -176,23 +200,23 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
 <!-- SECTION 1 — WHAT IS MICROPLAST -->
 <section class="section fade-in">
   <div class="section-inner">
-    <div class="section-kicker">📌 Hva er mikroplast?</div>
-    <h2>Usynlige biter av <em>plast i kroppen din</em></h2>
-    <p>Mikroplast er plastpartikler mindre enn 5 millimeter. Mange er så små at de ikke kan ses med det blotte øye — de kalles nanoplast. De dannes når større plastgjenstander brytes ned over tid, men de lekker også direkte fra plastemballasje til maten inne i den.</p>
-    <p><strong>Det er ikke et spørsmål om de er der.</strong> Mikroplast er funnet i menneskelig blod, lunger, morsmelk, placenta, hjernevev og til og med i fostre. Det er funnet i over 90% av testede drikkevannsprøver globalt — og i maten vi spiser hver eneste dag.</p>
+    <div class="section-kicker" id="mp-s1-tag">📌 Hva er mikroplast?</div>
+    <h2><span id="mp-s1-h2">Usynlige biter av</span> <em id="mp-s1-h2-em">plast i kroppen din</em></h2>
+    <p id="mp-s1-p1">Mikroplast er plastpartikler mindre enn 5 millimeter. Mange er så små at de ikke kan ses med det blotte øye — de kalles nanoplast. De dannes når større plastgjenstander brytes ned over tid, men de lekker også direkte fra plastemballasje til maten inne i den.</p>
+    <p id="mp-s1-p2"><strong id="mp-s1-p2-strong">Det er ikke et spørsmål om de er der.</strong> Mikroplast er funnet i menneskelig blod, lunger, morsmelk, placenta, hjernevev og til og med i fostre. Det er funnet i over 90% av testede drikkevannsprøver globalt — og i maten vi spiser hver eneste dag.</p>
 
     <div class="stat-grid-light">
       <div class="stat-card-light">
         <div class="stat-num">5g</div>
-        <div class="stat-lbl">Mikroplast spist per uke per person — vekten av et kredittkort</div>
+        <div class="stat-lbl" id="mp-stat1">Mikroplast spist per uke per person — vekten av et kredittkort</div>
       </div>
       <div class="stat-card-light">
         <div class="stat-num">74%</div>
-        <div class="stat-lbl">Av testet blodbaner hos friske voksne inneholdt målbare mengder mikroplast</div>
+        <div class="stat-lbl" id="mp-stat2">Av testet blodbaner hos friske voksne inneholdt målbare mengder mikroplast</div>
       </div>
       <div class="stat-card-light">
         <div class="stat-num">250 000</div>
-        <div class="stat-lbl">Mikroplastpartikler i én liter flaskevann — 20× mer enn i springvann</div>
+        <div class="stat-lbl" id="mp-stat3">Mikroplastpartikler i én liter flaskevann — 20× mer enn i springvann</div>
       </div>
     </div>
   </div>
@@ -201,37 +225,37 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
 <!-- SECTION 2 — HOW IT GETS IN YOUR FOOD (dark) -->
 <section class="section section-dark fade-in">
   <div class="section-inner">
-    <div class="section-kicker">🔄 Slik skjer det</div>
-    <h2>Hvordan plast siver inn i <em>maten din</em></h2>
-    <p>De fleste tror mikroplast kun er et problem med havmat. Sannheten er at det skjer i kjøkkenet ditt, i kjøleskapet ditt — og i matleveransen du mottar.</p>
+    <div class="section-kicker" id="mp-s2-tag">🔄 Slik skjer det</div>
+    <h2><span id="mp-s2-h2">Hvordan plast siver inn i</span> <em id="mp-s2-h2-em">maten din</em></h2>
+    <p id="mp-s2-p1">De fleste tror mikroplast kun er et problem med havmat. Sannheten er at det skjer i kjøkkenet ditt, i kjøleskapet ditt — og i matleveransen du mottar.</p>
 
     <div class="process">
       <div class="process-step">
         <div class="process-dot">🌡️</div>
         <div class="process-body">
-          <h4>Varme akselererer uttrekkingen</h4>
-          <p>Når plast utsettes for varme — selv romtemperatur over tid — øker molekylbevegelsen i plasten. Kjemiske forbindelser som bisfenol A (BPA), ftalater og andre mykgjørere løsner fra plaststrukturen og overføres til maten inni.</p>
+          <h4 id="mp-p1-h">Varme akselererer uttrekkingen</h4>
+          <p id="mp-p1-p">Når plast utsettes for varme — selv romtemperatur over tid — øker molekylbevegelsen i plasten. Kjemiske forbindelser som bisfenol A (BPA), ftalater og andre mykgjørere løsner fra plaststrukturen og overføres til maten inni.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">🧪</div>
         <div class="process-body">
-          <h4>Fett og syre trekker ut mer</h4>
-          <p>Fettholdige matvarer som kjøtt, fisk og sauser er spesielt utsatt. Fett er et utmerket løsningsmiddel for plastforbindelser — det trekker dem aktivt ut av emballasjen. Det samme gjelder sure matvarer som tomater og sitrusfrukter.</p>
+          <h4 id="mp-p2-h">Fett og syre trekker ut mer</h4>
+          <p id="mp-p2-p">Fettholdige matvarer som kjøtt, fisk og sauser er spesielt utsatt. Fett er et utmerket løsningsmiddel for plastforbindelser — det trekker dem aktivt ut av emballasjen. Det samme gjelder sure matvarer som tomater og sitrusfrukter.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">⏱️</div>
         <div class="process-body">
-          <h4>Tid forsterker effekten</h4>
-          <p>Jo lengre mat er i kontakt med plast, desto mer plast absorberes. Mat som er pakket inn for levering og oppbevart i plastbokser — selv "BPA-fri" plast — avgir målbare mengder kjemikalier til innholdet innen få timer.</p>
+          <h4 id="mp-p3-h">Tid forsterker effekten</h4>
+          <p id="mp-p3-p">Jo lengre mat er i kontakt med plast, desto mer plast absorberes. Mat som er pakket inn for levering og oppbevart i plastbokser — selv "BPA-fri" plast — avgir målbare mengder kjemikalier til innholdet innen få timer.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">🔬</div>
         <div class="process-body">
-          <h4>Nanoplast krysser cellemembraner</h4>
-          <p>De aller minste partiklene, nanoplast, er så små at de kan krysse cellemembraner og til og med blod-hjerne-barrieren. Forskning fra 2024 viste at hjerter med mikroplastinnskudd i åreveggene hadde 4,5× høyere risiko for hjerteinfarkt eller slag.</p>
+          <h4 id="mp-p4-h">Nanoplast krysser cellemembraner</h4>
+          <p id="mp-p4-p">De aller minste partiklene, nanoplast, er så små at de kan krysse cellemembraner og til og med blod-hjerne-barrieren. Forskning fra 2024 viste at hjerter med mikroplastinnskudd i åreveggene hadde 4,5× høyere risiko for hjerteinfarkt eller slag.</p>
         </div>
       </div>
     </div>
@@ -239,15 +263,15 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
     <div class="stat-grid">
       <div class="stat-card">
         <div class="stat-num">4.5×</div>
-        <div class="stat-lbl">Høyere risiko for hjerteinfarkt/slag ved mikroplast i åreveggene (NEJM 2024)</div>
+        <div class="stat-lbl" id="mp-dstat1">Høyere risiko for hjerteinfarkt/slag ved mikroplast i åreveggene (NEJM 2024)</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">100%</div>
-        <div class="stat-lbl">Av testede placentaer fra nyfødte inneholdt mikroplast (studie 2023)</div>
+        <div class="stat-lbl" id="mp-dstat2">Av testede placentaer fra nyfødte inneholdt mikroplast (studie 2023)</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">11×</div>
-        <div class="stat-lbl">Mer mikroplast i menneskehjernen nå enn for 20 år siden (studie 2024)</div>
+        <div class="stat-lbl" id="mp-dstat3">Mer mikroplast i menneskehjernen nå enn for 20 år siden (studie 2024)</div>
       </div>
     </div>
   </div>
@@ -256,31 +280,31 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
 <!-- SECTION 3 — PLASTIC VS CARDBOARD -->
 <section class="section fade-in">
   <div class="section-inner">
-    <div class="section-kicker">📦 Plast vs. papp</div>
-    <h2>Hvorfor emballasje <em>betyr alt</em></h2>
-    <p>Ikke alle emballasjematerialer er like. Det er en enorm forskjell mellom plastbokser — selv de som markedsføres som "trygge" — og papirbasert emballasje.</p>
+    <div class="section-kicker" id="mp-s3-tag">📦 Plast vs. papp</div>
+    <h2><span id="mp-s3-h2">Hvorfor emballasje</span> <em id="mp-s3-h2-em">betyr alt</em></h2>
+    <p id="mp-s3-p1">Ikke alle emballasjematerialer er like. Det er en enorm forskjell mellom plastbokser — selv de som markedsføres som "trygge" — og papirbasert emballasje.</p>
 
     <div class="compare">
       <div class="compare-col compare-bad">
-        <h4>🚫 Plastboks / plastfilm</h4>
-        <div class="compare-item"><span>☠️</span><span>Avgir ftalater, BPA og andre hormonforstyrrende stoffer til fet mat</span></div>
-        <div class="compare-item"><span>🌡️</span><span>Akselererer kraftig ved varme — mikroovn er spesielt ille</span></div>
-        <div class="compare-item"><span>🧪</span><span>"BPA-fri" plast inneholder ofte BPS og BPF — minst like skadelig</span></div>
-        <div class="compare-item"><span>♻️</span><span>Brytes ned over tid til stadig mindre, mer giftige partikler</span></div>
-        <div class="compare-item"><span>🌊</span><span>Havner i naturen og forurenser matjord og drikkevann</span></div>
+        <h4 id="mp-bad-h">🚫 Plastboks / plastfilm</h4>
+        <div class="compare-item"><span>☠️</span><span id="mp-bad1">Avgir ftalater, BPA og andre hormonforstyrrende stoffer til fet mat</span></div>
+        <div class="compare-item"><span>🌡️</span><span id="mp-bad2">Akselererer kraftig ved varme — mikroovn er spesielt ille</span></div>
+        <div class="compare-item"><span>🧪</span><span id="mp-bad3">"BPA-fri" plast inneholder ofte BPS og BPF — minst like skadelig</span></div>
+        <div class="compare-item"><span>♻️</span><span id="mp-bad4">Brytes ned over tid til stadig mindre, mer giftige partikler</span></div>
+        <div class="compare-item"><span>🌊</span><span id="mp-bad5">Havner i naturen og forurenser matjord og drikkevann</span></div>
       </div>
       <div class="compare-col compare-good">
-        <h4>✅ Pappemballasje</h4>
-        <div class="compare-item"><span>🌿</span><span>Ingen kjemiske mykgjørere som kan overføres til maten</span></div>
-        <div class="compare-item"><span>🔒</span><span>Inert materiale — reagerer ikke med fett eller syre i maten</span></div>
-        <div class="compare-item"><span>♻️</span><span>Biologisk nedbrytbar — forsvinner naturlig uten å bli mikroplast</span></div>
-        <div class="compare-item"><span>🌡️</span><span>Holder maten kald og frisk uten kjemisk påvirkning</span></div>
-        <div class="compare-item"><span>💚</span><span>Trygt for deg, trygt for miljøet</span></div>
+        <h4 id="mp-good-h">✅ Pappemballasje</h4>
+        <div class="compare-item"><span>🌿</span><span id="mp-good1">Ingen kjemiske mykgjørere som kan overføres til maten</span></div>
+        <div class="compare-item"><span>🔒</span><span id="mp-good2">Inert materiale — reagerer ikke med fett eller syre i maten</span></div>
+        <div class="compare-item"><span>♻️</span><span id="mp-good3">Biologisk nedbrytbar — forsvinner naturlig uten å bli mikroplast</span></div>
+        <div class="compare-item"><span>🌡️</span><span id="mp-good4">Holder maten kald og frisk uten kjemisk påvirkning</span></div>
+        <div class="compare-item"><span>💚</span><span id="mp-good5">Trygt for deg, trygt for miljøet</span></div>
       </div>
     </div>
 
     <div class="highlight">
-      <p><strong>Viktig å vite:</strong> Mange matleveringstjenester bruker plastbokser fordi de er billigere og gjenbrukbare. Men "gjenbrukbar" betyr at plasten brytes ned gradvis — og avgir mer mikroplast til maten for hvert bruk. Vi valgte papp fra dag én, ikke fordi det er enkelt, men fordi det er riktig.</p>
+      <p id="mp-s3-highlight"><strong>Viktig å vite:</strong> Mange matleveringstjenester bruker plastbokser fordi de er billigere og gjenbrukbare. Men "gjenbrukbar" betyr at plasten brytes ned gradvis — og avgir mer mikroplast til maten for hvert bruk. Vi valgte papp fra dag én, ikke fordi det er enkelt, men fordi det er riktig.</p>
     </div>
   </div>
 </section>
@@ -288,40 +312,40 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
 <!-- SECTION 4 — RESEARCH -->
 <section class="section fade-in" style="background:var(--card)">
   <div class="section-inner">
-    <div class="section-kicker">🧬 Forskningen sier</div>
-    <h2>Hva vitenskapen <em>har funnet</em></h2>
-    <p>Dette er ikke spekulasjon. Det er peer-reviewed forskning publisert i verdens mest anerkjente medisinske tidsskrifter.</p>
+    <div class="section-kicker" id="mp-s4-tag">🧬 Forskningen sier</div>
+    <h2><span id="mp-s4-h2">Hva vitenskapen</span> <em id="mp-s4-h2-em">har funnet</em></h2>
+    <p id="mp-s4-p1">Dette er ikke spekulasjon. Det er peer-reviewed forskning publisert i verdens mest anerkjente medisinske tidsskrifter.</p>
 
     <div class="research-grid">
       <div class="research-card">
         <div class="rc-source">New England Journal of Medicine · 2024</div>
-        <h4>Mikroplast i åreveggene koblet til 4,5× høyere hjerte-kar-risiko</h4>
-        <p>Pasienter med påvisbar mikroplast i åreveggene hadde dramatisk høyere risiko for hjerteinfarkt, slag og tidlig død sammenlignet med kontrollgruppen.</p>
+        <h4 id="mp-r1-h">Mikroplast i åreveggene koblet til 4,5× høyere hjerte-kar-risiko</h4>
+        <p id="mp-r1-p">Pasienter med påvisbar mikroplast i åreveggene hadde dramatisk høyere risiko for hjerteinfarkt, slag og tidlig død sammenlignet med kontrollgruppen.</p>
       </div>
       <div class="research-card">
         <div class="rc-source">Nature Medicine · 2024</div>
-        <h4>Menneskehjernen inneholder 11× mer plast enn for 20 år siden</h4>
-        <p>Analyse av hjernevev fra obduksjoner viste en alarmerende økning i plastkonsentrasjon over de siste to tiårene — med akselererende vekst.</p>
+        <h4 id="mp-r2-h">Menneskehjernen inneholder 11× mer plast enn for 20 år siden</h4>
+        <p id="mp-r2-p">Analyse av hjernevev fra obduksjoner viste en alarmerende økning i plastkonsentrasjon over de siste to tiårene — med akselererende vekst.</p>
       </div>
       <div class="research-card">
         <div class="rc-source">Environmental Science & Technology · 2023</div>
-        <h4>Mat i plastbokser absorberer målbare mengder ftalater innen 30 min</h4>
-        <p>Fettholdige matvarer i kontakt med standard plastbokser ved romtemperatur viste signifikant kjemisk overføring allerede etter en halvtime.</p>
+        <h4 id="mp-r3-h">Mat i plastbokser absorberer målbare mengder ftalater innen 30 min</h4>
+        <p id="mp-r3-p">Fettholdige matvarer i kontakt med standard plastbokser ved romtemperatur viste signifikant kjemisk overføring allerede etter en halvtime.</p>
       </div>
       <div class="research-card">
         <div class="rc-source">Environment International · 2022</div>
-        <h4>Mikroplast funnet i blodet til 77% av testede friske voksne</h4>
-        <p>Første studie som dokumenterte mikroplast i human sirkulasjon — inkludert polyetylen tereftalat (PET) fra plastflasker og matbeholdere.</p>
+        <h4 id="mp-r4-h">Mikroplast funnet i blodet til 77% av testede friske voksne</h4>
+        <p id="mp-r4-p">Første studie som dokumenterte mikroplast i human sirkulasjon — inkludert polyetylen tereftalat (PET) fra plastflasker og matbeholdere.</p>
       </div>
       <div class="research-card">
         <div class="rc-source">The Lancet · 2023</div>
-        <h4>Plastpartikler påvist i morsmelk og placenta</h4>
-        <p>Mikroplast er funnet i 100% av testede placenta-prøver, og i morsmelk fra mødre som aldri hadde jobbet med plast. Det betyr eksponering fra mat og emballasje alene.</p>
+        <h4 id="mp-r5-h">Plastpartikler påvist i morsmelk og placenta</h4>
+        <p id="mp-r5-p">Mikroplast er funnet i 100% av testede placenta-prøver, og i morsmelk fra mødre som aldri hadde jobbet med plast. Det betyr eksponering fra mat og emballasje alene.</p>
       </div>
       <div class="research-card">
         <div class="rc-source">WHO-rapport · 2023</div>
-        <h4>Plastforurensning i mat er en global folkehelsekrise</h4>
-        <p>Verdens helseorganisasjon klassifiserte mikroplasteksponering via mat som en prioritert global risikofaktor og krevde umiddelbar regulering av plastemballasje.</p>
+        <h4 id="mp-r6-h">Plastforurensning i mat er en global folkehelsekrise</h4>
+        <p id="mp-r6-p">Verdens helseorganisasjon klassifiserte mikroplasteksponering via mat som en prioritert global risikofaktor og krevde umiddelbar regulering av plastemballasje.</p>
       </div>
     </div>
   </div>
@@ -330,55 +354,54 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
 <!-- SECTION 5 — WHAT WE DO -->
 <section class="section fade-in">
   <div class="section-inner">
-    <div class="section-kicker">🌿 Det vi gjør</div>
-    <h2>Vår forpliktelse til <em>ren mat</em></h2>
-    <p>Vi startet Kokkens Takeout Meal med én tanke: mat skal nære, ikke skade. Det er ikke et markedsføringstriks. Det er en grunnleggende beslutning vi tok fra dag én.</p>
+    <div class="section-kicker" id="mp-s5-tag">🌿 Det vi gjør</div>
+    <h2><span id="mp-s5-h2">Vår forpliktelse til</span> <em id="mp-s5-h2-em">ren mat</em></h2>
+    <p id="mp-s5-p1">Vi startet Kokkens Takeout Meal med én tanke: mat skal nære, ikke skade. Det er ikke et markedsføringstriks. Det er en grunnleggende beslutning vi tok fra dag én.</p>
 
     <div class="highlight-green">
-      <p><strong>Ingen plastbokser. Ingen plastfilm. Ingen mikroplast.</strong> Alle rettene fra Kokkens Takeout Meal leveres i hygieniske pappeske-beholdere. Papp er inert — det reagerer ikke kjemisk med maten, avgir ingenting til innholdet, og brytes ned naturlig etter bruk.</p>
+      <p id="mp-s5-highlight"><strong>Ingen plastbokser. Ingen plastfilm. Ingen mikroplast.</strong> Alle rettene fra Kokkens Takeout Meal leveres i hygieniske pappeske-beholdere. Papp er inert — det reagerer ikke kjemisk med maten, avgir ingenting til innholdet, og brytes ned naturlig etter bruk.</p>
     </div>
 
-    <p>Vi forstår at dette koster litt mer. Plastbokser er billigere å produsere. Men vi mener du fortjener å vite hva emballasjen din gjør med maten — og vi velger å beskytte helsen din fremfor å spare noen kroner på pakking.</p>
-
-    <p><strong>Når du bestiller Kokkens Kasse, kan du være trygg på at:</strong></p>
+    <p id="mp-s5-p2">Vi forstår at dette koster litt mer. Plastbokser er billigere å produsere. Men vi mener du fortjener å vite hva emballasjen din gjør med maten — og vi velger å beskytte helsen din fremfor å spare noen kroner på pakking.</p>
+    <p id="mp-s5-p3"><strong id="mp-s5-p3-strong">Når du bestiller Kokkens Kasse, kan du være trygg på at:</strong></p>
 
     <div class="process" style="margin-top:1.5rem">
       <div class="process-step">
         <div class="process-dot">✅</div>
         <div class="process-body">
-          <h4>Maten aldri berører plast</h4>
-          <p>Fra kokkens kjøkken til din dør — maten er kun i kontakt med pappemballasje. Ingen mellomstadier med plastbokser, plastfilm eller plastposer.</p>
+          <h4 id="mp-c1-h">Maten aldri berører plast</h4>
+          <p id="mp-c1-p">Fra kokkens kjøkken til din dør — maten er kun i kontakt med pappemballasje. Ingen mellomstadier med plastbokser, plastfilm eller plastposer.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">✅</div>
         <div class="process-body">
-          <h4>Ferske råvarer uten plastpakking</h4>
-          <p>Vi tilbereder alt fra bunnen av med ferske råvarer. Vi bruker ikke ferdigpakkede ingredienser som har ligget i plastpakker i uker.</p>
+          <h4 id="mp-c2-h">Ferske råvarer uten plastpakking</h4>
+          <p id="mp-c2-p">Vi tilbereder alt fra bunnen av med ferske råvarer. Vi bruker ikke ferdigpakkede ingredienser som har ligget i plastpakker i uker.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">✅</div>
         <div class="process-body">
-          <h4>Levert raskt — ikke lagret i plastbokser</h4>
-          <p>Maten tilberedes og leveres samme dag. Du slipper maten som har ligget i en plastboks i kjøleskap i tre dager og absorbert kjemikalier hele tiden.</p>
+          <h4 id="mp-c3-h">Levert raskt — ikke lagret i plastbokser</h4>
+          <p id="mp-c3-p">Maten tilberedes og leveres samme dag. Du slipper maten som har ligget i en plastboks i kjøleskap i tre dager og absorbert kjemikalier hele tiden.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="process-dot">🌱</div>
         <div class="process-body">
-          <h4>Og det er bra for miljøet også</h4>
-          <p>Pappemballasje brytes ned naturlig. Den havner ikke i havet, blir ikke til mikroplast i matjorden, og forurenser ikke drikkevannkilder. En enkel beslutning som hjelper mer enn de fleste tror.</p>
+          <h4 id="mp-c4-h">Og det er bra for miljøet også</h4>
+          <p id="mp-c4-p">Pappemballasje brytes ned naturlig. Den havner ikke i havet, blir ikke til mikroplast i matjorden, og forurenser ikke drikkevannkilder. En enkel beslutning som hjelper mer enn de fleste tror.</p>
         </div>
       </div>
     </div>
 
     <div class="cta-banner">
       <div>
-        <h3>Ren mat, levert hjem.</h3>
-        <p>Bestill Kokkens Kasse i dag — <strong>14 ferske måltider</strong> i hygienisk pappemballasje, levert til døren din i Strømmen. Ingen plast. Ingen kompromiss.</p>
+        <h3 id="mp-cta-h">Ren mat, levert hjem.</h3>
+        <p id="mp-cta-p">Bestill Kokkens Kasse i dag — <strong>14 ferske måltider</strong> i hygienisk pappemballasje, levert til døren din i Strømmen. Ingen plast. Ingen kompromiss.</p>
       </div>
-      <a href="index.html#bestill" class="btn-fill">Bestill nå →</a>
+      <a href="index.html#bestill" class="btn-fill" id="mp-cta-btn">Bestill nå →</a>
     </div>
   </div>
 </section>
@@ -395,7 +418,7 @@ footer p{color:rgba(255,255,255,.3);font-size:.82rem}
     </svg>
     Kokkens Takeout Meal
   </div>
-  <p>Ingen mikroplast · Pappemballasje · Strømmen, Norge</p>
+  <p id="mp-footer">Ingen mikroplast · Pappemballasje · Strømmen, Norge</p>
 </footer>
 
 <script>
@@ -411,6 +434,440 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── Language switcher ──
+const flags  = { no:'🇳🇴', en:'🇬🇧', uk:'🇺🇦', so:'🇸🇴', ar:'🇸🇦', pl:'🇵🇱' };
+const labels = { no:'NO', en:'EN', uk:'UA', so:'SO', ar:'AR', pl:'PL' };
+
+function toggleLang() {
+  document.getElementById('langDropdown').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.lang-switcher')) document.getElementById('langDropdown').classList.remove('open');
+});
+
+function setLang(lang) {
+  const t = translations[lang];
+  document.getElementById('langBtn').innerHTML = '<span class="flag">'+flags[lang]+'</span><span class="lang-code">'+labels[lang]+'</span> ▾';
+  document.getElementById('langDropdown').classList.remove('open');
+  document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
+  document.querySelectorAll('.lang-option').forEach(o => { if(o.onclick.toString().includes("'"+lang+"'")) o.classList.add('active'); });
+  if (lang === 'ar') document.documentElement.setAttribute('dir','rtl');
+  else document.documentElement.removeAttribute('dir');
+
+  const set = (id, val) => { const el = document.getElementById(id); if(el && val !== undefined) el.textContent = val; };
+  const setHTML = (id, val) => { const el = document.getElementById(id); if(el && val !== undefined) el.innerHTML = val; };
+
+  set('mp-back',      t.back);
+  set('mp-kicker',    t.kicker);
+  set('mp-h1',        t.h1);
+  set('mp-h1-em',     t.h1em);
+  set('mp-sub',       t.sub);
+  setHTML('mp-warning', t.warning);
+  set('mp-stat1',     t.stat1);
+  set('mp-stat2',     t.stat2);
+  set('mp-stat3',     t.stat3);
+  set('mp-s1-tag',    t.s1tag);
+  set('mp-s1-h2',     t.s1h2);
+  set('mp-s1-h2-em',  t.s1h2em);
+  set('mp-s1-p1',     t.s1p1);
+  setHTML('mp-s1-p2', t.s1p2);
+  set('mp-s2-tag',    t.s2tag);
+  set('mp-s2-h2',     t.s2h2);
+  set('mp-s2-h2-em',  t.s2h2em);
+  set('mp-s2-p1',     t.s2p1);
+  set('mp-p1-h',      t.p1h); set('mp-p1-p', t.p1p);
+  set('mp-p2-h',      t.p2h); set('mp-p2-p', t.p2p);
+  set('mp-p3-h',      t.p3h); set('mp-p3-p', t.p3p);
+  set('mp-p4-h',      t.p4h); set('mp-p4-p', t.p4p);
+  set('mp-dstat1',    t.dstat1);
+  set('mp-dstat2',    t.dstat2);
+  set('mp-dstat3',    t.dstat3);
+  set('mp-s3-tag',    t.s3tag);
+  set('mp-s3-h2',     t.s3h2);
+  set('mp-s3-h2-em',  t.s3h2em);
+  set('mp-s3-p1',     t.s3p1);
+  set('mp-bad-h',     t.badh);
+  set('mp-bad1',      t.bad1); set('mp-bad2', t.bad2); set('mp-bad3', t.bad3); set('mp-bad4', t.bad4); set('mp-bad5', t.bad5);
+  set('mp-good-h',    t.goodh);
+  set('mp-good1',     t.good1); set('mp-good2', t.good2); set('mp-good3', t.good3); set('mp-good4', t.good4); set('mp-good5', t.good5);
+  setHTML('mp-s3-highlight', t.s3hl);
+  set('mp-s4-tag',    t.s4tag);
+  set('mp-s4-h2',     t.s4h2);
+  set('mp-s4-h2-em',  t.s4h2em);
+  set('mp-s4-p1',     t.s4p1);
+  set('mp-r1-h', t.r1h); set('mp-r1-p', t.r1p);
+  set('mp-r2-h', t.r2h); set('mp-r2-p', t.r2p);
+  set('mp-r3-h', t.r3h); set('mp-r3-p', t.r3p);
+  set('mp-r4-h', t.r4h); set('mp-r4-p', t.r4p);
+  set('mp-r5-h', t.r5h); set('mp-r5-p', t.r5p);
+  set('mp-r6-h', t.r6h); set('mp-r6-p', t.r6p);
+  set('mp-s5-tag',    t.s5tag);
+  set('mp-s5-h2',     t.s5h2);
+  set('mp-s5-h2-em',  t.s5h2em);
+  set('mp-s5-p1',     t.s5p1);
+  setHTML('mp-s5-highlight', t.s5hl);
+  set('mp-s5-p2',     t.s5p2);
+  setHTML('mp-s5-p3', t.s5p3);
+  set('mp-c1-h', t.c1h); set('mp-c1-p', t.c1p);
+  set('mp-c2-h', t.c2h); set('mp-c2-p', t.c2p);
+  set('mp-c3-h', t.c3h); set('mp-c3-p', t.c3p);
+  set('mp-c4-h', t.c4h); set('mp-c4-p', t.c4p);
+  set('mp-cta-h',   t.ctah);
+  setHTML('mp-cta-p', t.ctap);
+  set('mp-cta-btn', t.ctabtn);
+  set('mp-footer',  t.footer);
+}
+
+const translations = {
+  no: {
+    back:'Tilbake', kicker:'🔬 Vitenskapen bak maten din',
+    h1:'Mikroplast i mat.', h1em:'Det ingen snakker om.',
+    sub:'Hvert år spiser det gjennomsnittlige mennesket rundt 5 gram mikroplast — omtrent vekten av et kredittkort. Mye av det kommer fra emballasjen rundt maten vår.',
+    warning:'Dette er grunnen til at Kokkens Takeout Meal <strong>aldri bruker plast</strong> rundt maten din.',
+    stat1:'Mikroplast spist per uke per person — vekten av et kredittkort',
+    stat2:'Av testet blodbaner hos friske voksne inneholdt målbare mengder mikroplast',
+    stat3:'Mikroplastpartikler i én liter flaskevann — 20× mer enn i springvann',
+    s1tag:'📌 Hva er mikroplast?', s1h2:'Usynlige biter av', s1h2em:'plast i kroppen din',
+    s1p1:'Mikroplast er plastpartikler mindre enn 5 millimeter. Mange er så små at de ikke kan ses med det blotte øye — de kalles nanoplast. De dannes når større plastgjenstander brytes ned over tid, men de lekker også direkte fra plastemballasje til maten inne i den.',
+    s1p2:'<strong>Det er ikke et spørsmål om de er der.</strong> Mikroplast er funnet i menneskelig blod, lunger, morsmelk, placenta, hjernevev og til og med i fostre. Det er funnet i over 90% av testede drikkevannsprøver globalt — og i maten vi spiser hver eneste dag.',
+    s2tag:'🔄 Slik skjer det', s2h2:'Hvordan plast siver inn i', s2h2em:'maten din',
+    s2p1:'De fleste tror mikroplast kun er et problem med havmat. Sannheten er at det skjer i kjøkkenet ditt, i kjøleskapet ditt — og i matleveransen du mottar.',
+    p1h:'Varme akselererer uttrekkingen', p1p:'Når plast utsettes for varme — selv romtemperatur over tid — øker molekylbevegelsen i plasten. Kjemiske forbindelser som bisfenol A (BPA), ftalater og andre mykgjørere løsner fra plaststrukturen og overføres til maten inni.',
+    p2h:'Fett og syre trekker ut mer', p2p:'Fettholdige matvarer som kjøtt, fisk og sauser er spesielt utsatt. Fett er et utmerket løsningsmiddel for plastforbindelser — det trekker dem aktivt ut av emballasjen. Det samme gjelder sure matvarer som tomater og sitrusfrukter.',
+    p3h:'Tid forsterker effekten', p3p:'Jo lengre mat er i kontakt med plast, desto mer plast absorberes. Mat som er pakket inn for levering og oppbevart i plastbokser — selv "BPA-fri" plast — avgir målbare mengder kjemikalier til innholdet innen få timer.',
+    p4h:'Nanoplast krysser cellemembraner', p4p:'De aller minste partiklene, nanoplast, er så små at de kan krysse cellemembraner og til og med blod-hjerne-barrieren. Forskning fra 2024 viste at hjerter med mikroplastinnskudd i åreveggene hadde 4,5× høyere risiko for hjerteinfarkt eller slag.',
+    dstat1:'Høyere risiko for hjerteinfarkt/slag ved mikroplast i åreveggene (NEJM 2024)',
+    dstat2:'Av testede placentaer fra nyfødte inneholdt mikroplast (studie 2023)',
+    dstat3:'Mer mikroplast i menneskehjernen nå enn for 20 år siden (studie 2024)',
+    s3tag:'📦 Plast vs. papp', s3h2:'Hvorfor emballasje', s3h2em:'betyr alt',
+    s3p1:'Ikke alle emballasjematerialer er like. Det er en enorm forskjell mellom plastbokser — selv de som markedsføres som "trygge" — og papirbasert emballasje.',
+    badh:'🚫 Plastboks / plastfilm',
+    bad1:'Avgir ftalater, BPA og andre hormonforstyrrende stoffer til fet mat',
+    bad2:'Akselererer kraftig ved varme — mikroovn er spesielt ille',
+    bad3:'"BPA-fri" plast inneholder ofte BPS og BPF — minst like skadelig',
+    bad4:'Brytes ned over tid til stadig mindre, mer giftige partikler',
+    bad5:'Havner i naturen og forurenser matjord og drikkevann',
+    goodh:'✅ Pappemballasje',
+    good1:'Ingen kjemiske mykgjørere som kan overføres til maten',
+    good2:'Inert materiale — reagerer ikke med fett eller syre i maten',
+    good3:'Biologisk nedbrytbar — forsvinner naturlig uten å bli mikroplast',
+    good4:'Holder maten kald og frisk uten kjemisk påvirkning',
+    good5:'Trygt for deg, trygt for miljøet',
+    s3hl:'<strong>Viktig å vite:</strong> Mange matleveringstjenester bruker plastbokser fordi de er billigere og gjenbrukbare. Men "gjenbrukbar" betyr at plasten brytes ned gradvis — og avgir mer mikroplast til maten for hvert bruk. Vi valgte papp fra dag én, ikke fordi det er enkelt, men fordi det er riktig.',
+    s4tag:'🧬 Forskningen sier', s4h2:'Hva vitenskapen', s4h2em:'har funnet',
+    s4p1:'Dette er ikke spekulasjon. Det er peer-reviewed forskning publisert i verdens mest anerkjente medisinske tidsskrifter.',
+    r1h:'Mikroplast i åreveggene koblet til 4,5× høyere hjerte-kar-risiko', r1p:'Pasienter med påvisbar mikroplast i åreveggene hadde dramatisk høyere risiko for hjerteinfarkt, slag og tidlig død sammenlignet med kontrollgruppen.',
+    r2h:'Menneskehjernen inneholder 11× mer plast enn for 20 år siden', r2p:'Analyse av hjernevev fra obduksjoner viste en alarmerende økning i plastkonsentrasjon over de siste to tiårene — med akselererende vekst.',
+    r3h:'Mat i plastbokser absorberer målbare mengder ftalater innen 30 min', r3p:'Fettholdige matvarer i kontakt med standard plastbokser ved romtemperatur viste signifikant kjemisk overføring allerede etter en halvtime.',
+    r4h:'Mikroplast funnet i blodet til 77% av testede friske voksne', r4p:'Første studie som dokumenterte mikroplast i human sirkulasjon — inkludert polyetylen tereftalat (PET) fra plastflasker og matbeholdere.',
+    r5h:'Plastpartikler påvist i morsmelk og placenta', r5p:'Mikroplast er funnet i 100% av testede placenta-prøver, og i morsmelk fra mødre som aldri hadde jobbet med plast. Det betyr eksponering fra mat og emballasje alene.',
+    r6h:'Plastforurensning i mat er en global folkehelsekrise', r6p:'Verdens helseorganisasjon klassifiserte mikroplasteksponering via mat som en prioritert global risikofaktor og krevde umiddelbar regulering av plastemballasje.',
+    s5tag:'🌿 Det vi gjør', s5h2:'Vår forpliktelse til', s5h2em:'ren mat',
+    s5p1:'Vi startet Kokkens Takeout Meal med én tanke: mat skal nære, ikke skade. Det er ikke et markedsføringstriks. Det er en grunnleggende beslutning vi tok fra dag én.',
+    s5hl:'<strong>Ingen plastbokser. Ingen plastfilm. Ingen mikroplast.</strong> Alle rettene fra Kokkens Takeout Meal leveres i hygieniske pappeske-beholdere. Papp er inert — det reagerer ikke kjemisk med maten, avgir ingenting til innholdet, og brytes ned naturlig etter bruk.',
+    s5p2:'Vi forstår at dette koster litt mer. Plastbokser er billigere å produsere. Men vi mener du fortjener å vite hva emballasjen din gjør med maten — og vi velger å beskytte helsen din fremfor å spare noen kroner på pakking.',
+    s5p3:'<strong>Når du bestiller Kokkens Kasse, kan du være trygg på at:</strong>',
+    c1h:'Maten aldri berører plast', c1p:'Fra kokkens kjøkken til din dør — maten er kun i kontakt med pappemballasje. Ingen mellomstadier med plastbokser, plastfilm eller plastposer.',
+    c2h:'Ferske råvarer uten plastpakking', c2p:'Vi tilbereder alt fra bunnen av med ferske råvarer. Vi bruker ikke ferdigpakkede ingredienser som har ligget i plastpakker i uker.',
+    c3h:'Levert raskt — ikke lagret i plastbokser', c3p:'Maten tilberedes og leveres samme dag. Du slipper maten som har ligget i en plastboks i kjøleskap i tre dager og absorbert kjemikalier hele tiden.',
+    c4h:'Og det er bra for miljøet også', c4p:'Pappemballasje brytes ned naturlig. Den havner ikke i havet, blir ikke til mikroplast i matjorden, og forurenser ikke drikkevannkilder. En enkel beslutning som hjelper mer enn de fleste tror.',
+    ctah:'Ren mat, levert hjem.',
+    ctap:'Bestill Kokkens Kasse i dag — <strong>14 ferske måltider</strong> i hygienisk pappemballasje, levert til døren din i Strømmen. Ingen plast. Ingen kompromiss.',
+    ctabtn:'Bestill nå →',
+    footer:'Ingen mikroplast · Pappemballasje · Strømmen, Norge'
+  },
+
+  en: {
+    back:'Back', kicker:'🔬 The science behind your food',
+    h1:'Microplastics in food.', h1em:'The thing nobody talks about.',
+    sub:'Every year the average person consumes around 5 grams of microplastics — roughly the weight of a credit card. Much of it comes from the packaging around our food.',
+    warning:'This is why Kokkens Takeout Meal <strong>never uses plastic</strong> around your food.',
+    stat1:'Microplastics consumed per week per person — the weight of a credit card',
+    stat2:'Of blood samples from healthy adults contained measurable amounts of microplastics',
+    stat3:'Microplastic particles in one litre of bottled water — 20× more than tap water',
+    s1tag:'📌 What is microplastic?', s1h2:'Invisible pieces of', s1h2em:'plastic inside your body',
+    s1p1:'Microplastics are plastic particles smaller than 5 millimetres. Many are so small they are invisible to the naked eye — these are called nanoplastics. They form when larger plastic objects break down over time, but also leak directly from plastic packaging into the food inside.',
+    s1p2:'<strong>It\'s not a question of whether they\'re there.</strong> Microplastics have been found in human blood, lungs, breast milk, placenta, brain tissue and even in unborn foetuses. They have been detected in over 90% of drinking water samples tested globally.',
+    s2tag:'🔄 How it happens', s2h2:'How plastic seeps into', s2h2em:'your food',
+    s2p1:'Most people think microplastics are only a problem with seafood. The truth is it happens in your kitchen, in your fridge — and in the food delivery you receive.',
+    p1h:'Heat accelerates leaching', p1p:'When plastic is exposed to heat — even room temperature over time — molecular movement increases. Chemicals like BPA, phthalates and plasticisers detach from the plastic structure and transfer into food.',
+    p2h:'Fat and acid extract more', p2p:'Fatty foods like meat, fish and sauces are especially vulnerable. Fat is an excellent solvent for plastic compounds, actively drawing them out of packaging. The same applies to acidic foods like tomatoes and citrus.',
+    p3h:'Time amplifies the effect', p3p:'The longer food stays in contact with plastic, the more is absorbed. Food in plastic containers — even "BPA-free" plastic — releases measurable chemicals within hours.',
+    p4h:'Nanoplastics cross cell membranes', p4p:'The smallest particles can cross cell membranes and even the blood-brain barrier. A 2024 study showed 4.5× higher heart attack risk when microplastics were found in artery walls.',
+    dstat1:'Higher risk of heart attack with microplastics in artery walls (NEJM 2024)',
+    dstat2:'Of tested placentas from newborns contained microplastics (2023)',
+    dstat3:'More microplastic in the human brain now than 20 years ago (2024)',
+    s3tag:'📦 Plastic vs. cardboard', s3h2:'Why packaging', s3h2em:'matters everything',
+    s3p1:'Not all packaging materials are equal. There is an enormous difference between plastic containers — even those marketed as "safe" — and paper-based packaging.',
+    badh:'🚫 Plastic container / plastic film',
+    bad1:'Releases phthalates, BPA and hormone-disrupting chemicals into fatty food',
+    bad2:'Greatly accelerated by heat — microwaving is especially bad',
+    bad3:'"BPA-free" plastic often contains BPS and BPF — equally harmful',
+    bad4:'Breaks down into smaller, more toxic particles over time',
+    bad5:'Ends up in nature, polluting farmland and drinking water',
+    goodh:'✅ Cardboard packaging',
+    good1:'No chemical plasticisers that can transfer to food',
+    good2:'Inert material — does not react with fat or acid in food',
+    good3:'Biodegradable — breaks down naturally without becoming microplastic',
+    good4:'Keeps food cold and fresh without chemical interaction',
+    good5:'Safe for you, safe for the environment',
+    s3hl:'<strong>Important to know:</strong> Many food delivery services use plastic containers because they\'re cheaper and reusable. But "reusable" means the plastic gradually degrades — releasing more microplastics into food with every use. We chose cardboard from day one, not because it\'s easy, but because it\'s right.',
+    s4tag:'🧬 The research says', s4h2:'What science', s4h2em:'has found',
+    s4p1:'This is not speculation. It is peer-reviewed research published in the world\'s most respected medical journals.',
+    r1h:'Microplastics in artery walls linked to 4.5× higher cardiovascular risk', r1p:'Patients with detectable microplastics in artery walls had dramatically higher risk of heart attack, stroke and early death compared with the control group.',
+    r2h:'The human brain contains 11× more plastic than 20 years ago', r2p:'Analysis of brain tissue from autopsies revealed an alarming increase in plastic concentration over the past two decades — with accelerating growth.',
+    r3h:'Food in plastic containers absorbs phthalates within 30 minutes', r3p:'Fatty foods in contact with standard plastic containers at room temperature showed significant chemical transfer after just half an hour.',
+    r4h:'Microplastics found in the blood of 77% of healthy adults tested', r4p:'The first study to document microplastics in human circulation — including PET from plastic bottles and food containers.',
+    r5h:'Plastic particles detected in breast milk and placenta', r5p:'Microplastics were found in 100% of placenta samples tested, and in breast milk from mothers who had never worked with plastic.',
+    r6h:'Plastic contamination in food is a global public health crisis', r6p:'The WHO classified microplastic exposure via food as a priority global risk factor and called for immediate regulation of plastic packaging.',
+    s5tag:'🌿 What we do', s5h2:'Our commitment to', s5h2em:'clean food',
+    s5p1:'We started Kokkens Takeout Meal with one idea: food should nourish, not harm. This is not a marketing trick. It is a fundamental decision we made from day one.',
+    s5hl:'<strong>No plastic containers. No plastic film. No microplastics.</strong> All meals from Kokkens Takeout Meal are delivered in hygienic cardboard containers. Cardboard is inert — it does not react chemically with food, releases nothing into the contents, and breaks down naturally after use.',
+    s5p2:'We understand this costs a little more. Plastic containers are cheaper to produce. But we believe you deserve to know what your packaging does to your food — and we choose to protect your health rather than save a few pennies on packaging.',
+    s5p3:'<strong>When you order Kokkens Kasse, you can be sure that:</strong>',
+    c1h:'Food never touches plastic', c1p:'From the chef\'s kitchen to your door — food only contacts cardboard packaging. No plastic containers, plastic film or plastic bags.',
+    c2h:'Fresh ingredients without plastic packaging', c2p:'We prepare everything from scratch with fresh ingredients. We don\'t use pre-packaged items that have been sitting in plastic wrappers for weeks.',
+    c3h:'Delivered fast — not stored in plastic containers', c3p:'Food is prepared and delivered the same day. No sitting in a plastic container in the fridge for three days absorbing chemicals.',
+    c4h:'Good for the environment too', c4p:'Cardboard packaging breaks down naturally. It doesn\'t end up in the ocean, doesn\'t become microplastic in farmland, and doesn\'t contaminate drinking water sources.',
+    ctah:'Clean food, delivered home.',
+    ctap:'Order your Kokkens Kasse today — <strong>14 fresh meals</strong> in hygienic cardboard packaging, delivered to your door in Strømmen. No plastic. No compromise.',
+    ctabtn:'Order now →',
+    footer:'No microplastics · Cardboard packaging · Strømmen, Norway'
+  },
+
+  uk: {
+    back:'Назад', kicker:'🔬 Наука про вашу їжу',
+    h1:'Мікропластик у їжі.', h1em:'Про що ніхто не говорить.',
+    sub:'Щороку середньостатистична людина споживає близько 5 грамів мікропластику — приблизно вагу кредитної картки. Більша частина потрапляє з упаковки навколо їжі.',
+    warning:'Саме тому Kokkens Takeout Meal <strong>ніколи не використовує пластик</strong> навколо вашої їжі.',
+    stat1:'Мікропластику споживається на тиждень — вага кредитної картки',
+    stat2:'Зразків крові здорових дорослих містили вимірювані кількості мікропластику',
+    stat3:'Частинок мікропластику в одному літрі бутильованої води — у 20 разів більше, ніж у водопровідній',
+    s1tag:'📌 Що таке мікропластик?', s1h2:'Невидимі шматочки', s1h2em:'пластику у вашому тілі',
+    s1p1:'Мікропластик — це пластикові частинки розміром менше 5 міліметрів. Багато з них настільки малі, що невидимі неозброєним оком — їх називають нанопластиком. Вони утворюються при розкладанні пластикових предметів, але також безпосередньо просочуються з пластикової упаковки в їжу.',
+    s1p2:'<strong>Питання не в тому, чи є вони там.</strong> Мікропластик знайдено в крові, легенях, грудному молоці, плаценті, мозковій тканині і навіть у ненароджених дітей. Його виявлено у понад 90% протестованих зразків питної води у всьому світі.',
+    s2tag:'🔄 Як це відбувається', s2h2:'Як пластик проникає', s2h2em:'у вашу їжу',
+    s2p1:'Більшість людей вважає, що мікропластик — це лише проблема морепродуктів. Насправді це відбувається на вашій кухні, у вашому холодильнику — і в доставленій їжі.',
+    p1h:'Тепло прискорює вилуговування', p1p:'При нагріванні пластику молекулярний рух посилюється. Хімічні речовини, як-от BPA, фталати та пластифікатори, відокремлюються від пластику й потрапляють у їжу.',
+    p2h:'Жир і кислота витягують більше', p2p:'Жирна їжа — м\'ясо, риба, соуси — особливо вразлива. Жир є чудовим розчинником для пластикових сполук і активно витягує їх з упаковки.',
+    p3h:'Час посилює ефект', p3p:'Чим довше їжа контактує з пластиком, тим більше поглинається. Їжа в пластикових контейнерах — навіть «без BPA» — виділяє вимірювані хімічні речовини вже через кілька годин.',
+    p4h:'Нанопластик перетинає клітинні мембрани', p4p:'Найдрібніші частинки можуть проникати крізь клітинні мембрани і навіть гематоенцефалічний бар\'єр. Дослідження 2024 року показало ризик серцевого нападу у 4,5 рази вищий при наявності мікропластику в стінках артерій.',
+    dstat1:'Вищий ризик серцевого нападу при мікропластику в стінках артерій (NEJM 2024)',
+    dstat2:'Протестованих плацент новонароджених містили мікропластик (2023)',
+    dstat3:'Більше мікропластику в мозку людини зараз, ніж 20 років тому (2024)',
+    s3tag:'📦 Пластик проти картону', s3h2:'Чому упаковка', s3h2em:'має вирішальне значення',
+    s3p1:'Не всі пакувальні матеріали однакові. Між пластиковими контейнерами та паперовою упаковкою — величезна різниця.',
+    badh:'🚫 Пластиковий контейнер / плівка',
+    bad1:'Виділяє фталати, BPA та гормоноруйнівні речовини в жирну їжу',
+    bad2:'Різко прискорюється при нагріванні — мікрохвильова піч особливо небезпечна',
+    bad3:'Пластик «без BPA» часто містить BPS та BPF — однаково шкідливі',
+    bad4:'Розпадається на дрібніші, токсичніші частинки з часом',
+    bad5:'Потрапляє в природу, забруднює ґрунт та питну воду',
+    goodh:'✅ Картонна упаковка',
+    good1:'Жодних хімічних пластифікаторів, що можуть потрапити в їжу',
+    good2:'Інертний матеріал — не реагує з жирами чи кислотами в їжі',
+    good3:'Біорозкладна — розкладається природно, не стаючи мікропластиком',
+    good4:'Тримає їжу холодною і свіжою без хімічного впливу',
+    good5:'Безпечно для вас і для довкілля',
+    s3hl:'<strong>Важливо знати:</strong> Багато служб доставки їжі використовують пластикові контейнери, бо вони дешевші та «багаторазові». Але «багаторазовий» означає, що пластик поступово руйнується — і з кожним використанням виділяє більше мікропластику в їжу. Ми обрали картон з першого дня — не тому що це легко, а тому що це правильно.',
+    s4tag:'🧬 Що каже наука', s4h2:'Що виявили', s4h2em:'вчені',
+    s4p1:'Це не припущення. Це рецензовані дослідження, опубліковані в найавторитетніших медичних журналах світу.',
+    r1h:'Мікропластик у стінках артерій пов\'язаний із 4,5-кратно вищим ризиком серцево-судинних захворювань', r1p:'Пацієнти з виявленим мікропластиком у стінках артерій мали значно вищий ризик серцевого нападу, інсульту та передчасної смерті.',
+    r2h:'Мозок людини містить у 11 разів більше пластику, ніж 20 років тому', r2p:'Аналіз мозкової тканини при розтинах виявив тривожне зростання концентрації пластику за останні два десятиліття.',
+    r3h:'Їжа в пластикових контейнерах поглинає фталати протягом 30 хвилин', r3p:'Жирна їжа в контакті зі стандартними пластиковими контейнерами при кімнатній температурі демонструвала значний хімічний перенос вже через півгодини.',
+    r4h:'Мікропластик виявлено в крові 77% здорових дорослих', r4p:'Перше дослідження, яке задокументувало мікропластик у системі кровообігу людини, включаючи ПЕТ з пластикових пляшок та контейнерів.',
+    r5h:'Пластикові частинки виявлено в грудному молоці та плаценті', r5p:'Мікропластик знайдено у 100% протестованих зразків плаценти та в грудному молоці матерів, які ніколи не працювали з пластиком.',
+    r6h:'Забруднення їжі пластиком — глобальна криза громадського здоров\'я', r6p:'ВООЗ класифікувала вплив мікропластику через їжу як пріоритетний глобальний фактор ризику та закликала до негайного регулювання пластикової упаковки.',
+    s5tag:'🌿 Що ми робимо', s5h2:'Наша відданість', s5h2em:'чистій їжі',
+    s5p1:'Ми створили Kokkens Takeout Meal з однією ідеєю: їжа повинна живити, а не шкодити. Це не маркетинговий трюк. Це фундаментальне рішення, прийняте з першого дня.',
+    s5hl:'<strong>Жодних пластикових контейнерів. Жодної пластикової плівки. Жодного мікропластику.</strong> Усі страви доставляються в гігієнічних картонних контейнерах. Картон інертний — не реагує хімічно з їжею, нічого не виділяє і природно розкладається після використання.',
+    s5p2:'Ми розуміємо, що це коштує трохи більше. Пластикові контейнери дешевші у виробництві. Але ми вважаємо, що ви заслуговуєте знати, що ваша упаковка робить з їжею — і ми обираємо захист вашого здоров\'я.',
+    s5p3:'<strong>Замовляючи Kokkens Kasse, ви можете бути впевнені, що:</strong>',
+    c1h:'Їжа ніколи не торкається пластику', c1p:'Від кухні шефа до вашої двері — їжа контактує лише з картонною упаковкою. Жодних пластикових контейнерів, плівки чи пакетів.',
+    c2h:'Свіжі інгредієнти без пластикової упаковки', c2p:'Ми готуємо все з нуля зі свіжих інгредієнтів — жодних напівфабрикатів, що тижнями лежать у пластикових пакетах.',
+    c3h:'Доставка в той же день — не зберігання в пластику', c3p:'Їжа готується і доставляється в той же день. Вам не доведеться їсти страву, що три дні пролежала в пластиковому контейнері в холодильнику.',
+    c4h:'Добре і для довкілля', c4p:'Картонна упаковка розкладається природно. Вона не потрапляє в океан, не стає мікропластиком у ґрунті і не забруднює джерела питної води.',
+    ctah:'Чиста їжа, доставлена додому.',
+    ctap:'Замовте свій Kokkens Kasse сьогодні — <strong>14 свіжих страв</strong> у гігієнічній картонній упаковці, доставлених до вашої двері в Стрьоммені. Без пластику. Без компромісів.',
+    ctabtn:'Замовити зараз →',
+    footer:'Без мікропластику · Картонна упаковка · Стрьоммен, Норвегія'
+  },
+
+  so: {
+    back:'Dib u noqo', kicker:'🔬 Sayniska cuntooyinkaaga',
+    h1:'Baastik yar cuntada.', h1em:'Waxa aan cidna ka hadlin.',
+    sub:'Sanad kasta qofka caadiga ahu wuxuu cunaa qiyaastii 5 garaam oo baastik yar ah — gaadiidka xaaladda kaarka deynta. Badan ka mid ah waxay ka timaadaa xirmada cuntada.',
+    warning:'Taasi waa sababta Kokkens Takeout Meal aysan abid u isticmaalin <strong>baastik</strong> cuntooyinkaaga agtooda.',
+    stat1:'Baastik yar la cunaa toddobaadkiiba qofkiiba — miisaanka kaarka deynta',
+    stat2:'Muunada dhiigga dadka waaweyn ee caafimaadka qaba oo ka koobnaa qadarka la cabiri karo ee baastik yar',
+    stat3:'Xabadood baastik yar oo ku jira hal liitar biyo galaanyo — 20× ka badan biyaha tuubada',
+    s1tag:'📌 Maxay tahay baastik yar?', s1h2:'Qaybaha aan la arki karin', s1h2em:'ee baastik jidhaafkaaga ku jira',
+    s1p1:'Baastik yar waa xubno baastik ah oo ka yar 5 mm. Kuwo badan ayaa aad u yar oo indho-la\'aanta aan la arki karin — loo yaqaan nanoplastic. Waxay ka samaysmaan marka walxaha baastik ah ee waaweyn si tartiib ah u kala jabaan, laakiin sidoo kale si toos ah ayay uga soo daataan xirmada baastik ee cuntada gudaheeda.',
+    s1p2:'<strong>Arrintu ma aha su\'aal in ay joogaan.</strong> Baastik yar waxaa laga helay dhiigga aadanaha, sambabada, caanaha naaska, placenta, unugyada maskaxda iyo xitaa dhallaanka aan weli dhalan. Waxaa laga helay in ka badan 90% ee muunada biyaha cabbiritaanka ee caalamkiiba la tijaabiyay.',
+    s2tag:'🔄 Sida ay u dhacdo', s2h2:'Sida baastiku ugu soo gasho', s2h2em:'cuntadaada',
+    s2p1:'Dadka badan waxay u maleynayaan in baastik yar keliya yahay dhibaato cuntada badda laga helo. Xaqiiqdu waa in ay ku dhacdo jikadaada, qaboojiyahaaga — iyo gaadhsiinta cuntada aad hesho.',
+    p1h:'Kulaylku wuu dedejiyaa soo-saarka', p1p:'Marka baastiku kulaylka la saaro dhaqdhaqaaqa molekiuladu wuu kordhaa. Kiimikooyin sida BPA, phthalates iyo plasticizers ayaa baastika ka kala soocma oo cuntada ku wareegma.',
+    p2h:'Dufanka iyo aashitadu wax badan ayay soo saaraan', p2p:'Cuntada dufanka badan sida hilib, kalluun iyo sawsas ayaa gaar ahaan u nugul. Dufanku waa xal aad u fiican xiriirka baastik ee si firfircoon uga soo saara xirmada.',
+    p3h:'Waqtigu wuu xoojiyaa saamaynta', p3p:'Waqti dheer ee cuntadu baastika la xiriirto, wax dheeraad ah ayaa la nuugaa. Cuntada sanduuqyada baastik ah — xitaa baastikka \'BPA-free\' ah — waxay sii daayaan kiimikooyin la cabiri karo dhowr saacadood gudahood.',
+    p4h:'Nanoplastic waxay gudbaa xuubka unugyada', p4p:'Xubnaaha ugu yar ayaa xuubka unugyada iyo xitaa xuubka dhiig-maskaxeed gudbi kara. Cilmi-baarista 2024-kii waxay muujisay khatarta wadnaha ee 4.5× sare u ah marka baastik yar ay ku jiraan derbiga dhallaanada.',
+    dstat1:'Khatarta aad u sareeya ee xanuunka wadnaha marka baastik yar ay ku jiraan derbiga dhallaanada (NEJM 2024)',
+    dstat2:'Placenta-yada la tijaabiyay ee dhallaanka cusub oo ka koobnaa baastik yar (2023)',
+    dstat3:'Baastik yar oo dheeraad ah oo maskaxda aadanaha ku jira haddeer marka loo eego 20 sano ka hor (2024)',
+    s3tag:'📦 Baastik vs. carboard', s3h2:'Sababta xirmadu', s3h2em:'ay muhiim u tahay',
+    s3p1:'Dhammaan waxyaabaha xirmada ah ma siman yihiin. Farqi weyn ayaa u dhaxeeya sanduuqyada baastik ah iyo xirmada warqadda ah.',
+    badh:'🚫 Sanduuqa baastik / xariga baastik',
+    bad1:'Waxay sii daayaa phthalates, BPA iyo kiimikooyin hormone-disrupting ah ee cuntada dufanka badan',
+    bad2:'Aad ayuu u dedejiyaa kulaylka — microwave-ka ayaa si gaar ah u xun',
+    bad3:'Baastikka \'BPA-free\' ah badanaa wuxuu ka kooban yahay BPS iyo BPF — isla qadar xun',
+    bad4:'Waxay u jabaan xubno yar, sun badan oo waqti la soco',
+    bad5:'Waxay ku dhammaadaa dabiicada, waxay wasakhaysaa dhulka beerta iyo biyaha cabbiritaanka',
+    goodh:'✅ Xirmada carboard-ka',
+    good1:'Kiimikooyin plasticizer ah oo cuntada ku wareegi kara ma jiraan',
+    good2:'Maaddo inert ah — kuma falceliso dufanka ama aashitada cuntada',
+    good3:'Waxay si dabiici ah u burburaan — way baaba\'daa dabiiciga ahaan',
+    good4:'Waxay cuntada qabow iyo cusub u hayaa kiimikooyin aan lahayn',
+    good5:'Kuu ammaan, deegaankana ammaan',
+    s3hl:'<strong>Muhiim:</strong> Adeegyada badan ee gaadhsiinta cuntada ayaa adeegsada sanduuqyada baastik ah maxaa yeelay waa kheyraar. Laakiin baastikka \'dib loo isticmaali karo\' si tartiib ah ayuu u jabaa oo gaadhsiinta kasta wax badan ayuu ka sii daayaa. Annagu carboard-ka ayaan dooranay maalinta koowaad — maahan sababtoo ah waa fudud, laakiin sababtoo ah waa sax.',
+    s4tag:'🧬 Cilmi-baarista ayaa leh', s4h2:'Waxa sayniska', s4h2em:'la ogaaday',
+    s4p1:'Tani ma aha mala-awaal. Waa cilmi-baaris la dib-u-eegay oo lagu daabacay joornaalada caafimaadka ee ugu horreeya adduunka.',
+    r1h:'Baastik yar oo ku jira derbiga dhallaanada ee xiriirsan 4.5× khatarta joogtada ah ee wadnaha', r1p:'Dadka laga helay baastik yar oo la ogaan karo derbiga dhallaanada waxay lahaayeen khatarta aad u sareeya ee xanuunka wadnaha, paralysis iyo dhimasho xilligeedii hore.',
+    r2h:'Maskaxda aadanaha waxay ka kooban tahay 11× baastik ka badan 20 sano ka hor', r2p:'Falanqaynta unugyada maskaxda ee falanqaynta geerida ayaa muujisay kororka bahdaadinta ah ee xasaasiyada baastik.',
+    r3h:'Cuntada sanduuqyada baastik ah ku jirta waxay nuugtaa phthalates 30 daqiiqo gudahood', r3p:'Cuntada dufanka badan ee la xiriirta sanduuqyada baastik ee caadiga ah heerkulka qolka waxay muujisay wareejinta kiimikooyin muhiim ah xitaa kala bar saacad ka dib.',
+    r4h:'Baastik yar waxaa laga helay dhiigga 77% ee dadka waaweyn ee caafimaadka qaba', r4p:'Daraasaddii ugu horraysay ee diiwaangelisay baastik yar wareega dhiigga aadanaha — oo ay ku jirto PET ka timid boolalka baastik iyo weelasha cuntada.',
+    r5h:'Xubno baastik ah oo laga helay caanaha naaska iyo placenta', r5p:'Baastik yar waxaa laga helay 100% muunada placenta ee la tijaabiyay, iyo caanaha naaska ee hooyooyinka aan weligood la shaqayn baastik.',
+    r6h:'Wasakhowga baastik ee cuntada waa dhibaato caafimaad oo caalami ah', r6p:'WHO waxay kala saarisay baastik yar ee cuntada oo saamaynta ugu muhiimsan ee khatarta caalamiga ah, waxayna u baaqday sharci deg-deg ah oo ku saabsan xirmada baastik.',
+    s5tag:'🌿 Waxa aannu samaynno', s5h2:'Ballanqaadkayaga', s5h2em:'cuntada nadiifka ah',
+    s5p1:'Waxaan bilownay Kokkens Takeout Meal fikrad keliya: cuntadu waa inay nafaqaysaa, khasaaro ma yeelan. Taasi ma aha xayeysiis. Waa go\'aan aasaasi ah oo aan ka gaadhay maalinta koowaad.',
+    s5hl:'<strong>Sanduuqyo baastik ma leh. Xarig baastik ma leh. Baastik yar ma leh.</strong> Dhammaan cuntooyinku waxay ku gaadhaan weelasha carboard-ka nadiifka ah. Carboard-ku waa inert — kuma falceliso kiimikooyin cuntada, waxba kama sii daayaan, oo dabiici ah ayuu u burburaa kadib isticmaalka.',
+    s5p2:'Waxaan fahamnaa in tani wax ka badan ku kacdo. Sanduuqyada baastik ah waa kheyraar. Laakiin waxaan aaminnahay in aad u mudan tahay inaad garanayso waxa xirmadaadu cuntadaada ku sameynayso — waana dooranaa xifaadhinta caafimaadkaaga.',
+    s5p3:'<strong>Marka aad dalbanayso Kokkens Kasse, waxaad ku kalsoonaanaysaa in:</strong>',
+    c1h:'Cuntadu weligeed ma taabato baastik', c1p:'Jikada aashparka ilaa albaabkaaga — cuntadu waxay kaliya la xiriirtaa xirmada carboard-ka. Sanduuqyo baastik, xarig baastik ama bac baastik ma leh.',
+    c2h:'Cuntooyin cusub oo aan lahayn xirmo baastik', c2p:'Wax walba waxaan ka diyaarinnaa bilowga oo leh cuntooyin cusub — ma leh walxo la diyaariyay horeba oo todobaadyo ku jiray xirmooyinka baastik.',
+    c3h:'La geeyaa degdeg — lama kaydin sanduuqyada baastik', c3p:'Cuntada waxaa lagu diyaariyaa oo la geeyaa maalintaas. Cidna uma baahna inay cunto cunaan oo saddex maalmood sanduuqa baastik ee qaboojiyaha ku jirtay.',
+    c4h:'Deegaankana waa fiican tahay', c4p:'Xirmada carboard-ka si dabiici ah ayay u burburaa. Badda kuma gadhayso, dhulka beerta kuma noqoto baastik yar, mana wasakhayso ilaha biyaha cabbiritaanka.',
+    ctah:'Cunto nadiif ah, gurigaaga la keenay.',
+    ctap:'Dalbo Kokkens Kasse-kaaga maanta — <strong>14 cuntooyiin cusub</strong> oo ku xidban xirmo carboard ah oo nadiif ah, albaabkaaga Strømmen laga keenayo. Baastik la\'aan. Heshiis la\'aan.',
+    ctabtn:'Hada u dalbo →',
+    footer:'Baastik yar la\'aan · Xirmo carboard · Strømmen, Noorweey'
+  },
+
+  ar: {
+    back:'رجوع', kicker:'🔬 العلم وراء طعامك',
+    h1:'البلاستيك الدقيق في الطعام.', h1em:'ما لا يتحدث عنه أحد.',
+    sub:'يستهلك الإنسان العادي كل عام حوالي 5 غرامات من البلاستيك الدقيق — ما يعادل وزن بطاقة ائتمان. كثير منه يأتي من عبوات الطعام.',
+    warning:'هذا هو السبب في أن Kokkens Takeout Meal <strong>لا تستخدم أبداً البلاستيك</strong> حول طعامك.',
+    stat1:'من البلاستيك الدقيق يُستهلك أسبوعياً لكل شخص — يساوي وزن بطاقة ائتمان',
+    stat2:'من عينات دم البالغين الأصحاء احتوت على كميات قابلة للقياس من البلاستيك الدقيق',
+    stat3:'جسيم بلاستيك دقيق في لتر واحد من المياه المعبأة — أكثر بـ 20 مرة من مياه الصنبور',
+    s1tag:'📌 ما هو البلاستيك الدقيق؟', s1h2:'جسيمات غير مرئية', s1h2em:'من البلاستيك داخل جسمك',
+    s1p1:'البلاستيك الدقيق هو جسيمات بلاستيكية أصغر من 5 ملم. كثير منها صغير جداً لدرجة أنه لا يُرى بالعين المجردة — ويُسمى النانوبلاستيك. تتشكل عند تحلل الأجسام البلاستيكية الكبيرة، لكنها تتسرب أيضاً مباشرة من العبوات البلاستيكية إلى الطعام.',
+    s1p2:'<strong>السؤال ليس هل هي موجودة.</strong> لقد وُجد البلاستيك الدقيق في دم الإنسان، والرئتين، وحليب الأم، والمشيمة، وأنسجة المخ، وحتى في الأجنة. وُجد في أكثر من 90% من عينات مياه الشرب المختبرة حول العالم.',
+    s2tag:'🔄 كيف يحدث ذلك', s2h2:'كيف يتسرب البلاستيك', s2h2em:'إلى طعامك',
+    s2p1:'يعتقد معظم الناس أن البلاستيك الدقيق مشكلة الأطعمة البحرية فقط. الحقيقة أن ذلك يحدث في مطبخك، في ثلاجتك — وفي الطعام الذي تستلمه.',
+    p1h:'الحرارة تُسرّع الاستخلاص', p1p:'عند تعرض البلاستيك للحرارة — حتى درجة حرارة الغرفة مع الوقت — تزداد الحركة الجزيئية. مواد كيميائية كـBPA والفثالات والملدنات تنفصل عن البلاستيك وتنتقل إلى الطعام.',
+    p2h:'الدهون والأحماض تستخلص أكثر', p2p:'الأطعمة الدهنية كاللحوم والأسماك والصلصات أكثر عرضة. الدهن مذيب ممتاز للمركبات البلاستيكية يسحبها بفاعلية من العبوة.',
+    p3h:'الوقت يُضخّم التأثير', p3p:'كلما طال تلامس الطعام مع البلاستيك، زاد ما يُمتص. الطعام في حاويات بلاستيكية — حتى البلاستيك "الخالي من BPA" — يطلق مواد كيميائية قابلة للقياس خلال ساعات.',
+    p4h:'النانوبلاستيك يخترق أغشية الخلايا', p4p:'أصغر الجسيمات يمكنها اختراق أغشية الخلايا وحتى الحاجز الدموي الدماغي. أظهرت دراسة 2024 خطراً أعلى بـ4.5 مرة للنوبة القلبية عند وجود بلاستيك دقيق في جدران الشرايين.',
+    dstat1:'خطر أعلى للنوبة القلبية عند وجود بلاستيك دقيق في جدران الشرايين (NEJM 2024)',
+    dstat2:'من المشيمات المختبرة لحديثي الولادة احتوت على بلاستيك دقيق (2023)',
+    dstat3:'بلاستيك دقيق أكثر في دماغ الإنسان الآن مقارنة بما كان قبل 20 عاماً (2024)',
+    s3tag:'📦 البلاستيك مقابل الكرتون', s3h2:'لماذا العبوة', s3h2em:'تعني كل شيء',
+    s3p1:'ليست جميع مواد التعبئة متساوية. هناك فرق هائل بين الحاويات البلاستيكية — حتى تلك التي تُسوَّق كـ"آمنة" — والعبوات الورقية.',
+    badh:'🚫 حاوية بلاستيكية / غلاف بلاستيكي',
+    bad1:'تطلق الفثالات وBPA والمواد المخلّة بالهرمونات في الأطعمة الدهنية',
+    bad2:'يتسارع بشكل كبير مع الحرارة — الميكروويف خطير بشكل خاص',
+    bad3:'البلاستيك "الخالي من BPA" كثيراً ما يحتوي على BPS وBPF — بنفس الضرر',
+    bad4:'يتحلل إلى جسيمات أصغر وأكثر سمية مع الوقت',
+    bad5:'ينتهي في الطبيعة، يلوث التربة الزراعية ومياه الشرب',
+    goodh:'✅ عبوة كرتونية',
+    good1:'لا ملدنات كيميائية يمكن أن تنتقل إلى الطعام',
+    good2:'مادة خاملة — لا تتفاعل مع الدهون أو الأحماض في الطعام',
+    good3:'قابلة للتحلل البيولوجي — تتحلل طبيعياً دون أن تصبح بلاستيكاً دقيقاً',
+    good4:'تحافظ على الطعام بارداً وطازجاً دون تأثير كيميائي',
+    good5:'آمن لك، آمن للبيئة',
+    s3hl:'<strong>مهم:</strong> تستخدم كثير من خدمات توصيل الطعام حاويات بلاستيكية لأنها أرخص وقابلة لإعادة الاستخدام. لكن "إعادة الاستخدام" تعني أن البلاستيك يتدهور تدريجياً — ويطلق بلاستيكاً دقيقاً أكثر في الطعام مع كل استخدام. اخترنا الكرتون من اليوم الأول، ليس لأنه سهل، بل لأنه صحيح.',
+    s4tag:'🧬 ما تقوله الأبحاث', s4h2:'ما اكتشفه', s4h2em:'العلم',
+    s4p1:'هذا ليس تكهناً. إنه بحث علمي محكّم نُشر في أرقى المجلات الطبية في العالم.',
+    r1h:'البلاستيك الدقيق في جدران الشرايين مرتبط بخطر أعلى بـ4.5 مرة للأمراض القلبية', r1p:'المرضى الذين وُجد لديهم بلاستيك دقيق في جدران الشرايين كانوا أكثر عرضة بشكل دراماتيكي للنوبات القلبية والسكتة الدماغية والوفاة المبكرة.',
+    r2h:'دماغ الإنسان يحتوي على 11 مرة بلاستيك أكثر مما كان قبل 20 عاماً', r2p:'كشف تحليل أنسجة الدماغ من تشريح الجثث عن زيادة مقلقة في تركيز البلاستيك خلال العقدين الماضيين.',
+    r3h:'الطعام في حاويات بلاستيكية يمتص الفثالات خلال 30 دقيقة', r3p:'أظهرت الأطعمة الدهنية التي تلامست مع حاويات بلاستيكية قياسية في درجة حرارة الغرفة نقلاً كيميائياً ملحوظاً بعد نصف ساعة فقط.',
+    r4h:'البلاستيك الدقيق وُجد في دم 77% من البالغين الأصحاء المختبرين', r4p:'أول دراسة توثق البلاستيك الدقيق في الدورة الدموية البشرية — بما فيها PET من زجاجات البلاستيك وحاويات الطعام.',
+    r5h:'جسيمات بلاستيكية اكتُشفت في حليب الأم والمشيمة', r5p:'وُجد البلاستيك الدقيق في 100% من عينات المشيمة المختبرة وفي حليب الأم من أمهات لم يعملن أبداً مع البلاستيك.',
+    r6h:'تلوث الطعام بالبلاستيك أزمة صحة عامة عالمية', r6p:'صنّفت منظمة الصحة العالمية التعرض للبلاستيك الدقيق عبر الطعام كعامل خطر عالمي ذي أولوية وطالبت بتنظيم فوري لعبوات البلاستيك.',
+    s5tag:'🌿 ما نفعله', s5h2:'التزامنا بـ', s5h2em:'الطعام النظيف',
+    s5p1:'أسسنا Kokkens Takeout Meal بفكرة واحدة: الطعام يجب أن يغذي، لا يضر. هذه ليست حيلة تسويقية. إنه قرار أساسي اتخذناه منذ اليوم الأول.',
+    s5hl:'<strong>لا حاويات بلاستيكية. لا غلاف بلاستيكي. لا بلاستيك دقيق.</strong> جميع الوجبات تُسلَّم في حاويات كرتونية صحية. الكرتون خامل — لا يتفاعل كيميائياً مع الطعام، ولا يطلق شيئاً في المحتوى، ويتحلل طبيعياً بعد الاستخدام.',
+    s5p2:'نحن نفهم أن هذا يكلف أكثر قليلاً. الحاويات البلاستيكية أرخص في الإنتاج. لكننا نؤمن بأنك تستحق أن تعرف ما تفعله عبوتك بطعامك — ونختار حماية صحتك.',
+    s5p3:'<strong>عند طلب Kokkens Kasse، يمكنك الاطمئنان إلى أن:</strong>',
+    c1h:'الطعام لا يلمس البلاستيك أبداً', c1p:'من مطبخ الشيف إلى بابك — الطعام يتلامس فقط مع التغليف الكرتوني. لا حاويات بلاستيكية، لا غلاف، لا أكياس بلاستيكية.',
+    c2h:'مكونات طازجة بدون تغليف بلاستيكي', c2p:'نحضّر كل شيء من الصفر بمكونات طازجة — لا منتجات معبأة مسبقاً قضت أسابيع في أكياس بلاستيكية.',
+    c3h:'توصيل سريع — لا تخزين في حاويات بلاستيكية', c3p:'يُحضَّر الطعام ويُسلَّم في نفس اليوم. لن تضطر إلى تناول طعام قضى ثلاثة أيام في حاوية بلاستيكية في الثلاجة يمتص المواد الكيميائية.',
+    c4h:'جيد للبيئة أيضاً', c4p:'التغليف الكرتوني يتحلل طبيعياً. لا ينتهي في المحيط، ولا يصبح بلاستيكاً دقيقاً في التربة، ولا يلوث مصادر مياه الشرب.',
+    ctah:'طعام نظيف، يُوصَّل إلى المنزل.',
+    ctap:'اطلب Kokkens Kasse اليوم — <strong>14 وجبة طازجة</strong> في تغليف كرتوني صحي، تُوصَّل إلى بابك في Strømmen. بدون بلاستيك. بدون تنازلات.',
+    ctabtn:'اطلب الآن →',
+    footer:'بدون بلاستيك دقيق · تغليف كرتوني · ستروممن، النرويج'
+  },
+
+  pl: {
+    back:'Powrót', kicker:'🔬 Nauka stojąca za Twoim jedzeniem',
+    h1:'Mikroplastik w żywności.', h1em:'O czym nikt nie mówi.',
+    sub:'Przeciętny człowiek spożywa rocznie około 5 gramów mikroplastiku — mniej więcej tyle, ile waży karta kredytowa. Większość pochodzi z opakowań naszej żywności.',
+    warning:'To właśnie dlatego Kokkens Takeout Meal <strong>nigdy nie używa plastiku</strong> w kontakcie z Twoim jedzeniem.',
+    stat1:'Mikroplastiku spożywanego tygodniowo na osobę — tyle waży karta kredytowa',
+    stat2:'Próbek krwi zdrowych dorosłych zawierała mierzalne ilości mikroplastiku',
+    stat3:'Cząstek mikroplastiku w jednym litrze wody butelkowanej — 20× więcej niż w kranowej',
+    s1tag:'📌 Czym jest mikroplastik?', s1h2:'Niewidoczne kawałki', s1h2em:'plastiku w Twoim ciele',
+    s1p1:'Mikroplastik to cząstki plastiku mniejsze niż 5 mm. Wiele jest tak małych, że niewidocznych gołym okiem — nazywamy je nanoplastikiem. Powstają gdy większe przedmioty plastikowe ulegają degradacji, ale również bezpośrednio przenikają z plastikowych opakowań do znajdującej się w nich żywności.',
+    s1p2:'<strong>Pytanie nie brzmi, czy tam są.</strong> Mikroplastik znaleziono w ludzkiej krwi, płucach, mleku matki, łożysku, tkance mózgowej i nawet w płodach. Wykryto go w ponad 90% badanych próbek wody pitnej na całym świecie.',
+    s2tag:'🔄 Jak to się dzieje', s2h2:'Jak plastik przenika', s2h2em:'do Twojego jedzenia',
+    s2p1:'Większość ludzi uważa, że mikroplastik to problem tylko owoców morza. Prawda jest taka, że dzieje się to w Twojej kuchni, w Twojej lodówce — i w dostarczanym Ci jedzeniu.',
+    p1h:'Ciepło przyspiesza wymywanie', p1p:'Gdy plastik jest narażony na ciepło — nawet temperaturę pokojową z czasem — wzrasta ruch cząsteczkowy. Substancje chemiczne jak BPA, ftalany i plastyfikatory oddzielają się od struktury plastiku i przenikają do jedzenia.',
+    p2h:'Tłuszcz i kwasy wyciągają więcej', p2p:'Tłuste potrawy jak mięso, ryby i sosy są szczególnie narażone. Tłuszcz jest doskonałym rozpuszczalnikiem dla związków plastikowych i aktywnie wyciąga je z opakowania.',
+    p3h:'Czas wzmacnia efekt', p3p:'Im dłużej żywność ma kontakt z plastikiem, tym więcej jest wchłaniane. Żywność w plastikowych pojemnikach — nawet plastiku "wolnym od BPA" — uwalnia mierzalne ilości substancji chemicznych w ciągu kilku godzin.',
+    p4h:'Nanoplastik przekracza błony komórkowe', p4p:'Najmniejsze cząstki mogą przekraczać błony komórkowe, a nawet barierę krew-mózg. Badanie z 2024 roku wykazało 4,5× wyższe ryzyko zawału serca przy mikroplastiku w ścianach tętnic.',
+    dstat1:'Wyższe ryzyko zawału serca przy mikroplastiku w ścianach tętnic (NEJM 2024)',
+    dstat2:'Przebadanych łożysk noworodków zawierało mikroplastik (2023)',
+    dstat3:'Więcej mikroplastiku w ludzkim mózgu teraz niż 20 lat temu (2024)',
+    s3tag:'📦 Plastik vs. karton', s3h2:'Dlaczego opakowanie', s3h2em:'ma znaczenie absolutne',
+    s3p1:'Nie wszystkie materiały opakowaniowe są sobie równe. Istnieje ogromna różnica między plastikowymi pojemnikami — nawet tymi marketowanymi jako "bezpieczne" — a opakowaniami papierowymi.',
+    badh:'🚫 Plastikowy pojemnik / folia plastikowa',
+    bad1:'Uwalnia ftalany, BPA i substancje zaburzające gospodarkę hormonalną do tłustej żywności',
+    bad2:'Znacznie przyspieszone przez ciepło — kuchenka mikrofalowa jest szczególnie szkodliwa',
+    bad3:'Plastik "wolny od BPA" często zawiera BPS i BPF — równie szkodliwe',
+    bad4:'Rozkłada się na coraz mniejsze, bardziej toksyczne cząstki z czasem',
+    bad5:'Trafia do środowiska, zanieczyszcza glebę rolną i wodę pitną',
+    goodh:'✅ Opakowanie kartonowe',
+    good1:'Żadnych chemicznych plastyfikatorów, które mogą przenikać do żywności',
+    good2:'Materiał obojętny — nie reaguje z tłuszczem ani kwasami w żywności',
+    good3:'Biodegradowalny — rozkłada się naturalnie bez stawania się mikroplastikiem',
+    good4:'Utrzymuje żywność chłodną i świeżą bez oddziaływania chemicznego',
+    good5:'Bezpieczny dla Ciebie, bezpieczny dla środowiska',
+    s3hl:'<strong>Ważne:</strong> Wiele usług dostawczych używa plastikowych pojemników, bo są tańsze i wielokrotnego użytku. Ale "wielokrotny użytek" oznacza, że plastik stopniowo degraduje się — uwalniając więcej mikroplastiku przy każdym użyciu. Wybraliśmy karton od pierwszego dnia, nie dlatego że to łatwe, ale dlatego że to właściwe.',
+    s4tag:'🧬 Co mówi nauka', s4h2:'Co odkryła', s4h2em:'nauka',
+    s4p1:'To nie spekulacje. To recenzowane badania opublikowane w najbardziej prestiżowych medycznych czasopismach świata.',
+    r1h:'Mikroplastik w ścianach tętnic powiązany z 4,5× wyższym ryzykiem sercowo-naczyniowym', r1p:'Pacjenci z wykrywalnym mikroplastikiem w ścianach tętnic mieli dramatycznie wyższe ryzyko zawału serca, udaru i przedwczesnej śmierci w porównaniu z grupą kontrolną.',
+    r2h:'Ludzki mózg zawiera 11× więcej plastiku niż 20 lat temu', r2p:'Analiza tkanki mózgowej z autopsji wykazała alarmujący wzrost stężenia plastiku w ciągu ostatnich dwóch dekad.',
+    r3h:'Żywność w plastikowych pojemnikach pochłania ftalany w ciągu 30 minut', r3p:'Tłuste potrawy w kontakcie ze standardowymi plastikowymi pojemnikami w temperaturze pokojowej wykazały znaczący transfer chemiczny już po pół godzinie.',
+    r4h:'Mikroplastik znaleziono we krwi 77% przebadanych zdrowych dorosłych', r4p:'Pierwsze badanie dokumentujące mikroplastik w krwiobiegu człowieka — w tym PET z plastikowych butelek i pojemników na żywność.',
+    r5h:'Cząstki plastiku wykryte w mleku matki i łożysku', r5p:'Mikroplastik znaleziono w 100% przebadanych próbek łożyska i w mleku matki od matek, które nigdy nie pracowały z plastikiem.',
+    r6h:'Zanieczyszczenie żywności plastikiem to globalny kryzys zdrowia publicznego', r6p:'WHO sklasyfikowała narażenie na mikroplastik przez żywność jako priorytetowy globalny czynnik ryzyka i zażądała natychmiastowej regulacji opakowań plastikowych.',
+    s5tag:'🌿 Co robimy', s5h2:'Nasze zobowiązanie do', s5h2em:'czystej żywności',
+    s5p1:'Założyliśmy Kokkens Takeout Meal z jedną myślą: jedzenie ma żywić, nie szkodzić. To nie chwyt marketingowy. To fundamentalna decyzja podjęta od pierwszego dnia.',
+    s5hl:'<strong>Żadnych plastikowych pojemników. Żadnej folii plastikowej. Żadnego mikroplastiku.</strong> Wszystkie posiłki dostarczane są w higienicznych pojemnikach kartonowych. Karton jest obojętny — nie reaguje chemicznie z jedzeniem, nie uwalnia niczego do zawartości i rozkłada się naturalnie po użyciu.',
+    s5p2:'Rozumiemy, że to kosztuje trochę więcej. Plastikowe pojemniki są tańsze w produkcji. Ale wierzymy, że zasługujesz wiedzieć, co Twoje opakowanie robi z jedzeniem — i wybieramy ochronę Twojego zdrowia.',
+    s5p3:'<strong>Zamawiając Kokkens Kasse, możesz mieć pewność, że:</strong>',
+    c1h:'Jedzenie nigdy nie dotyka plastiku', c1p:'Od kuchni szefa kuchni do Twoich drzwi — jedzenie ma kontakt wyłącznie z opakowaniem kartonowym. Żadnych plastikowych pojemników, folii ani torebek.',
+    c2h:'Świeże składniki bez plastikowego opakowania', c2p:'Wszystko przygotowujemy od podstaw ze świeżych składników — żadnych gotowych produktów leżących tygodniami w plastikowych opakowaniach.',
+    c3h:'Dostawa tego samego dnia — nie przechowywanie w plastiku', c3p:'Jedzenie jest przygotowywane i dostarczane tego samego dnia. Nie musisz jeść potrawy, która trzy dni leżała w plastikowym pojemniku w lodówce wchłaniając substancje chemiczne.',
+    c4h:'Dobre też dla środowiska', c4p:'Opakowanie kartonowe rozkłada się naturalnie. Nie trafia do oceanu, nie staje się mikroplastikiem w glebie rolnej i nie zanieczyszcza źródeł wody pitnej.',
+    ctah:'Czyste jedzenie, dostarczone do domu.',
+    ctap:'Zamów swój Kokkens Kasse już dziś — <strong>14 świeżych posiłków</strong> w higienicznym opakowaniu kartonowym, dostarczonych pod Twoje drzwi w Strømmen. Bez plastiku. Bez kompromisów.',
+    ctabtn:'Zamów teraz →',
+    footer:'Bez mikroplastiku · Opakowanie kartonowe · Strømmen, Norwegia'
+  }
+};
 </script>
 </body>
 </html>
