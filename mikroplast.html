@@ -435,6 +435,10 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// ── Language switcher ──
+const flags  = { no:'🇳🇴', en:'🇬🇧', uk:'🇺🇦', so:'🇸🇴', ar:'🇸🇦', pl:'🇵🇱' };
+const labels = { no:'NO', en:'EN', uk:'UA', so:'SO', ar:'AR', pl:'PL' };
+
 // ── Restore saved language ──
 function restoreLang() {
   const savedLang = localStorage.getItem('kokkens-lang');
@@ -442,10 +446,6 @@ function restoreLang() {
 }
 restoreLang();
 window.addEventListener('pageshow', restoreLang);
-
-// ── Language switcher ──
-const flags  = { no:'🇳🇴', en:'🇬🇧', uk:'🇺🇦', so:'🇸🇴', ar:'🇸🇦', pl:'🇵🇱' };
-const labels = { no:'NO', en:'EN', uk:'UA', so:'SO', ar:'AR', pl:'PL' };
 
 function toggleLang() {
   document.getElementById('langDropdown').classList.toggle('open');
