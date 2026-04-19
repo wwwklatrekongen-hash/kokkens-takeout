@@ -1949,9 +1949,11 @@ let currentLang = 'no';
 // ── Auto year ──
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// ── Restore saved language ──
-const savedLang = localStorage.getItem('kokkens-lang');
-if (savedLang && savedLang !== 'no') setLang(savedLang);
+// ── Restore saved language (also fires on bfcache restore) ──
+window.addEventListener('pageshow', function() {
+  const savedLang = localStorage.getItem('kokkens-lang');
+  if (savedLang && savedLang !== 'no') setLang(savedLang);
+});
 
 // ── Scroll-to-top visibility ──
 const scrollBtn = document.getElementById('scrollTop');
