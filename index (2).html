@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kokkens Takeout Meal — Ukentlige måltidsbokser, Strømmen</title>
+<meta name="google-site-verification" content="googledc27153c267ca4dd" />
+<meta name="description" content="Kokkens Takeout Meal — Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager. Bestill Kokkens Kasse for 1 450 kr. Ingen mikroplast, bare god mat.">
+<meta name="keywords" content="matleveranse Strømmen, ukentlig matkasse, ferdig mat hjemlevering, mealprep Strømmen, kokkens takeout, matlevering Viken, ferdigmat levering">
+<meta property="og:title" content="Kokkens Takeout Meal — Hjemlevering i Strømmen">
+<meta property="og:description" content="2 ferske måltider om dagen, 7 dager — levert til døren din i Strømmen. Bestill Kokkens Kasse for 1 450 kr.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chefsfinest.netlify.app">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="https://chefsfinest.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kokkens Takeout Meal — Hjemlevering i Strømmen">
+<meta name="twitter:description" content="2 ferske måltider om dagen, 7 dager — levert til døren din i Strømmen.">
+<link rel="canonical" href="https://chefsfinest.netlify.app">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23C4522A'/%3E%3Crect x='13' y='21' width='18' height='5' rx='2' fill='%23FAF6F0'/%3E%3Cellipse cx='17' cy='18' rx='5' ry='6' fill='%23FAF6F0'/%3E%3Cellipse cx='22' cy='17' rx='5.5' ry='7' fill='%23fff'/%3E%3Cellipse cx='27' cy='18' rx='5' ry='6' fill='%23FAF6F0'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodDeliveryService",
+  "name": "Kokkens Takeout Meal",
+  "description": "Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.",
+  "url": "https://chefsfinest.netlify.app",
+  "telephone": "",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Strømmen",
+    "postalCode": "2010",
+    "addressCountry": "NO"
+  },
+  "areaServed": [
+    "Strømmen", "Lillestrøm", "Lørenskog", "Skedsmo", "Rælingen"
+  ],
+  "servesCuisine": "Norwegian",
+  "priceRange": "1450 kr per uke",
+  "hasMenu": "https://chefsfinest.netlify.app/#meny",
+  "openingHours": "Mo-Fr 11:00-20:00 Sa 12:00-19:00"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1C1410;
+  --ink2:#4A3728;
+  --paper:#FAF6F0;
+  --card:#FFFFFF;
+  --sage:#4E6651;
+  --sage-light:#D6E5D0;
+  --terra:#C4522A;
+  --terra-pale:#F7E8E2;
+  --butter:#F2C35B;
+  --butter-pale:#FEF8E6;
+  --stroke:#E0D9D0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+.serif{font-family:'DM Serif Display',serif}
+.tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:4px}
+.tag-sage{background:var(--sage-light);color:var(--sage)}
+.tag-terra{background:var(--terra-pale);color:var(--terra)}
+.tag-butter{background:var(--butter-pale);color:#7A5C10}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5px solid var(--stroke);height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-r{display:flex;align-items:center;gap:2rem}
+.nav-link{text-decoration:none;color:var(--ink2);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--terra)}
+.nav-active{color:var(--terra) !important;font-weight:600}
+.nav-btn{background:var(--ink);color:#fff;border:none;border-radius:6px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}
+.nav-btn:hover{background:var(--terra);transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:90vh;display:grid;grid-template-columns:1fr 460px;align-items:stretch;overflow:hidden}
+.hero-left{padding:6rem 5% 6rem 6%;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-left::after{content:'';position:absolute;right:0;top:15%;bottom:15%;width:1.5px;background:var(--stroke)}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.6rem}
+.eyebrow-line{width:32px;height:2px;background:var(--terra)}
+.eyebrow-text{font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--terra)}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,5vw,4.6rem);line-height:1.1;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--terra);display:block}
+.hero-sub{font-size:1.05rem;color:var(--ink2);line-height:1.75;max-width:460px;margin-bottom:2.8rem}
+.cta-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn-fill{background:var(--terra);color:#fff;border:none;border-radius:6px;padding:15px 30px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none;display:inline-block}
+.btn-fill:hover{background:#A8431F;transform:translateY(-2px)}
+.btn-ghost{color:var(--ink);font-size:.9rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s}
+.btn-ghost:hover{color:var(--terra)}
+.hero-badges{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1.5px solid var(--stroke)}
+.badge{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;color:var(--ink2)}
+.badge-icon{width:28px;height:28px;border-radius:6px;background:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+
+/* HERO RIGHT */
+.hero-right{background:var(--ink);display:flex;align-items:center;justify-content:center;padding:3rem 2.5rem;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:rgba(196,82,42,.12)}
+.hero-right::after{content:'';position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:rgba(242,195,91,.08)}
+.box-visual{position:relative;z-index:1;width:100%;max-width:360px}
+.box-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.8rem;margin-bottom:1rem}
+.box-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+.box-card-title{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#fff;line-height:1.25;flex:1}
+.box-badge{background:var(--butter);color:var(--ink);border-radius:8px;padding:6px 12px;font-size:.8rem;font-weight:800;letter-spacing:.04em;text-align:center;flex-shrink:0;line-height:1.3}
+.box-sub-label{font-size:.68rem;color:rgba(255,255,255,.35);margin-bottom:1rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.meal-list{display:flex;flex-direction:column;gap:.55rem}
+.meal-item{display:flex;align-items:center;gap:10px;padding:.55rem .9rem;border-radius:10px;background:rgba(255,255,255,.06);font-size:.85rem;color:rgba(255,255,255,.88);white-space:nowrap}
+.meal-dot{width:9px;height:9px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.meal-gram{margin-left:auto;font-size:.72rem;color:rgba(255,255,255,.38);font-weight:500;padding-left:.5rem}
+.box-divider{height:1px;background:rgba(255,255,255,.08);margin:1.2rem 0}
+.box-stats{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.1rem}
+.box-stat{background:rgba(255,255,255,.06);border-radius:10px;padding:.8rem;text-align:center}
+.box-stat-val{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;line-height:1}
+.box-stat-val.gold{color:var(--butter)}
+.box-stat-lbl{font-size:.68rem;color:rgba(255,255,255,.38);margin-top:4px;font-weight:500}
+.box-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.2rem}
+.box-footer-label{font-size:.78rem;color:rgba(255,255,255,.4);font-weight:400}
+.box-footer-val{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--butter);letter-spacing:-.01em}
+.delivery-chip{display:flex;align-items:center;gap:8px;background:var(--sage);color:#fff;border-radius:50px;padding:9px 18px;font-size:.82rem;font-weight:600;width:fit-content;margin:0 auto}
+
+/* SCROLL MARGIN — prevents navbar covering section headings */
+section{scroll-margin-top:72px}
+
+/* SECTION SHARED */
+.section-head{text-align:center;margin-bottom:4.5rem}
+.section-head .tag{margin-bottom:1rem;display:inline-block}
+.section-head h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,2.9rem);margin-bottom:.9rem;line-height:1.15}
+.section-head p{color:var(--ink2);font-size:1rem;max-width:500px;margin:0 auto;line-height:1.75}
+
+/* PHILOSOPHY */
+.philosophy{padding:7rem 6%;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.philosophy::before{content:'';position:absolute;top:-100px;left:-100px;width:350px;height:350px;border-radius:50%;background:rgba(78,102,81,.15)}
+.philosophy::after{content:'';position:absolute;bottom:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:rgba(242,195,91,.06)}
+.philosophy-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.philosophy-text .tag-sage{background:rgba(78,102,81,.25);color:#8BC49A;margin-bottom:1rem;display:inline-block}
+.philosophy-text h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;margin-bottom:1.2rem;line-height:1.2}
+.philosophy-text p{color:rgba(255,255,255,.65);line-height:1.85;font-size:1rem;margin-bottom:1.5rem}
+.philosophy-values{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.philosophy-value{display:flex;align-items:flex-start;gap:12px}
+.value-icon{width:36px;height:36px;border-radius:8px;background:rgba(78,102,81,.3);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.value-text h5{font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.2rem}
+.value-text p{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.55;margin:0}
+/* COMING SOON PRODUCTS */
+.future-products{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);border-radius:20px;padding:2rem}
+.future-products h4{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--sage);margin-bottom:.4rem}
+.future-products>p{font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.4rem;line-height:1.6}
+.future-items{display:flex;flex-direction:column;gap:.55rem}
+.future-item{display:flex;align-items:center;gap:12px;padding:.75rem 1rem;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);font-size:.88rem;color:rgba(255,255,255,.8);transition:background .2s}
+.future-item:hover{background:rgba(255,255,255,.09)}
+.future-item-icon{font-size:1.1rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:32px;height:32px}
+.future-item-label{flex:1;line-height:1.4}
+.future-soon{font-size:.68rem;color:var(--butter);font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:rgba(242,195,91,.15);padding:4px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.info-btn{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);font-size:.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-family:'DM Sans',sans-serif;user-select:none;transition:all .2s;line-height:1}
+.info-btn:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.35)}
+.info-btn.open{background:var(--butter);color:var(--ink);border-color:var(--butter)}
+.product-tooltip{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease,margin .3s ease;opacity:0;margin-top:0;width:100%;border-radius:12px}
+.product-tooltip.active{max-height:700px;opacity:1;margin-top:.6rem}
+.tt-inner{background:#fff;border-radius:12px;padding:1.2rem 1.3rem;box-shadow:0 8px 32px rgba(28,20,16,.15)}
+.tt-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:.7rem;padding-bottom:.65rem;border-bottom:1.5px solid #f0ebe4}
+.tt-name{font-family:'DM Serif Display',serif;font-size:.95rem;color:#1C1410}
+.tt-badge{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;background:#D6E5D0;color:#3a5e3a;border-radius:4px;padding:3px 8px;white-space:nowrap}
+.tt-desc{font-size:.78rem;color:#6B5540;line-height:1.6;margin-bottom:.8rem}
+.tt-minerals{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.8rem}
+.tt-mineral{background:#FAF6F0;border:1px solid #e8e0d8;border-radius:50px;padding:2px 9px;font-size:.7rem;font-weight:600;color:#4A3728}
+.tt-benefits{display:flex;flex-direction:column;gap:.35rem}
+.tt-benefit{display:flex;align-items:flex-start;gap:7px;font-size:.77rem;color:#4A3728;line-height:1.45}
+.tt-check{width:15px;height:15px;border-radius:50%;background:#D6E5D0;color:#3a5e3a;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* HOW */
+.how{padding:7rem 6%;background:var(--card);border-top:1.5px solid var(--stroke);border-bottom:1.5px solid var(--stroke)}
+.how-inner{max-width:1100px;margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1.5px;background:var(--stroke);z-index:0}
+.step{text-align:center;padding:0 1rem;position:relative;z-index:1}
+.step-num{width:56px;height:56px;border-radius:12px;background:var(--paper);border:1.5px solid var(--stroke);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.4rem;margin:0 auto 1.2rem;color:var(--terra);transition:background .2s,border-color .2s,color .2s}
+.step:hover .step-num{background:var(--terra);border-color:var(--terra);color:#fff}
+.step h4{font-size:1rem;font-weight:600;margin-bottom:.5rem}
+.step p{font-size:.88rem;color:var(--ink2);line-height:1.65}
+
+/* PACKAGES */
+.packages{padding:7rem 6%;background:var(--card)}
+.packages-inner{max-width:1160px;margin:0 auto}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.pkg-card{background:var(--paper);border:1.5px solid var(--stroke);border-radius:20px;padding:2.2rem;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.pkg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--stroke);transition:background .25s;border-radius:20px 20px 0 0}
+.pkg-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(28,20,16,.11);border-color:var(--terra-pale)}
+.pkg-card.featured{border-color:var(--terra);background:var(--card)}
+.pkg-card.featured::before{background:var(--terra)}
+.featured-ribbon{position:absolute;top:16px;right:16px;background:var(--terra);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:50px}
+.pkg-icon{font-size:2.4rem;margin-bottom:1.1rem}
+.pkg-card h3{font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:.4rem}
+.pkg-sub{font-size:.88rem;color:var(--ink2);margin-bottom:1.6rem;line-height:1.6}
+.pkg-meals{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.6rem}
+.pkg-meals li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--ink2);line-height:1.5}
+.pkg-meals li::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:6px}
+.pkg-divider{height:1px;background:var(--stroke);margin:1.4rem 0}
+.pkg-cta{display:block;width:100%;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:14px;font-family:'DM Sans',sans-serif;font-size:.94rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-align:center;text-decoration:none}
+.pkg-cta:hover{background:var(--terra);transform:translateY(-1px)}
+.pkg-card.featured .pkg-cta{background:var(--terra)}
+.pkg-card.featured .pkg-cta:hover{background:#A8431F}
+
+/* SUPERHUMAN DIET */
+.superhuman{padding:7rem 6%;background:var(--paper);border-top:1.5px solid var(--stroke);position:relative;overflow:hidden}
+.superhuman::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(78,102,81,.06) 0%,rgba(242,195,91,.06) 100%);pointer-events:none}
+.superhuman-inner{max-width:1160px;margin:0 auto}
+.superhuman-hero{text-align:center;margin-bottom:4rem;position:relative}
+.superhuman-kicker{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--butter);border-radius:50px;padding:8px 20px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.4rem}
+.superhuman-hero h2{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--ink);line-height:1.1;margin-bottom:1rem}
+.superhuman-hero h2 em{font-style:italic;color:var(--sage)}
+.superhuman-hero p{font-size:1.1rem;color:var(--ink2);max-width:580px;margin:0 auto;line-height:1.75}
+.superhuman-pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-bottom:4rem}
+.pillar{background:var(--card);border:1.5px solid var(--stroke);border-radius:16px;padding:1.8rem 1.6rem;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sage)}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(28,20,16,.1)}
+.pillar-link:hover{border-color:var(--terra) !important}
+.pillar-link:hover::before{background:var(--terra)}
+.pillar-read-more{display:inline-block;margin-top:.6rem;font-size:.75rem;font-weight:600;color:var(--terra);letter-spacing:.03em}
+.dish-pill-link{cursor:pointer;text-decoration:none}
+.dish-pill-link:hover{background:var(--terra-pale);border-color:var(--terra);color:var(--terra)}
+.pillar-icon{font-size:2rem;margin-bottom:.9rem;display:block}
+.pillar h4{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:.5rem;color:var(--ink)}
+.pillar p{font-size:.87rem;color:var(--ink2);line-height:1.65}
+.superhuman-banner{background:var(--ink);border-radius:20px;padding:3rem 3.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.superhuman-banner h3{font-family:'DM Serif Display',serif;font-size:1.8rem;color:#fff;margin-bottom:.6rem}
+.superhuman-banner p{color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7;max-width:540px}
+.superhuman-banner p strong{color:var(--butter)}
+
+/* MENU */
+.menu-section{padding:7rem 6%;background:var(--paper);border-top:1.5px solid var(--stroke)}
+.menu-inner{max-width:1160px;margin:0 auto}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
+.dish-card{border:1.5px solid var(--stroke);border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .3s;background:var(--card);display:flex;flex-direction:column}
+.dish-premium-badge{display:inline-flex;align-items:center;gap:6px;background:var(--butter);color:var(--ink);font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:20px;margin-top:.6rem;width:fit-content}
+.dish-surcharge{font-size:.78rem;color:var(--terra);font-weight:600;margin-top:.5rem;display:flex;align-items:center;gap:5px}
+.dish-surcharge::before{content:'＋';font-weight:800}
+.dish-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(28,20,16,.13)}
+.dish-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:5.5rem;overflow:hidden;position:relative}
+.dish-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(28,20,16,.18))}
+.dish-img img{width:100%;height:100%;object-fit:cover}
+.dish-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.dish-meta{display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;flex-wrap:wrap}
+.dish-body h3{font-family:'DM Serif Display',serif;font-size:1.35rem;margin-bottom:.6rem;line-height:1.2}
+.dish-desc{font-size:.88rem;color:var(--ink2);line-height:1.7;flex:1}
+.dish-footer{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--stroke)}
+.dish-pills{display:flex;flex-direction:column;gap:5px}
+.dish-pill{display:inline-flex;align-items:center;gap:6px;background:var(--paper);border:1px solid var(--stroke);border-radius:50px;padding:4px 10px;font-size:.76rem;font-weight:500;color:var(--ink2);width:fit-content}
+.coming-soon-card{border:1.5px dashed var(--stroke);border-radius:20px;padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;background:var(--card)}
+.coming-soon-card p{font-size:.9rem;color:var(--ink2)}
+.coming-soon-card strong{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--ink)}
+
+/* DELIVERY */
+.delivery{padding:7rem 6%;background:var(--ink);color:#fff;overflow:hidden;position:relative}
+.delivery::before{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;border-radius:50%;background:rgba(196,82,42,.1)}
+.delivery-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.delivery-head .tag-terra{background:rgba(196,82,42,.2);color:#F4845A;margin-bottom:.9rem}
+.delivery-head h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;margin-bottom:.8rem}
+.delivery-head p{color:rgba(255,255,255,.55);line-height:1.75;font-size:1rem;margin-bottom:2.5rem}
+.perks{display:flex;flex-direction:column;gap:1.2rem}
+.perk{display:flex;align-items:flex-start;gap:14px;padding:1.1rem 1.2rem;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04)}
+.perk-icon{width:38px;height:38px;border-radius:8px;background:rgba(196,82,42,.25);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.perk h5{font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.3rem}
+.perk p{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.55}
+.map-box{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);border-radius:16px;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2.5rem}
+.map-box .map-e{font-size:4rem;opacity:.3}
+.map-box h4{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff}
+.map-box p{font-size:.88rem;color:rgba(255,255,255,.45);text-align:center;max-width:240px;line-height:1.6}
+.map-addr{font-size:.82rem;font-weight:600;color:var(--butter);background:rgba(242,195,91,.1);padding:8px 16px;border-radius:6px}
+
+/* MEAL DISTRIBUTION */
+.meal-dist-grid{display:flex;flex-direction:column;gap:.55rem;margin-top:.5rem}
+.meal-dist-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem;border-radius:10px;background:var(--paper);border:1.5px solid var(--stroke);transition:border-color .2s}
+.meal-dist-item:hover{border-color:var(--terra-pale)}
+.meal-dist-premium{border-color:rgba(196,82,42,.25);background:rgba(196,82,42,.03)}
+.meal-dist-info{display:flex;align-items:center;gap:.7rem;flex:1;min-width:0}
+.meal-dist-emoji{font-size:1.4rem;flex-shrink:0}
+.meal-dist-name{font-size:.88rem;font-weight:600;color:var(--ink);white-space:nowrap}
+.meal-dist-price{font-size:.75rem;color:var(--ink2);margin-top:1px}
+.meal-dist-surcharge{color:var(--terra);font-weight:600}
+.meal-dist-counter{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+.meal-dist-counter button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--stroke);background:var(--card);color:var(--ink);font-size:1rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;line-height:1;padding:0}
+.meal-dist-counter button:hover{border-color:var(--terra);color:var(--terra);background:rgba(196,82,42,.06)}
+.meal-dist-counter span{font-size:1rem;font-weight:700;color:var(--ink);min-width:20px;text-align:center}
+.meal-dist-summary{display:flex;align-items:center;justify-content:space-between;margin-top:.8rem;padding:.65rem 1rem;border-radius:10px;background:var(--ink);color:#fff}
+.meal-dist-remaining{font-size:.85rem;color:rgba(255,255,255,.6)}
+#remaining-count{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--butter)}
+.meal-dist-total{font-size:.88rem;color:rgba(255,255,255,.7)}
+.meal-dist-total strong{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--butter);margin-left:.3rem}
+.meal-dist-total.over-budget strong{color:#ff6b6b}
+
+/* ORDER FORM */
+.order-section{padding:7rem 6%;background:var(--paper);border-top:1.5px solid var(--stroke)}
+.order-inner{max-width:680px;margin:0 auto}
+.order-card{background:var(--card);border:1.5px solid var(--stroke);border-radius:20px;padding:3rem 3.5rem}
+.order-form{display:flex;flex-direction:column;gap:1.2rem;margin-top:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.form-group{display:flex;flex-direction:column;gap:.45rem}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--ink);letter-spacing:.03em}
+.form-group input,.form-group select,.form-group textarea{
+  font-family:'DM Sans',sans-serif;font-size:.92rem;
+  border:1.5px solid var(--stroke);border-radius:8px;
+  padding:11px 14px;color:var(--ink);
+  background:var(--paper);
+  transition:border-color .2s,box-shadow .2s;
+  outline:none;width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--terra);
+  box-shadow:0 0 0 3px rgba(196,82,42,.1);
+}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A3728' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-divider{height:1px;background:var(--stroke);margin:.4rem 0}
+.vipps-btn{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  width:100%;background:#FF5B24;color:#fff;
+  border:none;border-radius:10px;padding:16px 24px;
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;
+  cursor:pointer;transition:background .2s,transform .15s;
+  text-decoration:none;margin-top:.4rem;
+  letter-spacing:.01em;
+}
+.vipps-btn:hover{background:#E04810;transform:translateY(-2px)}
+.vipps-logo{font-size:1.3rem;background:#fff;color:#FF5B24;border-radius:6px;padding:2px 7px;font-weight:900;font-size:.85rem;letter-spacing:.02em}
+.order-note{font-size:.78rem;color:var(--ink2);text-align:center;margin-top:.8rem;line-height:1.6}
+.order-note a{color:var(--terra);text-decoration:none}
+
+/* LANGUAGE SWITCHER */
+.lang-switcher{position:relative;display:flex;align-items:center}
+.lang-btn{display:flex;align-items:center;gap:6px;background:transparent;border:1.5px solid var(--stroke);border-radius:6px;padding:7px 12px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;color:var(--ink2);cursor:pointer;transition:border-color .2s,color .2s}
+.lang-btn:hover{border-color:var(--terra);color:var(--terra)}
+.lang-btn .flag{font-size:1.2rem;line-height:1}
+.lang-btn .lang-code{font-size:.82rem;font-weight:700}
+.lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1.5px solid var(--stroke);border-radius:10px;padding:.4rem;min-width:150px;z-index:500;display:none;box-shadow:0 8px 24px rgba(28,20,16,.12)}
+.lang-dropdown.open{display:block}
+.lang-option{display:flex;align-items:center;gap:10px;padding:.55rem .8rem;border-radius:6px;font-size:.88rem;font-weight:500;color:var(--ink2);cursor:pointer;transition:background .15s}
+.lang-option:hover{background:var(--paper)}
+.lang-option.active{background:var(--terra-pale);color:var(--terra);font-weight:600}
+.lang-option .flag{font-size:1.1rem}
+
+.scroll-top{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--terra);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 4px 20px rgba(196,82,42,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:all .3s;z-index:500;line-height:1}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top:hover{background:#A8431F;transform:translateY(-3px)}
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:3.5rem 6% 2rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:.83rem;color:rgba(255,255,255,.4);line-height:1.7;margin-top:.8rem;max-width:220px}
+.footer-col h6{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.footer-col a{display:block;font-size:.88rem;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:.55rem;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-social{display:flex;gap:.7rem;margin-top:1.2rem}
+.social-btn{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.85rem;text-decoration:none;transition:all .2s}
+.social-btn:hover{background:var(--terra);border-color:var(--terra);color:#fff}
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:10px}
+.footer-logo .dot{width:28px;height:28px;border-radius:6px;background:var(--terra);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+@media(max-width:960px){.footer-inner{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:600px){.footer-inner{grid-template-columns:1fr}}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left::after{display:none}
+  .hero-left{padding:4rem 6% 3rem}
+  .hero-right{min-height:340px;padding:2.5rem}
+  .steps{grid-template-columns:1fr 1fr;gap:2rem}
+  .steps::before{display:none}
+  .philosophy-inner{grid-template-columns:1fr}
+  .delivery-inner{grid-template-columns:1fr}
+  .superhuman-banner{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  nav .nav-r .nav-link{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:flex}
+}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;transition:background .2s;background:transparent;border:none}
+.hamburger:hover{background:var(--paper)}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--paper);border-bottom:1.5px solid var(--stroke);flex-direction:column;padding:1rem 6%;gap:.2rem;z-index:199;box-shadow:0 8px 24px rgba(28,20,16,.1)}
+.mobile-menu a{text-decoration:none;color:var(--ink);font-size:1rem;font-weight:500;padding:.75rem 0;border-bottom:1px solid var(--stroke)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--terra)}
+@media(max-width:600px){
+  .hero h1{font-size:2.2rem}
+  .steps{grid-template-columns:1fr}
+  .how,.packages,.menu-section,.delivery,.superhuman{padding:3.5rem 5%}
+  .hero-right{display:none}
+  .hero-left{padding:3rem 6% 3.5rem}
+  .pkg-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .superhuman-pillars{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  nav .nav-btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+      <circle cx="22" cy="22" r="20" fill="none" stroke="#F7E8E2" stroke-width="1" stroke-dasharray="4 3"/>
+      <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+      <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+      <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <rect x="13" y="23" width="18" height="1.5" rx="1" fill="#E0D9D0"/>
+      <line x1="17" y1="27" x2="17" y2="34" stroke="#FAF6F0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="15" y1="27" x2="15" y2="31" stroke="#FAF6F0" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="19" y1="27" x2="19" y2="31" stroke="#FAF6F0" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M15 31 Q17 33 19 31" fill="none" stroke="#FAF6F0" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="27" y1="27" x2="27" y2="34" stroke="#FAF6F0" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M27 27 Q30 30 27 33" fill="#FAF6F0" stroke="none"/>
+      <path d="M19 13 Q18 10 19 8" fill="none" stroke="#F2C35B" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M22 12 Q21 9 22 7" fill="none" stroke="#F2C35B" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M25 13 Q24 10 25 8" fill="none" stroke="#F2C35B" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    Kokkens Takeout Meal
+  </a>
+  <div class="nav-r">
+    <a href="#how" class="nav-link" id="nav-how-txt">Slik fungerer det</a>
+    <a href="#filosofi" class="nav-link" id="nav-filosofi-txt">Filosofi</a>
+    <a href="#superhuman" class="nav-link" id="nav-super-txt">Kokkens Visjon</a>
+    <a href="#pakker" class="nav-link" id="nav-pakker-txt">Pakker</a>
+    <a href="#meny" class="nav-link" id="nav-meny-txt">Meny</a>
+    <a href="#bestill" class="nav-link" id="nav-bestill-txt">Bestill</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">
+        <span class="flag">🇳🇴</span><span class="lang-code">NO</span> ▾
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option active" onclick="setLang('no')"><span class="flag">🇳🇴</span> Norsk</div>
+        <div class="lang-option" onclick="setLang('en')"><span class="flag">🇬🇧</span> English</div>
+        <div class="lang-option" onclick="setLang('uk')"><span class="flag">🇺🇦</span> Українська</div>
+        <div class="lang-option" onclick="setLang('so')"><span class="flag">🇸🇴</span> Somali</div>
+        <div class="lang-option" onclick="setLang('ar')"><span class="flag">🇸🇦</span> العربية</div>
+        <div class="lang-option" onclick="setLang('pl')"><span class="flag">🇵🇱</span> Polski</div>
+      </div>
+    </div>
+    <a href="#bestill" class="nav-btn" id="nav-cta-btn">Bestill nå</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Meny">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how" onclick="closeMobileMenu()" id="mob-how-txt">Slik fungerer det</a>
+  <a href="#filosofi" onclick="closeMobileMenu()" id="mob-filosofi-txt">Filosofi</a>
+  <a href="#superhuman" onclick="closeMobileMenu()" id="mob-super-txt">Kokkens Visjon</a>
+  <a href="#pakker" onclick="closeMobileMenu()" id="mob-pakker-txt">Pakker</a>
+  <a href="#meny" onclick="closeMobileMenu()" id="mob-meny-txt">Meny</a>
+  <a href="#bestill" onclick="closeMobileMenu()" id="mob-bestill-txt" style="color:var(--terra);font-weight:700">Bestill nå →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text" id="hero-eyebrow-txt">Hjemlevering · Strømmen, Norge</span>
+    </div>
+    <h1>
+      <span id="hero-h1-txt">To måltider om dagen,</span><br>
+      <em id="hero-h1-em-txt">levert hjem</em><br>
+      <span id="hero-h1-end-txt">hele uken.</span>
+    </h1>
+    <p class="hero-sub" id="hero-sub-txt">
+      Morgen og kveld — kokkens beste, pakket for hele uken. Ingen handletur. Ingen stress. Bare god mat levert rett til døren din.
+    </p>
+    <div class="cta-row">
+      <a href="#bestill" class="btn-fill" id="hero-btn1-txt">Se pakker →</a>
+      <a href="#meny" class="btn-ghost" id="hero-btn2-txt">Se menyen →</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><div class="badge-icon">📦</div><span id="badge1-txt">14 måltider per uke</span></div>
+      <div class="badge"><div class="badge-icon">🚚</div><span id="badge2-txt">Levering til dør</span></div>
+      <div class="badge" onclick="window.location='mikroplast.html'" style="cursor:pointer" title="Les mer om mikroplast"><div class="badge-icon">🌿</div><span id="badge3-txt">Pappemballasje — ingen mikroplast</span></div>
+      <div class="badge"><div class="badge-icon">💰</div><span id="badge4-txt">1 450 kr/uke</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="box-visual">
+      <div class="box-card">
+        <div class="box-card-header">
+          <span class="box-card-title" id="box-title-txt">Kokkens Kasse<br>7 dager × 2 måltider</span>
+          <span class="box-badge">1 450<br>KR</span>
+        </div>
+        <div class="box-sub-label" id="box-sub-txt">Hvert måltid (daglig × 7)</div>
+        <div class="meal-list">
+          <div class="meal-item">
+            <div class="meal-dot"></div>
+            <span id="meal1-txt">Måltid 1 — Biff / Kylling / Fisk</span>
+            <span class="meal-gram">150g + 250g</span>
+          </div>
+          <div class="meal-item">
+            <div class="meal-dot" style="background:#D6E5D0"></div>
+            <span id="meal2-txt">Måltid 2 — Biff / Kylling / Fisk</span>
+            <span class="meal-gram">150g + 250g</span>
+          </div>
+        </div>
+        <div class="box-divider"></div>
+        <div class="box-stats">
+          <div class="box-stat">
+            <div class="box-stat-val">14</div>
+            <div class="box-stat-lbl" id="box-total-txt">måltider totalt</div>
+          </div>
+          <div class="box-stat">
+            <div class="box-stat-val gold">~104 kr</div>
+            <div class="box-stat-lbl" id="box-per-txt">per måltid</div>
+          </div>
+        </div>
+        <div class="box-footer">
+          <span class="box-footer-label" id="box-footer-label-txt">Hjemlevering inkludert</span>
+          <span class="box-footer-val">1 450 kr/uke</span>
+        </div>
+      </div>
+      <div class="delivery-chip" id="delivery-chip-txt">
+        🚚 Levert til din dør i Strømmen
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="filosofi">
+  <div class="philosophy-inner">
+    <div class="philosophy-text">
+      <span class="tag tag-sage" id="phil-tag-txt">Vår filosofi</span>
+      <h2><span id="phil-h2-1-txt">Vi tror på mat som</span><br><em style="font-style:italic;color:var(--butter)" id="phil-h2-em-txt">gjør deg bra.</em></h2>
+      <p id="phil-p1-txt">Kokkens Takeout Meal ble til med én tanke: at god, næringsrik mat skal være enkelt tilgjengelig for alle — uten at du trenger å bruke timer på kjøkkenet eller i butikken.</p>
+      <p id="phil-p2-txt">Vi bruker ferske råvarer, pappemballasje uten mikroplast, og lager alt med omtanke. Mat er mer enn drivstoff — det er helse, velvære og glede. Det er det vi leverer til døren din.</p>
+      <div class="philosophy-values">
+        <div class="philosophy-value">
+          <div class="value-icon">🌿</div>
+          <div class="value-text">
+            <h5 id="val1-h-txt">Ren mat, rene materialer</h5>
+            <p id="val1-p-txt">Ingen mikroplast, ingen unødvendige tilsetningsstoffer. Bare ekte råvarer i pappemballasje.</p>
+          </div>
+        </div>
+        <div class="philosophy-value">
+          <div class="value-icon">💪</div>
+          <div class="value-text">
+            <h5 id="val2-h-txt">Helse i fokus</h5>
+            <p id="val2-p-txt">Balanserte måltider med riktig protein, karbohydrater og grønnsaker — tilberedt av kokken.</p>
+          </div>
+        </div>
+        <div class="philosophy-value">
+          <div class="value-icon">📍</div>
+          <div class="value-text">
+            <h5 id="val3-h-txt">Lokalt og personlig</h5>
+            <p id="val3-p-txt">Vi er fra Strømmen, vi leverer i Strømmen. Du snakker alltid med oss direkte — ikke en chatbot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="future-products">
+      <h4 id="future-h-txt">🌱 Kommer snart — helsebutikken</h4>
+      <p id="future-p-txt">Vi bygger noe større. Snart lanserer vi et utvalg helseprodukter du kan legge til i din Kokkens Kasse.</p>
+      <div class="future-items">
+        <div class="future-item">
+          <span class="future-item-icon">
+            <svg width="28" height="28" viewBox="0 0 150 220" xmlns="http://www.w3.org/2000/svg">
+              <rect x="22" y="38" width="106" height="10" rx="3" fill="#a8a89e" stroke="#888880" stroke-width="1"/>
+              <line x1="22" y1="41" x2="128" y2="41" stroke="#c4c4bc" stroke-width="1" opacity="0.8"/>
+              <ellipse cx="75" cy="38" rx="53" ry="7" fill="#d4d4cc" stroke="#a0a098" stroke-width="1"/>
+              <ellipse cx="75" cy="36" rx="42" ry="5" fill="#c8c8c0"/>
+              <ellipse cx="75" cy="35" rx="22" ry="3.5" fill="#bcbcb4"/>
+              <ellipse cx="58" cy="33" rx="16" ry="2.5" fill="white" opacity="0.38"/>
+              <path d="M34 48 Q28 56 22 66 L128 66 Q122 56 116 48 Z" fill="#ddecd2" stroke="#b4c8a0" stroke-width="1.2"/>
+              <line x1="31" y1="54" x2="119" y2="54" stroke="#b8d0a0" stroke-width="1" opacity="0.7"/>
+              <line x1="26" y1="60" x2="124" y2="60" stroke="#b8d0a0" stroke-width="1" opacity="0.7"/>
+              <rect x="14" y="66" width="122" height="132" rx="10" fill="#ddecd2" stroke="#b4c8a0" stroke-width="1.5"/>
+              <rect x="20" y="72" width="110" height="120" rx="6" fill="#b5a45e"/>
+              <path d="M20 84 Q42 76 64 84 Q86 92 108 82 Q122 76 130 80 L130 72 L20 72 Z" fill="#c8b86a"/>
+              <path d="M26 106 Q55 99 84 106 Q108 112 124 104" fill="none" stroke="#9e8848" stroke-width="1.2" opacity="0.4"/>
+              <path d="M26 124 Q50 117 80 124 Q108 131 124 122" fill="none" stroke="#9e8848" stroke-width="1" opacity="0.3"/>
+              <rect x="20" y="146" width="110" height="40" rx="4" fill="#2a6448"/>
+              <rect x="20" y="146" width="110" height="3" rx="1.5" fill="#52a070"/>
+              <rect x="20" y="183" width="110" height="3" rx="1.5" fill="#52a070"/>
+              <text x="75" y="161" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#b7e4c7" letter-spacing="1.2">TRUE SEA MOSS</text>
+              <text x="75" y="172" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" fill="#81c995">Sea Moss Gel</text>
+              <rect x="38" y="175" width="74" height="9" rx="4.5" fill="#f2c35b"/>
+              <text x="75" y="182.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" font-weight="700" fill="#2a6448" letter-spacing="1">WILDCRAFTED</text>
+              <rect x="20" y="72" width="7" height="72" rx="3.5" fill="white" opacity="0.15"/>
+              <rect x="20" y="192" width="110" height="6" rx="3" fill="#c4d8b0" opacity="0.45"/>
+            </svg>
+          </span>
+          <span class="future-item-label" id="future1-txt">Sea Moss — naturlig superfood rikt på mineraler</span>
+          <span class="future-soon" id="future-soon-txt">Snart</span>
+          <span class="info-btn" id="btn-seamoss" onclick="toggleInfo('tt-seamoss','btn-seamoss')">i</span>
+        </div>
+        <div class="product-tooltip" id="tt-seamoss">
+          <div class="tt-inner">
+            <div class="tt-header">
+              <span class="tt-name" id="sm-name-txt">Sea Moss</span>
+              <span class="tt-badge" id="sm-badge-txt">🌊 Superfood</span>
+            </div>
+            <p class="tt-desc" id="sm-desc-txt">Sea Moss (Chondrus crispus) er en rød alge fra Atlanterhavet, brukt i hundrevis av år i tradisjonell medisin. Inneholder over 92 av de 102 mineralene kroppen din trenger.</p>
+            <div class="tt-minerals">
+              <span class="tt-mineral" id="sm-m1-txt">Jod</span><span class="tt-mineral" id="sm-m2-txt">Jern</span><span class="tt-mineral" id="sm-m3-txt">Kalsium</span><span class="tt-mineral" id="sm-m4-txt">Magnesium</span><span class="tt-mineral" id="sm-m5-txt">Kalium</span><span class="tt-mineral" id="sm-m6-txt">Sink</span><span class="tt-mineral" id="sm-m7-txt">Folsyre</span><span class="tt-mineral" id="sm-m8-txt">Omega-3</span>
+            </div>
+            <div class="tt-benefits">
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sm-b1-txt">Støtter skjoldbruskkjertelen med naturlig jod</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sm-b2-txt">Styrker immunforsvaret og tarmhelsen</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sm-b3-txt">Gir energi og reduserer tretthet</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sm-b4-txt">Betennelsesdempende og støtter leddene</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sm-b5-txt">Naturlig kilde til kollagen for hud og hår</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="future-item">
+          <span class="future-item-icon">
+            <svg width="22" height="28" viewBox="0 0 100 260" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="50" cy="22" rx="16" ry="20" fill="#181818" stroke="#2e2e2e" stroke-width="1.2"/>
+              <ellipse cx="42" cy="14" rx="6" ry="8" fill="#3a3a3a" opacity="0.55"/>
+              <ellipse cx="40" cy="12" rx="3" ry="4" fill="white" opacity="0.12"/>
+              <rect x="46" y="40" width="8" height="26" rx="4" fill="#222" stroke="#2e2e2e" stroke-width="0.8"/>
+              <rect x="47.5" y="42" width="2.5" height="22" rx="1.2" fill="#444" opacity="0.55"/>
+              <rect x="26" y="64" width="48" height="18" rx="5" fill="#181818" stroke="#2a2a2a" stroke-width="1.2"/>
+              <line x1="26" y1="69" x2="74" y2="69" stroke="#333" stroke-width="1" opacity="0.7"/>
+              <line x1="26" y1="74" x2="74" y2="74" stroke="#333" stroke-width="1" opacity="0.7"/>
+              <line x1="26" y1="79" x2="74" y2="79" stroke="#333" stroke-width="0.7" opacity="0.5"/>
+              <path d="M18 82 Q13 92 10 104 L90 104 Q87 92 82 82 Z" fill="#1a1a1a" stroke="#242424" stroke-width="1"/>
+              <rect x="8" y="104" width="84" height="148" rx="10" fill="#1a1a1a" stroke="#242424" stroke-width="1.2"/>
+              <rect x="12" y="108" width="7" height="100" rx="3.5" fill="white" opacity="0.055"/>
+              <rect x="13" y="116" width="74" height="120" rx="5" fill="#f7f3ee" stroke="#e0d8d0" stroke-width="0.8"/>
+              <rect x="13" y="116" width="74" height="3.5" rx="1.5" fill="#8B3A2A"/>
+              <rect x="13" y="232.5" width="74" height="3.5" rx="1.5" fill="#8B3A2A"/>
+              <text x="23" y="129" font-family="Arial,sans-serif" font-size="5.5" font-weight="700" fill="#8B3A2A">100%</text>
+              <text x="23" y="136" font-family="Arial,sans-serif" font-size="5" fill="#8B3A2A">PURE</text>
+              <text x="77" y="129" text-anchor="end" font-family="Arial,sans-serif" font-size="5" fill="#8B3A2A">SINCE</text>
+              <text x="77" y="136" text-anchor="end" font-family="Arial,sans-serif" font-size="5" fill="#8B3A2A">1889</text>
+              <circle cx="50" cy="146" r="11" fill="none" stroke="#8B3A2A" stroke-width="1.2"/>
+              <path d="M50 152 Q44 146 44 142 Q44 138.5 47.5 138.5 Q49 138.5 50 140 Q51 138.5 52.5 138.5 Q56 138.5 56 142 Q56 146 50 152 Z" fill="#8B3A2A"/>
+              <text x="50" y="165" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1a1a1a" letter-spacing="0.8">SHILAJIT</text>
+              <text x="50" y="175" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#3a3a3a">Liquid Drops</text>
+              <line x1="20" y1="181" x2="80" y2="181" stroke="#d0c8be" stroke-width="0.8"/>
+              <path d="M18 207 L30 186 L42 200 L50 188 L68 207 Z" fill="#8B3A2A" opacity="0.9"/>
+              <path d="M30 186 L26 194 L34 194 Z" fill="#f7f3ee" opacity="0.75"/>
+              <path d="M50 188 L47 195 L53 195 Z" fill="#f7f3ee" opacity="0.65"/>
+              <text x="50" y="219" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" fill="#8B3A2A" letter-spacing="0.5">AYURVEDIC SUPPLEMENT</text>
+              <text x="50" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.5" fill="#999">2 FL OZ (60 ML)</text>
+              <rect x="8" y="244" width="84" height="8" rx="0 0 8 8" fill="#111" opacity="0.85"/>
+            </svg>
+          </span>
+          <span class="future-item-label" id="future4-txt">Shilajit — uralt mineral-resin for energi & vitalitet</span>
+          <span class="future-soon">Snart</span>
+          <span class="info-btn" id="btn-shilajit" onclick="toggleInfo('tt-shilajit','btn-shilajit')">i</span>
+        </div>
+        <div class="product-tooltip" id="tt-shilajit">
+          <div class="tt-inner">
+            <div class="tt-header">
+              <span class="tt-name" id="sh-name-txt">Shilajit</span>
+              <span class="tt-badge" id="sh-badge-txt">⛰️ Ayurvedic</span>
+            </div>
+            <p class="tt-desc" id="sh-desc-txt">Shilajit er en naturlig harpiks som siver ut fra himalayafjellene over tusenvis av år. Dannet av nedbrutt plantemateriale og mineraler, brukt i ayurvedisk medisin i over 3 000 år.</p>
+            <div class="tt-minerals">
+              <span class="tt-mineral" id="sh-m1-txt">Fulvinsyre</span><span class="tt-mineral" id="sh-m2-txt">Jern</span><span class="tt-mineral" id="sh-m3-txt">Sink</span><span class="tt-mineral" id="sh-m4-txt">Magnesium</span><span class="tt-mineral" id="sh-m5-txt">Kobber</span><span class="tt-mineral" id="sh-m6-txt">Selen</span><span class="tt-mineral" id="sh-m7-txt">80+ mineraler</span>
+            </div>
+            <div class="tt-benefits">
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sh-b1-txt">Øker energinivå og utholdenhet naturlig</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sh-b2-txt">Støtter hjernefunksjon og fokus</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sh-b3-txt">Transporterer næringsstoffer inn i cellene via fulvinsyre</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sh-b4-txt">Testosteron og hormonbalanse</span></div>
+              <div class="tt-benefit"><span class="tt-check">✓</span><span id="sh-b5-txt">Antioksidant og anti-aldringseffekter</span></div>
+            </div>
+          </div>
+        </div>
+          <div class="future-item">
+          <span class="future-item-icon">🍵</span>
+          <span class="future-item-label" id="future2-txt">Helsedrikker & urteteer</span>
+          <span class="future-soon">Snart</span>
+        </div>
+        <div class="future-item" style="border-style:dashed;opacity:.55">
+          <span class="future-item-icon">✨</span>
+          <span class="future-item-label" id="future3-txt">Flere helseprodukter på vei...</span>
+          <span class="future-soon">Snart</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPERHUMAN DIET -->
+<section class="superhuman" id="superhuman">
+  <div class="superhuman-inner">
+    <div class="superhuman-hero">
+      <div class="superhuman-kicker">⚡ <span id="super-kicker-txt">Kokkens Visjon</span></div>
+      <h2 id="super-h2-txt">Spis som en <em>maskin bygget for å yte.</em></h2>
+      <p id="super-p-txt">Vi tror ikke på halvhjertet mat. Vi tror på et kosthold som gir deg energi, fokus og styrke — hele dagen, hele uken. Det er filosofien bak hvert eneste måltid vi lager.</p>
+    </div>
+
+    <div class="superhuman-pillars">
+      <div class="pillar">
+        <span class="pillar-icon">🥩</span>
+        <h4 id="sp1-h-txt">Premium protein</h4>
+        <p id="sp1-p-txt">150g høykvalitets protein per måltid — biff, kylling eller fersk laks. Muskler bygges av ekte råvarer, ikke prosessert fyll.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🔥</span>
+        <h4 id="sp2-h-txt">Ren energi</h4>
+        <p id="sp2-p-txt">Komplekse karbohydrater fra potetbåter og søtpotet gir stabil energi uten blodsukkertopper. Drivstoff som varer.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🥦</span>
+        <h4 id="sp3-h-txt">Mikronæring</h4>
+        <p id="sp3-p-txt">250g ferske grønnsaker per måltid. Vitaminer, mineraler og antioksidanter som kroppen din faktisk trenger for å fungere optimalt.</p>
+      </div>
+      <div class="pillar pillar-link" onclick="window.location='mikroplast.html'" style="cursor:pointer">
+        <span class="pillar-icon">🌿</span>
+        <h4 id="sp4-h-txt">Ingen giftstoffer</h4>
+        <p id="sp4-p-txt">Pappemballasje, ikke plast. Ingen mikroplast i maten din. Ren mat i rene beholdere — slik det alltid burde vært.</p>
+        <span class="pillar-read-more">Les mer om mikroplast →</span>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">⛰️</span>
+        <h4 id="sp5-h-txt">Supermat kommer</h4>
+        <p id="sp5-p-txt">Snart lanserer vi Sea Moss, Shilajit og andre naturlige superfoods du kan legge til boksen din. Optimering på neste nivå.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">⏰</span>
+        <h4 id="sp6-h-txt">Konsistens er nøkkelen</h4>
+        <p id="sp6-p-txt">To måltider om dagen, syv dager i uken — levert til din dør. Ingen unnskyldninger, ingen dårlige valg. Bare resultater.</p>
+      </div>
+    </div>
+
+    <div class="superhuman-banner">
+      <div>
+        <h3 id="super-banner-h-txt">Mat er medisin. Velg det beste.</h3>
+        <p id="super-banner-p-txt">Kokkens Kasse er ikke bare takeout — det er et <strong>system for optimal helse</strong>. Ferske råvarer, riktig mengde, levert hjem. Begynn uken riktig.</p>
+      </div>
+      <a href="#bestill" class="btn-fill" id="super-banner-btn-txt" style="white-space:nowrap;flex-shrink:0">Bestill nå →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="section-head">
+      <span class="tag tag-sage" id="how-tag-txt">Slik fungerer det</span>
+      <h2 id="how-h2-txt">Ukentlig mat, null stress.</h2>
+      <p id="how-p-txt">Fra bestilling til middagsbordet ditt — fire enkle steg.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4 id="step1-h-txt">Velg pakke</h4><p id="step1-p-txt">Velg Kokkens Kasse med 14 måltider, prøveboks (6 måltider) eller familiepakke.</p></div>
+      <div class="step"><div class="step-num">2</div><h4 id="step2-h-txt">Kokkens kjøkken lager</h4><p id="step2-p-txt">Alle rettene tilberedes fersk med utvalgte råvarer av våre kokker.</p></div>
+      <div class="step"><div class="step-num">3</div><h4 id="step3-h-txt">Boksen pakkes</h4><p id="step3-p-txt">Alle 14 måltider pakkes trygt og forsvarlig, klare for levering.</p></div>
+      <div class="step"><div class="step-num">4</div><h4 id="step4-h-txt">Vi leverer hjem til deg</h4><p id="step4-p-txt">Ingen henting. Vi kjører rett til din dør i Strømmen-området.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="pakker">
+  <div class="packages-inner">
+    <div class="section-head">
+      <span class="tag tag-terra" id="pkg-tag-txt">Pakker</span>
+      <h2 id="pkg-h2-txt">Velg din Kokkens Kasse</h2>
+      <p id="pkg-p-txt">2 måltider per dag, 7 dager — 14 ferske porsjoner levert til hjemmet ditt.</p>
+      <p id="pkg-custom-txt" style="font-size:.85rem;color:var(--ink2);margin-top:.6rem;display:flex;align-items:center;gap:6px;justify-content:center;flex-wrap:wrap;text-align:center">
+        <span style="background:var(--sage-light);color:var(--sage);border-radius:4px;padding:2px 8px;font-weight:600;font-size:.75rem;flex-shrink:0">TIPS</span>
+        Du velger selv hvilke retter du vil ha — og hvor mange av hver. Fiskesuppen koster 50 kr ekstra per måltid pga. ren kokosmelk uten tilsetningsstoffer.
+      </p>
+    </div>
+    <div class="pkg-grid">
+
+      <div class="pkg-card">
+        <div class="pkg-icon">🥡</div>
+        <h3 id="pkg1-h-txt">Prøveboks</h3>
+        <p class="pkg-sub" id="pkg1-sub-txt">3 dager — 6 måltider. Perfekt for å prøve konseptet.</p>
+        <ul class="pkg-meals">
+          <li id="pkg1-li1-txt">2 måltider per dag i 3 dager</li>
+          <li id="pkg1-li2-txt">150g protein (biff/kylling/fisk) per måltid</li>
+          <li id="pkg1-li3-txt">250g potetbåter m/ søtpotet + 250g grønnsaker per måltid</li>
+          <li id="pkg1-li4-txt">Hjemlevering inkludert</li>
+        </ul>
+        <div class="pkg-divider"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
+          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">725 kr</span>
+          <span style="font-size:.82rem;color:var(--ink2)">~121 kr per måltid</span>
+        </div>
+        <a href="#bestill" class="pkg-cta" id="pkg1-cta-txt">Bestill prøveboks</a>
+      </div>
+
+      <div class="pkg-card featured">
+        <div class="featured-ribbon" id="pkg2-ribbon-txt">Mest populær</div>
+        <div class="pkg-icon">📦</div>
+        <h3 id="pkg2-h-txt">Kokkens Kasse</h3>
+        <p class="pkg-sub" id="pkg2-sub-txt">7 dager — 14 måltider. Hele uken dekket.</p>
+        <ul class="pkg-meals">
+          <li id="pkg2-li1-txt">2 måltider per dag i 7 dager</li>
+          <li id="pkg2-li2-txt">150g protein (biff/kylling/fisk) per måltid</li>
+          <li id="pkg2-li3-txt">250g potetbåter m/ søtpotet + 250g grønnsaker per måltid</li>
+          <li id="pkg2-li4-txt">Hjemlevering til din dør inkludert</li>
+        </ul>
+        <div class="pkg-divider"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
+          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">1 450 kr</span>
+          <span id="pkg2-per-txt" style="font-size:.82rem;color:var(--ink2)">~104 kr per måltid</span>
+        </div>
+        <a href="#bestill" class="pkg-cta" id="pkg2-cta-txt">Bestill Kokkens Kasse</a>
+      </div>
+
+      <div class="pkg-card">
+        <div class="pkg-icon">🏠</div>
+        <h3 id="pkg3-h-txt">Familieboks</h3>
+        <p class="pkg-sub" id="pkg3-sub-txt">7 dager — 14 måltider × 2 porsjoner. For par eller familie.</p>
+        <ul class="pkg-meals">
+          <li id="pkg3-li1-txt">2 måltider × 2 porsjoner per dag — for to personer</li>
+          <li id="pkg3-li2-txt">300g protein (biff/kylling/fisk) per porsjon per måltid</li>
+          <li id="pkg3-li3-txt">500g potetbåter m/ søtpotet + 500g grønnsaker per måltid</li>
+          <li id="pkg3-li4-txt">Hjemlevering til din dør, én samlet kasse</li>
+        </ul>
+        <div class="pkg-divider"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
+          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">2 900 kr</span>
+          <span style="font-size:.82rem;color:var(--ink2)">~104 kr per porsjon</span>
+        </div>
+        <a href="#bestill" class="pkg-cta" id="pkg3-cta-txt">Bestill familieboks</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="meny">
+  <div class="menu-inner">
+    <div class="section-head">
+      <span class="tag tag-butter" id="menu-tag-txt">Menyen</span>
+      <h2 id="menu-h2-txt">Rettene i boksen</h2>
+      <p id="menu-p-txt">Alle retter tilberedt med ferske råvarer, servert i hygieniske pappeske-beholdere — ingen mikroplast, bare god mat.</p>
+    </div>
+    <div class="menu-grid">
+
+      <div class="dish-card">
+        <div class="dish-img" style="background:linear-gradient(135deg,#F2DDD4 0%,#E8C4B0 100%)">🥩</div>
+        <div class="dish-body">
+          <div class="dish-meta">
+            <span class="tag tag-terra" id="d1-tag1-txt">Kjøtt</span>
+            <span class="tag tag-sage" id="d1-tag2-txt">Høy protein</span>
+          </div>
+          <h3 id="d1-h-txt">Kokkens Stolthet</h3>
+          <p class="dish-desc" id="d1-desc-txt">En skikkelig klassiker fra kokkens kjøkken. 150g mørbradbiff — det møreste kuttet — krydret og stekt til saftig perfeksjon. Ledsaget av 250g sprø potetbåter med søtpotet i miksen, pluss 250g dampede grønnsaker. Mettende, næringsrik og laget med stolthet.</p>
+          <div class="dish-footer">
+            <div class="dish-pills">
+              <span class="dish-pill" id="d1-p1-txt">🥩 150g mørbradbiff</span>
+              <span class="dish-pill" id="d1-p2-txt">🥔 250g potetbåter m/ søtpotet</span>
+              <span class="dish-pill" id="d1-p3-txt">🥦 250g grønnsaker</span>
+              <a href="mikroplast.html" class="dish-pill dish-pill-link" id="d1-p4-txt" title="Les om mikroplast">🌿 Pappemballasje · ingen mikroplast ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <div class="dish-img" style="background:linear-gradient(135deg,#D4EDE8 0%,#A8D5CC 100%)">🐟</div>
+        <div class="dish-body">
+          <div class="dish-meta">
+            <span class="tag tag-sage" id="d2-tag1-txt">Sjømat</span>
+            <span class="tag tag-sage" id="d2-tag2-txt">Omega-3 rik</span>
+          </div>
+          <h3 id="d2-h-txt">Havets Beste</h3>
+          <p class="dish-desc" id="d2-desc-txt">Fersk norsk laksefilet på 150g — rik på omega-3 og full av smak. Tilberedt varsomt av kokken for en perfekt, flakende tekstur. Serveres med 250g gylne potetbåter med søtpotet i miksen, pluss 250g dampede grønnsaker. Sunn, smakfull og mettende.</p>
+          <div class="dish-footer">
+            <div class="dish-pills">
+              <span class="dish-pill" id="d2-p1-txt">🐟 150g fersk laks</span>
+              <span class="dish-pill" id="d2-p2-txt">🥔 250g potetbåter m/ søtpotet</span>
+              <span class="dish-pill" id="d2-p3-txt">🥦 250g grønnsaker</span>
+              <a href="mikroplast.html" class="dish-pill dish-pill-link" id="d2-p4-txt" title="Les om mikroplast">🌿 Pappemballasje · ingen mikroplast ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <div class="dish-img" style="background:linear-gradient(135deg,#FFEDAA 0%,#F4C430 60%,#E8A000 100%)">🍗</div>
+        <div class="dish-body">
+          <div class="dish-meta">
+            <span class="tag tag-butter" id="d3-tag1-txt">Kylling</span>
+            <span class="tag tag-terra" id="d3-tag2-txt">Gyllen Favoritt</span>
+          </div>
+          <h3 id="d3-h-txt">Gyllen Favoritt</h3>
+          <p class="dish-desc" id="d3-desc-txt">Saftige, møre kyllingstrips marinert og stekt til gyllen perfeksjon. Serveres med 250g sprø potetbåter, friske epleskiver, en deilig sweet chili saus og mild barnesaus — perfekt for hele familien.</p>
+          <div class="dish-footer">
+            <div class="dish-pills">
+              <span class="dish-pill" id="d3-p1-txt">🍗 150g kyllingstrips · 🍎 Eple</span>
+              <span class="dish-pill" id="d3-p2-txt">🥔 250g sprø potetbåter</span>
+              <span class="dish-pill" id="d3-p4-txt">🌶 Sweet chili · 🍶 Barnesaus</span>
+              <a href="mikroplast.html" class="dish-pill dish-pill-link" id="d3-p5-txt" title="Les om mikroplast">🌿 Pappemballasje · ingen mikroplast ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" style="border-color:var(--butter)">
+        <div class="dish-img" style="background:linear-gradient(135deg,#FFF8E8 0%,#F5E4B8 100%);position:relative">
+          🍲
+          <span style="position:absolute;top:10px;right:10px;background:var(--butter);color:var(--ink);font-size:.65rem;font-weight:800;padding:3px 8px;border-radius:20px;letter-spacing:.04em">PREMIUM</span>
+        </div>
+        <div class="dish-body">
+          <div class="dish-meta">
+            <span class="tag tag-sage" id="d4-tag1-txt">Sjømat</span>
+            <span class="tag tag-butter" id="d4-tag2-txt">Suppe</span>
+          </div>
+          <h3 id="d4-h-txt">Kokkens Fiskesuppe</h3>
+          <p class="dish-desc" id="d4-desc-txt">En fyldig og aromatisk fiskesuppe kokt på 100% ren kokosmelk uten tilsetningsstoffer — det gir en dypere, rikere smak enn vanlig kraft. Torskefilet og saftige reker med søt gulrot og myk potet. Varm, næringsrik og trøstende.</p>
+          <p class="dish-surcharge" id="d4-surcharge-txt">+ 50 kr tillegg · ren kokosmelk uten tilsetningsstoffer</p>
+          <div class="dish-footer">
+            <div class="dish-pills">
+              <span class="dish-pill" id="d4-p1-txt">🐟 Torsk &amp; 🦐 Reker — 150g totalt</span>
+              <span class="dish-pill" id="d4-p2-txt">🥥 Ren kokosmelk — ingen tilsetningsstoffer</span>
+              <span class="dish-pill" id="d4-p3-txt">🥕 Gulrot &amp; 🥔 Potet</span>
+              <a href="mikroplast.html" class="dish-pill dish-pill-link" id="d4-p4-txt" title="Les om mikroplast">🌿 Pappemballasje · ingen mikroplast ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coming-soon-card">
+        <div style="font-size:2.5rem;opacity:.35">🍴</div>
+        <strong id="cs-h-txt">Flere retter på vei</strong>
+        <p id="cs-p-txt">Kokkens kjøkken jobber med nye sesongretter. Menyen vokser snart!</p>
+        <a href="#bestill" class="btn-fill" id="cs-btn-txt" style="margin-top:.5rem;font-size:.88rem;padding:11px 22px">Bli varslet</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery" id="levering">
+  <div class="delivery-inner">
+    <div>
+      <div class="delivery-head">
+        <span class="tag tag-terra" id="del-tag-txt">Hjemlevering</span>
+        <h2 id="del-h2-txt">Vi kommer til deg.</h2>
+        <p id="del-p-txt">Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.</p>
+      </div>
+      <div class="perks">
+        <div class="perk" onclick="window.location='mikroplast.html'" style="cursor:pointer;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(196,82,42,.4)'" onmouseout="this.style.borderColor=''">
+          <div class="perk-icon">♻️</div>
+          <div>
+            <h5 id="perk1-h-txt">Pappemballasje — ingen mikroplast</h5>
+            <p id="perk1-p-txt">Alle måltider leveres i hygieniske pappeske-beholdere. Ingen plastbokser, ingen mikroplast — trygt for deg og bra for miljøet.</p>
+            <span style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.4rem;display:inline-block">Les mer om mikroplast →</span>
+          </div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🚚</div>
+          <div>
+            <h5 id="perk2-h-txt">Dørlevering i Strømmen</h5>
+            <p id="perk2-p-txt">Vi leverer direkte til din adresse. Du trenger ikke å forlate hjemmet.</p>
+          </div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">📞</div>
+          <div>
+            <h5 id="perk3-h-txt">Enkel bestilling</h5>
+            <p id="perk3-p-txt">Ta kontakt for å bestille din Kokkens Kasse. Vi avtaler levering som passer deg.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-box" style="padding:0;overflow:hidden;min-height:380px">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.5!2d11.0336!3d59.9333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416f5a5a5a5a5a%3A0x0!2sStr%C3%B8mmen%2C+Norway!5e0!3m2!1sno!2sno!4v1620000000000!5m2!1sno!2sno"
+        width="100%"
+        height="380"
+        style="border:0;display:block;filter:grayscale(20%)"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Kokkens Takeout Meal — Strømmen, Norge">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-section" id="bestill">
+  <div class="order-inner">
+    <div class="section-head">
+      <span class="tag tag-terra" id="order-tag-txt">Bestilling</span>
+      <h2 id="order-h2-txt">Klar for en uke med god mat?</h2>
+      <p id="order-p-txt">Fyll ut skjemaet så tar vi kontakt for å bekrefte levering og betaling via Vipps.</p>
+    </div>
+    <div class="order-card">
+      <div class="order-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label id="form-fname-lbl">Fornavn</label>
+            <input id="form-fname-input" name="fornavn" type="text" placeholder="Ola">
+          </div>
+          <div class="form-group">
+            <label id="form-lname-lbl">Etternavn</label>
+            <input id="form-lname-input" name="etternavn" type="text" placeholder="Nordmann">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label id="form-phone-lbl">Telefon</label>
+            <input type="tel" name="telefon" placeholder="+47 000 00 000">
+          </div>
+          <div class="form-group">
+            <label id="form-email-lbl">E-post</label>
+            <input type="email" name="epost" placeholder="ola@epost.no">
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="form-addr-lbl">Leveringsadresse</label>
+          <input id="form-addr-input" name="adresse" type="text" placeholder="Gateadresse, Strømmen">
+        </div>
+        <div class="form-group">
+          <label id="form-pkg-lbl">Velg pakke</label>
+          <select id="pkg-select" name="pakke" onchange="updatePrice()">
+            <option value="" id="sel-opt0">— Velg din Kokkens Kasse —</option>
+            <option value="prøveboks" id="sel-opt1">Prøveboks — 3 dager, 6 måltider</option>
+            <option value="kokkenskasse" id="sel-opt2">Kokkens Kasse — 7 dager, 14 måltider (1 450 kr)</option>
+            <option value="familieboks" id="sel-opt3">Familieboks — 7 dager, 14 × 2 porsjoner</option>
+          </select>
+        </div>
+
+        <!-- MEAL DISTRIBUTION -->
+        <div class="form-group" id="meal-dist-group" style="display:none">
+          <label id="form-dist-lbl">Fordeling av retter <span style="font-weight:400;color:var(--ink2)" id="form-dist-sub">(velg antall av hver rett — totalt <span id="meals-total">14</span> måltider)</span></label>
+          <div class="meal-dist-grid">
+            <div class="meal-dist-item">
+              <div class="meal-dist-info">
+                <span class="meal-dist-emoji">🥩</span>
+                <div>
+                  <div class="meal-dist-name" id="dist-d1-name">Kokkens Stolthet</div>
+                  <div class="meal-dist-price">Inkludert</div>
+                </div>
+              </div>
+              <div class="meal-dist-counter">
+                <button type="button" onclick="adjustMeal('d1',-1)">−</button>
+                <span id="d1-count">0</span>
+                <button type="button" onclick="adjustMeal('d1',1)">+</button>
+              </div>
+            </div>
+            <div class="meal-dist-item">
+              <div class="meal-dist-info">
+                <span class="meal-dist-emoji">🐟</span>
+                <div>
+                  <div class="meal-dist-name" id="dist-d2-name">Havets Beste</div>
+                  <div class="meal-dist-price">Inkludert</div>
+                </div>
+              </div>
+              <div class="meal-dist-counter">
+                <button type="button" onclick="adjustMeal('d2',-1)">−</button>
+                <span id="d2-count">0</span>
+                <button type="button" onclick="adjustMeal('d2',1)">+</button>
+              </div>
+            </div>
+            <div class="meal-dist-item">
+              <div class="meal-dist-info">
+                <span class="meal-dist-emoji">🍗</span>
+                <div>
+                  <div class="meal-dist-name" id="dist-d3-name">Gyllen Favoritt</div>
+                  <div class="meal-dist-price">Inkludert</div>
+                </div>
+              </div>
+              <div class="meal-dist-counter">
+                <button type="button" onclick="adjustMeal('d3',-1)">−</button>
+                <span id="d3-count">0</span>
+                <button type="button" onclick="adjustMeal('d3',1)">+</button>
+              </div>
+            </div>
+            <div class="meal-dist-item meal-dist-premium">
+              <div class="meal-dist-info">
+                <span class="meal-dist-emoji">🍲</span>
+                <div>
+                  <div class="meal-dist-name" id="dist-d4-name">Kokkens Fiskesuppe</div>
+                  <div class="meal-dist-price meal-dist-surcharge">+ 50 kr per måltid</div>
+                </div>
+              </div>
+              <div class="meal-dist-counter">
+                <button type="button" onclick="adjustMeal('d4',-1)">−</button>
+                <span id="d4-count">0</span>
+                <button type="button" onclick="adjustMeal('d4',1)">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="meal-dist-summary">
+            <div class="meal-dist-remaining">
+              <span id="remaining-count">14</span> <span id="remaining-label">måltider gjenstår</span>
+            </div>
+            <div class="meal-dist-total" id="price-display">
+              Totalt: <strong id="total-price">1 450 kr</strong>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="form-day-lbl">Ønsket leveringsdag</label>
+          <input id="form-day-input" name="leveringsdag" type="text" placeholder="F.eks. mandag eller tirsdag">
+        </div>
+        <div class="form-group">
+          <label id="form-comment-lbl">Kommentar <span id="form-comment-opt-txt" style="font-weight:400;color:var(--ink2)">(valgfritt)</span></label>
+          <textarea id="form-comment-input" name="kommentar" placeholder="Allergier, ønsket fordeling av retter (f.eks. 4× fiskesuppe, 5× biff, 5× laks), spesielle ønsker..."></textarea>
+        </div>
+        <div class="form-divider"></div>
+        <a href="#" class="vipps-btn" onclick="handleVipps(event)">
+          <span class="vipps-logo">vipps</span>
+          <span id="vipps-btn-txt">Betal med Vipps — <span id="vipps-price">1 450 kr</span></span>
+        </a>
+        <p class="order-note">
+          <span id="order-note-txt-el">Vi sender deg en bekreftelse på SMS så snart bestillingen er mottatt.</span><br>
+          <span style="font-size:.8rem;color:var(--ink2)">💡 Fiskesuppen koster 50 kr ekstra per måltid pga. ren kokosmelk uten tilsetningsstoffer.</span><br>
+          Spørsmål? Ta kontakt på <a href="mailto:post@kokkenstakeout.no">post@kokkenstakeout.no</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Til toppen">↑</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+          <circle cx="22" cy="22" r="20" fill="none" stroke="#F7E8E2" stroke-width="1" stroke-dasharray="4 3"/>
+          <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+          <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+          <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+          <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+        </svg>
+        Kokkens Takeout Meal
+      </div>
+      <p id="footer-brand-txt">Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com" target="_blank" class="social-btn" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-btn" title="TikTok">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.25 8.25 0 004.83 1.56V6.8a4.85 4.85 0 01-1.06-.11z"/></svg>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-btn" title="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h6 id="ft-nav-h">Navigasjon</h6>
+      <a href="#how" id="ft-nav-1">Slik fungerer det</a>
+      <a href="#filosofi" id="ft-nav-2">Filosofi</a>
+      <a href="#superhuman" id="ft-nav-3">Kokkens Visjon</a>
+      <a href="#pakker" id="ft-nav-4">Pakker</a>
+      <a href="#meny" id="ft-nav-5">Meny</a>
+    </div>
+    <div class="footer-col">
+      <h6 id="ft-pkg-h">Pakker</h6>
+      <a href="#pakker" id="ft-pkg-1">Prøveboks</a>
+      <a href="#pakker">Kokkens Kasse</a>
+      <a href="#pakker" id="ft-pkg-3">Familieboks</a>
+      <a href="#filosofi" id="ft-pkg-4">Sea Moss · Snart</a>
+      <a href="#filosofi" id="ft-pkg-5">Shilajit · Snart</a>
+    </div>
+    <div class="footer-col">
+      <h6 id="ft-contact-h">Kontakt</h6>
+      <a href="#bestill" id="ft-contact-1">Bestill nå</a>
+      <a href="mailto:post@kokkenstakeout.no">post@kokkenstakeout.no</a>
+      <a href="#levering" id="ft-contact-3">📍 Strømmen, Norge</a>
+      <a href="https://vipps.no" target="_blank" id="ft-contact-4">💳 Vipps-betaling</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-logo" style="font-size:.88rem">
+      <div class="dot">🍴</div>
+      Kokkens Takeout Meal
+    </div>
+    <p id="footer-copy" style="color:rgba(255,255,255,.3);font-size:.82rem">Hjemmelaget ukentlig takeout · Strømmen, Norge · © <span id='yr'></span></p>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  no: {
+    'nav-how':'Slik fungerer det','nav-filosofi':'Filosofi','nav-pakker':'Pakker','nav-meny':'Meny','nav-bestill':'Bestill','nav-cta':'Bestill nå',
+    'hero-eyebrow':'Hjemlevering · Strømmen, Norge',
+    'hero-h1':'To måltider om dagen,',
+    'hero-h1-em':'levert hjem',
+    'hero-h1-end':'hele uken.',
+    'hero-sub':'Morgen og kveld — kokkens beste, pakket for hele uken. Ingen handletur. Ingen stress. Bare god mat levert rett til døren din.',
+    'hero-btn1':'Se pakker →','hero-btn2':'Se menyen →',
+    'badge1':'14 måltider per uke','badge2':'Levering til dør','badge3':'Pappemballasje — ingen mikroplast','badge4':'1 450 kr/uke',
+    'how-tag':'Slik fungerer det','how-h2':'Ukentlig mat, null stress.','how-p':'Fra bestilling til middagsbordet ditt — fire enkle steg.',
+    'step1-h':'Velg pakke','step1-p':'Velg Kokkens Kasse med 14 måltider, prøveboks (6 måltider) eller familiepakke.',
+    'step2-h':'Kokkens kjøkken lager','step2-p':'Alle rettene tilberedes fersk med utvalgte råvarer av våre kokker.',
+    'step3-h':'Boksen pakkes','step3-p':'Alle 14 måltider pakkes trygt og forsvarlig, klare for levering.',
+    'step4-h':'Vi leverer hjem til deg','step4-p':'Ingen henting. Vi kjører rett til din dør i Strømmen-området.',
+    'pkg-tag':'Pakker','pkg-h2':'Velg din Kokkens Kasse','pkg-p':'2 måltider per dag, 7 dager — 14 ferske porsjoner levert til hjemmet ditt.',
+    'menu-tag':'Menyen','menu-h2':'Rettene i boksen','menu-p':'Alle retter tilberedt med ferske råvarer, servert i hygieniske pappeske-beholdere — ingen mikroplast, bare god mat.',
+    'order-tag':'Bestilling','order-h2':'Klar for en uke med god mat?','order-p':'Fyll ut skjemaet så tar vi kontakt for å bekrefte levering og betaling via Vipps.',
+    'del-tag':'Hjemlevering','del-h2':'Vi kommer til deg.','del-p':'Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.',
+    'footer-p':'Hjemmelaget ukentlig takeout · Strømmen, Norge',
+    'footer-brand':'Ferske, hjemmelagde måltider levert til døren din i Strømmen. 2 måltider om dagen, 7 dager i uken.',
+    'ft-nav-h':'Navigasjon',
+    'ft-nav-1':'Slik fungerer det',
+    'ft-nav-2':'Filosofi',
+    'ft-nav-3':'Kokkens Visjon',
+    'ft-nav-4':'Pakker',
+    'ft-nav-5':'Meny',
+    'ft-pkg-h':'Pakker',
+    'ft-pkg-1':'Prøveboks',
+    'ft-pkg-3':'Familieboks',
+    'ft-pkg-4':'Sea Moss · Snart',
+    'ft-pkg-5':'Shilajit · Snart',
+    'ft-contact-h':'Kontakt',
+    'ft-contact-1':'Bestill nå',
+    'ft-contact-3':'📍 Strømmen, Norge',
+    'ft-contact-4':'💳 Vipps-betaling',
+    'form-fname':'Fornavn','form-lname':'Etternavn','form-phone':'Telefon','form-email':'E-post',
+    'form-addr':'Leveringsadresse','form-pkg':'Velg pakke','form-day':'Ønsket leveringsdag','form-comment':'Kommentar',
+    'form-comment-opt':'(valgfritt)','form-ph-fname':'Ola','form-ph-lname':'Nordmann',
+    'form-ph-addr':'Gateadresse, Strømmen','form-ph-day':'F.eks. mandag eller tirsdag',
+    'form-ph-comment':'Allergier, spesielle ønsker, annet...',
+    'vipps-txt':'Betal med Vipps — 1 450 kr',
+    'order-note-txt':'Vi sender deg en bekreftelse på SMS så snart bestillingen er mottatt.',
+    'perk1-h':'Pappemballasje — ingen mikroplast','perk1-p':'Alle måltider leveres i hygieniske pappeske-beholdere. Ingen plastbokser, ingen mikroplast — trygt for deg og bra for miljøet.',
+    'perk2-h':'Dørlevering i Strømmen','perk2-p':'Vi leverer direkte til din adresse. Du trenger ikke å forlate hjemmet.',
+    'perk3-h':'Enkel bestilling','perk3-p':'Ta kontakt for å bestille din Kokkens Kasse. Vi avtaler levering som passer deg.',
+    'phil-tag':'Vår filosofi','phil-h2-1':'Vi tror på mat som','phil-h2-em':'gjør deg bra.','phil-p1':'Kokkens Takeout Meal ble til med én tanke: at god, næringsrik mat skal være enkelt tilgjengelig for alle.','phil-p2':'Vi bruker ferske råvarer, pappemballasje uten mikroplast, og lager alt med omtanke.',
+    'val1-h':'Ren mat, rene materialer','val1-p':'Ingen mikroplast, ingen unødvendige tilsetningsstoffer. Bare ekte råvarer i pappemballasje.',
+    'val2-h':'Helse i fokus','val2-p':'Balanserte måltider med riktig protein, karbohydrater og grønnsaker — tilberedt av kokken.',
+    'val3-h':'Lokalt og personlig','val3-p':'Vi er fra Strømmen, vi leverer i Strømmen. Du snakker alltid med oss direkte — ikke en chatbot.',
+    'nav-how-t':'Slik fungerer det','nav-filosofi-t':'Filosofi','nav-pakker-t':'Pakker','nav-meny-t':'Meny','nav-bestill-t':'Bestill',
+    'box-title':'Kokkens Kasse — 7 dager × 2 måltider','box-sub':'Hvert måltid (daglig × 7)',
+    'meal1':'Måltid 1 — Biff / Kylling / Fisk','meal2':'Måltid 2 — Biff / Kylling / Fisk',
+    'box-total':'måltider totalt','box-per':'per måltid','box-footer-label':'Hjemlevering inkludert',
+    'delivery-chip':'🚚 Levert til din dør i Strømmen',
+    'pkg1-h':'Prøveboks','pkg1-sub':'3 dager — 6 måltider. Perfekt for å prøve konseptet.',
+    'pkg1-li1':'2 måltider per dag i 3 dager','pkg1-li2':'150g protein (biff/kylling/fisk) per måltid',
+    'pkg1-li3':'250g potetbåter m/ søtpotet + 250g grønnsaker per måltid','pkg1-li4':'Hjemlevering inkludert','pkg1-cta':'Bestill prøveboks',
+    'pkg2-ribbon':'Mest populær','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 dager — 14 måltider. Hele uken dekket.',
+    'pkg2-li1':'2 måltider per dag i 7 dager','pkg2-li2':'150g protein (biff/kylling/fisk) per måltid',
+    'pkg2-li3':'250g potetbåter m/ søtpotet + 250g grønnsaker per måltid','pkg2-li4':'Hjemlevering til din dør inkludert',
+    'pkg2-per':'~104 kr per måltid','pkg2-cta':'Bestill Kokkens Kasse',
+    'pkg3-h':'Familieboks','pkg3-sub':'7 dager — 14 måltider × 2 porsjoner. For par eller familie.',
+    'pkg3-li1':'2 måltider × 2 porsjoner per dag — for to personer','pkg3-li2':'300g protein (biff/kylling/fisk) per porsjon per måltid',
+    'pkg3-li3':'500g potetbåter m/ søtpotet + 500g grønnsaker per måltid','pkg3-li4':'Hjemlevering til din dør, én samlet kasse','pkg3-cta':'Bestill familieboks',
+    'd1-tag1':'Kjøtt','d1-tag2':'Høy protein','d1-h':'Kokkens Stolthet',
+    'd1-desc':'En skikkelig klassiker fra kokkens kjøkken. 150g mørbradbiff — det møreste kuttet — krydret og stekt til saftig perfeksjon. Ledsaget av 250g sprø potetbåter med søtpotet i miksen, pluss 250g dampede grønnsaker.',
+    'd1-p1':'🥩 150g mørbradbiff','d1-p2':'🥔 250g potetbåter m/ søtpotet','d1-p3':'🥦 250g grønnsaker','d1-p4':'🌿 Pappemballasje · ingen mikroplast',
+    'd2-tag1':'Sjømat','d2-tag2':'Omega-3 rik','d2-h':'Havets Beste',
+    'd2-desc':'Fersk norsk laksefilet på 150g — rik på omega-3 og full av smak. Tilberedt varsomt av kokken. Serveres med 250g gylne potetbåter med søtpotet i miksen, pluss 250g dampede grønnsaker.',
+    'd2-p1':'🐟 150g fersk laks','d2-p2':'🥔 250g potetbåter m/ søtpotet','d2-p3':'🥦 250g grønnsaker','d2-p4':'🌿 Pappemballasje · ingen mikroplast',
+    'd3-tag1':'Kylling','d3-tag2':'Gyllen Favoritt','d3-h':'Gyllen Favoritt',
+    'd3-desc':'Saftige, møre kyllingstrips marinert og stekt til gyllen perfeksjon. Serveres med 250g sprø potetbåter, friske epleskiver, en deilig sweet chili saus og mild barnesaus — perfekt for hele familien.',
+    'd3-p1':'🍗 150g kyllingstrips · 🍎 Eple','d3-p2':'🥔 250g sprø potetbåter','d3-p3':'','d3-p4':'🌶 Sweet chili · 🍶 Barnesaus','d3-p5':'🌿 Pappemballasje · ingen mikroplast',
+    'cs-h':'Flere retter på vei','cs-p':'Kokkens kjøkken jobber med nye sesongretter. Menyen vokser snart!','cs-btn':'Bli varslet',
+    'future-h':'🌱 Kommer snart — helsebutikken','future-p':'Vi bygger noe større. Snart lanserer vi helseprodukter du kan legge til i din Kokkens Kasse.',
+    'future1':'Sea Moss — naturlig superfood rikt på mineraler','future2':'Helsedrikker & urteteer','future3':'Flere helseprodukter på vei...','future-soon':'Snart',
+    'sm-badge':'🌊 Superfood',
+    'sm-desc':'Sea Moss (Chondrus crispus) er en rød alge fra Atlanterhavet, brukt i hundrevis av år i tradisjonell medisin. Inneholder over 92 av de 102 mineralene kroppen din trenger.',
+    'sm-m1':'Jod',
+    'sm-m2':'Jern',
+    'sm-m3':'Kalsium',
+    'sm-m4':'Magnesium',
+    'sm-m5':'Kalium',
+    'sm-m6':'Sink',
+    'sm-m7':'Folsyre',
+    'sm-m8':'Omega-3',
+    'sm-b1':'Støtter skjoldbruskkjertelen med naturlig jod',
+    'sm-b2':'Styrker immunforsvaret og tarmhelsen',
+    'sm-b3':'Gir energi og reduserer tretthet',
+    'sm-b4':'Betennelsesdempende og støtter leddene',
+    'sm-b5':'Naturlig kilde til kollagen for hud og hår',
+    'sh-badge':'⛰️ Ayurvedisk',
+    'sh-desc':'Shilajit er en naturlig harpiks som siver ut fra himalayafjellene over tusenvis av år. Brukt i ayurvedisk medisin i over 3 000 år.',
+    'sh-m1':'Fulvinsyre',
+    'sh-m2':'Jern',
+    'sh-m3':'Sink',
+    'sh-m4':'Magnesium',
+    'sh-m5':'Kobber',
+    'sh-m6':'Selen',
+    'sh-m7':'80+ mineraler',
+    'sh-b1':'Øker energinivå og utholdenhet naturlig',
+    'sh-b2':'Støtter hjernefunksjon og fokus',
+    'sh-b3':'Transporterer næringsstoffer inn i cellene via fulvinsyre',
+    'sh-b4':'Testosteron og hormonbalanse',
+    'sh-b5':'Antioksidant og anti-aldringseffekter',
+    'd4-tag1':'Sjømat',
+    'd4-tag2':'Suppe',
+    'd4-h':'Kokkens Fiskesuppe',
+    'd4-desc':'En fyldig og aromatisk fiskesuppe kokt på 100% ren kokosmelk uten tilsetningsstoffer — det gir en dypere, rikere smak enn vanlig kraft. Torskefilet og saftige reker med søt gulrot og myk potet. Varm og næringsrik.',
+    'd4-p1':'🐟 Torsk & 🦐 Reker — 150g totalt',
+    'd4-p2':'🥥 Ren kokosmelk — ingen tilsetningsstoffer',
+    'd4-p3':'🥕 Gulrot & 🥔 Potet',
+    'd4-p4':'🌿 Pappemballasje · ingen mikroplast',
+    'd4-surcharge':'+ 50 kr tillegg · ren kokosmelk uten tilsetningsstoffer',
+    'pkg-custom':'Du velger selv hvilke retter og hvor mange av hver. Fiskesuppen koster 50 kr ekstra per måltid pga. ren kokosmelk uten tilsetningsstoffer.',
+    'form-ph-comment':'Allergier, ønsket fordeling av retter (f.eks. 4× fiskesuppe, 5× biff, 5× laks)...',
+    'future4':'Shilajit — uralt mineral-resin for energi & vitalitet',
+    'nav-super-t':'Kokkens Visjon',
+    'sel-opt0':'— Velg din Kokkens Kasse —',
+    'sel-opt1':'Prøveboks — 3 dager, 6 måltider',
+    'sel-opt2':'Kokkens Kasse — 7 dager, 14 måltider (1 450 kr)',
+    'sel-opt3':'Familieboks — 7 dager, 14 × 2 porsjoner',
+    'super-kicker':'Kokkens Visjon',
+    'super-h2':'Spis som en maskin bygget for å yte.',
+    'super-p':'Et kosthold som gir deg energi, fokus og styrke — hele dagen, hele uken.',
+    'sp1-h':'Premium protein',
+    'sp1-p':'150g høykvalitets protein per måltid — biff, kylling eller fersk laks.',
+    'sp2-h':'Ren energi',
+    'sp2-p':'Komplekse karbohydrater fra potetbåter og søtpotet gir stabil energi.',
+    'sp3-h':'Mikronæring',
+    'sp3-p':'250g ferske grønnsaker per måltid — vitaminer og mineraler kroppen trenger.',
+    'sp4-h':'Ingen giftstoffer',
+    'sp4-p':'Pappemballasje, ikke plast. Ingen mikroplast i maten din.',
+    'sp5-h':'Supermat kommer',
+    'sp5-p':'Snart lanserer vi Sea Moss, Shilajit og naturlige superfoods til boksen din.',
+    'sp6-h':'Konsistens er nøkkelen',
+    'sp6-p':'To måltider om dagen, syv dager i uken — levert til din dør.',
+    'super-banner-h':'Mat er medisin. Velg det beste.',
+    'super-banner-p':'Kokkens Kasse er et system for optimal helse. Ferske råvarer, riktig mengde, levert hjem.',
+    'super-banner-btn':'Bestill nå →'
+  },
+  en: {
+    'nav-how':'How it works','nav-filosofi':'Philosophy','nav-pakker':'Packages','nav-meny':'Menu','nav-bestill':'Order','nav-cta':'Order now',
+    'hero-eyebrow':'Home delivery · Strømmen, Norway',
+    'hero-h1':'Two meals a day,',
+    'hero-h1-em':'delivered home',
+    'hero-h1-end':'every week.',
+    'hero-sub':'Morning and evening — the chef\'s best, packed for the whole week. No grocery run. No stress. Just great food delivered to your door.',
+    'hero-btn1':'See packages →','hero-btn2':'See menu →',
+    'badge1':'14 meals per week','badge2':'Door delivery','badge3':'Cardboard — no microplastics','badge4':'1,450 kr/week',
+    'how-tag':'How it works','how-h2':'Weekly food, zero stress.','how-p':'From order to your dinner table — four simple steps.',
+    'step1-h':'Choose a package','step1-p':'Choose Kokkens Kasse with 14 meals, a trial box (6 meals) or family package.',
+    'step2-h':'The chef\'s kitchen cooks','step2-p':'All dishes are freshly prepared with selected ingredients by our chefs.',
+    'step3-h':'The box is packed','step3-p':'All 14 meals are safely and securely packed, ready for delivery.',
+    'step4-h':'We deliver to your door','step4-p':'No pick-up needed. We drive straight to your door in the Strømmen area.',
+    'pkg-tag':'Packages','pkg-h2':'Choose your Kokkens Kasse','pkg-p':'2 meals per day, 7 days — 14 fresh portions delivered to your home.',
+    'menu-tag':'Menu','menu-h2':'Dishes in the box','menu-p':'All dishes prepared with fresh ingredients, served in hygienic cardboard containers — no microplastics, just good food.',
+    'order-tag':'Order','order-h2':'Ready for a week of great food?','order-p':'Fill in the form and we will contact you to confirm delivery and payment via Vipps.',
+    'del-tag':'Home delivery','del-h2':'We come to you.','del-p':'No car trip, no queue. We pack, drive and deliver Kokkens Kassen straight to your door in Strømmen.',
+    'footer-p':'Homemade weekly takeout · Strømmen, Norway',
+    'footer-brand':'Fresh, homemade meals delivered to your door in Strømmen. 2 meals a day, 7 days a week.',
+    'ft-nav-h':'Navigation',
+    'ft-nav-1':'How it works',
+    'ft-nav-2':'Philosophy',
+    'ft-nav-3':'Kokkens Visjon',
+    'ft-nav-4':'Packages',
+    'ft-nav-5':'Menu',
+    'ft-pkg-h':'Packages',
+    'ft-pkg-1':'Trial Box',
+    'ft-pkg-3':'Family Box',
+    'ft-pkg-4':'Sea Moss · Soon',
+    'ft-pkg-5':'Shilajit · Soon',
+    'ft-contact-h':'Contact',
+    'ft-contact-1':'Order now',
+    'ft-contact-3':'📍 Strømmen, Norway',
+    'ft-contact-4':'💳 Vipps payment',
+    'form-fname':'First name','form-lname':'Last name','form-phone':'Phone','form-email':'Email',
+    'form-addr':'Delivery address','form-pkg':'Choose package','form-day':'Preferred delivery day','form-comment':'Comment',
+    'form-comment-opt':'(optional)','form-ph-fname':'John','form-ph-lname':'Smith',
+    'form-ph-addr':'Street address, Strømmen','form-ph-day':'E.g. Monday or Tuesday',
+    'form-ph-comment':'Allergies, special requests...',
+    'vipps-txt':'Pay with Vipps — 1,450 kr',
+    'order-note-txt':'We will send you an SMS confirmation as soon as your order is received.',
+    'perk1-h':'Cardboard packaging — no microplastics','perk1-p':'All meals delivered in hygienic cardboard containers. No plastic, no microplastics — safe for you and good for the environment.',
+    'perk2-h':'Door delivery in Strømmen','perk2-p':'We deliver directly to your address. You don\'t need to leave your home.',
+    'perk3-h':'Easy ordering','perk3-p':'Contact us to order your Kokkens Kasse. We\'ll arrange delivery at a time that suits you.',
+    'phil-tag':'Our philosophy','phil-h2-1':'We believe in food that','phil-h2-em':'does you good.','phil-p1':'Kokkens Takeout Meal was created with one thought: good, nutritious food should be easily accessible to everyone.','phil-p2':'We use fresh ingredients, microplastic-free cardboard packaging, and make everything with care.',
+    'val1-h':'Clean food, clean materials','val1-p':'No microplastics, no unnecessary additives. Just real ingredients in cardboard packaging.',
+    'val2-h':'Health in focus','val2-p':'Balanced meals with the right protein, carbohydrates and vegetables — prepared by the chef.',
+    'val3-h':'Local and personal','val3-p':'We\'re from Strømmen, we deliver in Strømmen. You always talk directly with us — not a chatbot.',
+    'nav-how-t':'How it works','nav-filosofi-t':'Philosophy','nav-pakker-t':'Packages','nav-meny-t':'Menu','nav-bestill-t':'Order',
+    'box-title':'Kokkens Kasse — 7 days × 2 meals','box-sub':'Each meal (daily × 7)',
+    'meal1':'Meal 1 — Beef / Chicken / Fish','meal2':'Meal 2 — Beef / Chicken / Fish',
+    'box-total':'meals total','box-per':'per meal','box-footer-label':'Home delivery included',
+    'delivery-chip':'🚚 Delivered to your door in Strømmen',
+    'pkg1-h':'Trial Box','pkg1-sub':'3 days — 6 meals. Perfect for trying the concept.',
+    'pkg1-li1':'2 meals per day for 3 days','pkg1-li2':'150g protein (beef/chicken/fish) per meal',
+    'pkg1-li3':'250g boat potatoes w/ sweet potato + 250g vegetables per meal','pkg1-li4':'Home delivery included','pkg1-cta':'Order trial box',
+    'pkg2-ribbon':'Most popular','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 days — 14 meals. The whole week covered.',
+    'pkg2-li1':'2 meals per day for 7 days','pkg2-li2':'150g protein (beef/chicken/fish) per meal',
+    'pkg2-li3':'250g boat potatoes w/ sweet potato + 250g vegetables per meal','pkg2-li4':'Home delivery to your door included',
+    'pkg2-per':'~104 kr per meal','pkg2-cta':'Order Kokkens Kasse',
+    'pkg3-h':'Family Box','pkg3-sub':'7 days — 14 meals × 2 portions. For couples or families.',
+    'pkg3-li1':'2 meals × 2 portions per day — for two people','pkg3-li2':'300g protein (beef/chicken/fish) per portion per meal',
+    'pkg3-li3':'500g boat potatoes w/ sweet potato + 500g vegetables per meal','pkg3-li4':'Home delivery to your door, one combined box','pkg3-cta':'Order family box',
+    'd1-tag1':'Meat','d1-tag2':'High protein','d1-h':'The Chef\'s Pride',
+    'd1-desc':'A true classic from the chef\'s kitchen. 150g tenderloin — the most tender cut — seasoned and cooked to juicy perfection. With 250g crispy boat potatoes with sweet potato and 250g vegetables.',
+    'd1-p1':'🥩 150g tenderloin','d1-p2':'🥔 250g boat potatoes w/ sweet potato','d1-p3':'🥦 250g vegetables','d1-p4':'🌿 Cardboard · no microplastics',
+    'd2-tag1':'Seafood','d2-tag2':'Omega-3 rich','d2-h':'Best of the Sea',
+    'd2-desc':'Fresh Norwegian salmon fillet of 150g — rich in omega-3 and full of flavour. Carefully prepared by the chef. Served with 250g golden boat potatoes with sweet potato and 250g vegetables.',
+    'd2-p1':'🐟 150g fresh salmon','d2-p2':'🥔 250g boat potatoes w/ sweet potato','d2-p3':'🥦 250g vegetables','d2-p4':'🌿 Cardboard · no microplastics',
+    'd3-tag1':'Chicken','d3-tag2':'Golden Favourite','d3-h':'Golden Favourite',
+    'd3-desc':'Juicy, tender chicken strips marinated and cooked to golden perfection. Served with 250g crispy boat potatoes, fresh apple slices, a delicious sweet chili sauce and mild children\'s sauce — perfect for the whole family.',
+    'd3-p1':'🍗 150g chicken strips · 🍎 Apple','d3-p2':'🥔 250g crispy boat potatoes','d3-p3':'','d3-p4':'🌶 Sweet chili · 🍶 Children\'s sauce','d3-p5':'🌿 Cardboard · no microplastics',
+    'cs-h':'More dishes coming soon','cs-p':'The chef\'s kitchen is working on new seasonal dishes. The menu is growing soon!','cs-btn':'Get notified',
+    'future-h':'🌱 Coming soon — the health shop','future-p':'We\'re building something bigger. Soon we\'ll launch health products you can add to your Kokkens Kasse.',
+    'future1':'Sea Moss — natural superfood rich in minerals','future2':'Health drinks & herbal teas','future3':'More health products on the way...','future-soon':'Soon',
+    'sm-badge':'🌊 Superfood',
+    'sm-desc':'Sea Moss (Chondrus crispus) is a red algae from the Atlantic Ocean, used for hundreds of years in traditional medicine. Contains over 92 of the 102 minerals your body needs.',
+    'sm-m1':'Iodine',
+    'sm-m2':'Iron',
+    'sm-m3':'Calcium',
+    'sm-m4':'Magnesium',
+    'sm-m5':'Potassium',
+    'sm-m6':'Zinc',
+    'sm-m7':'Folic Acid',
+    'sm-m8':'Omega-3',
+    'sm-b1':'Supports the thyroid gland with natural iodine',
+    'sm-b2':'Strengthens the immune system and gut health',
+    'sm-b3':'Boosts energy and reduces fatigue',
+    'sm-b4':'Anti-inflammatory and supports the joints',
+    'sm-b5':'Natural source of collagen for skin and hair',
+    'sh-badge':'⛰️ Ayurvedic',
+    'sh-desc':'Shilajit is a natural resin that seeps from the Himalayan mountains over thousands of years. Used in Ayurvedic medicine for over 3,000 years.',
+    'sh-m1':'Fulvic Acid',
+    'sh-m2':'Iron',
+    'sh-m3':'Zinc',
+    'sh-m4':'Magnesium',
+    'sh-m5':'Copper',
+    'sh-m6':'Selenium',
+    'sh-m7':'80+ minerals',
+    'sh-b1':'Increases energy levels and endurance naturally',
+    'sh-b2':'Supports brain function and focus',
+    'sh-b3':'Transports nutrients into cells via fulvic acid',
+    'sh-b4':'Testosterone and hormone balance',
+    'sh-b5':'Antioxidant and anti-ageing effects',
+    'd4-tag1':'Seafood',
+    'd4-tag2':'Soup',
+    'd4-h':'The Chef\'s Fish Soup',
+    'd4-desc':'A rich fish soup made with 100% pure coconut milk, no additives — giving it a deeper, richer flavour. Cod fillet and juicy shrimp with sweet carrot and soft potato. Warm and nutritious. Note: +50 kr surcharge per meal due to the coconut milk.',
+    'd4-p1':'🐟 Cod & 🦐 Shrimp — 150g total',
+    'd4-p2':'🥥 Pure coconut milk — no additives',
+    'd4-p3':'🥕 Carrot & 🥔 Potato',
+    'd4-p4':'🌿 Cardboard · no microplastics',
+    'd4-surcharge':'+ 50 kr surcharge · pure coconut milk, no additives',
+    'pkg-custom':'You choose which dishes and how many of each. The fish soup costs 50 kr extra per meal due to pure coconut milk with no additives.',
+    'form-ph-comment':'Allergies, preferred dish split (e.g. 4× fish soup, 5× beef, 5× salmon)...',
+    'future4':'Shilajit — ancient mineral resin for energy & vitality',
+    'nav-super-t':'Kokkens Visjon',
+    'sel-opt0':'— Choose your Kokkens Kasse —',
+    'sel-opt1':'Trial Box — 3 days, 6 meals',
+    'sel-opt2':'Kokkens Kasse — 7 days, 14 meals (1,450 kr)',
+    'sel-opt3':'Family Box — 7 days, 14 × 2 portions',
+    'super-kicker':'Superhuman diet',
+    'super-h2':'Eat like a machine built to perform.',
+    'super-p':'A diet that gives you energy, focus and strength — all day, all week.',
+    'sp1-h':'Premium protein',
+    'sp1-p':'150g high-quality protein per meal — beef, chicken or fresh salmon.',
+    'sp2-h':'Clean energy',
+    'sp2-p':'Complex carbs from boat potatoes and sweet potato give stable energy.',
+    'sp3-h':'Micronutrients',
+    'sp3-p':'250g fresh vegetables per meal — vitamins and minerals your body needs.',
+    'sp4-h':'No toxins',
+    'sp4-p':'Cardboard, not plastic. No microplastics in your food.',
+    'sp5-h':'Superfoods coming',
+    'sp5-p':'Soon we launch Sea Moss, Shilajit and natural superfoods for your box.',
+    'sp6-h':'Consistency is key',
+    'sp6-p':'Two meals a day, seven days a week — delivered to your door.',
+    'super-banner-h':'Food is medicine. Choose the best.',
+    'super-banner-p':'Kokkens Kasse is a system for optimal health. Fresh ingredients, right portions, delivered home.',
+    'super-banner-btn':'Order now →'
+  },
+  so: {
+    'nav-how':'Sida u shaqeyso','nav-filosofi':'Falsafad','nav-pakker':'Xidmooyinka','nav-meny':'Cuntooyinka','nav-bestill':'Dalbo','nav-cta':'Dalbo hada',
+    'hero-eyebrow':'Gaadhsiinta guriga · Strømmen, Norway',
+    'hero-h1':'Laba cunto maalinba,',
+    'hero-h1-em':'guriga laguu keeno',
+    'hero-h1-end':'usbuuca oo dhan.',
+    'hero-sub':'Subax iyo galabnimo — cuntada ugu fiican, la kaydiyey usbuuca oo dhan. Ma jirto socdaal dukaan. Xoog la\'aan. Cunto fiican oo albaabkaaga lagu keeno.',
+    'hero-btn1':'Arag xidmooyinka →','hero-btn2':'Arag cuntooyinka →',
+    'badge1':'14 cunto usbuucii','badge2':'Gaadhsiinta albaabka','badge3':'Kartoon — microplastic la\'aan','badge4':'1,450 kr/usbuuc',
+    'how-tag':'Sida u shaqeyso','how-h2':'Cunto usbuucii, xoog la\'aan.','how-p':'Dalab ilaa miiska cuntadaada — afar tallaabo oo fudud.',
+    'step1-h':'Dooro xidmada','step1-p':'Dooro Kokkens Kasse 14 cunto, sanduuqa tijaabada (6 cunto) ama xidmada qoyska.',
+    'step2-h':'Jikada khabiirku kariso','step2-p':'Dhammaan cuntooyinka waxaa kariya khabiirrada soo jiidasho leh.',
+    'step3-h':'Sanduuqa la buuxsho','step3-p':'Dhammaan 14 cunto waxaa si ammaan ah loo sindiyo, diyaar u gaadhsiinta.',
+    'step4-h':'Waxaan kuu keenaa gurigaaga','step4-p':'Ma jirto qaadashada. Waxaan si toos ah ugu wadnaa albaabkaaga Strømmen.',
+    'pkg-tag':'Xidmooyinka','pkg-h2':'Dooro Kokkens Kasse','pkg-p':'2 cunto maalinba, 7 maalin — 14 qaybood oo cusub gurigaaga loo keeno.',
+    'menu-tag':'Cuntooyinka','menu-h2':'Cuntooyinka sanduuqa','menu-p':'Dhammaan cuntooyinka waxaa lagu diyaariyaa khudradda cusub, kartoon nadiif ah.',
+    'order-tag':'Dalbo','order-h2':'Ma diyaar tahay usbuuc cunto fiican?','order-p':'Buuxi foomka, waxaanna kula xiriiri si loo xaqiijiyo gaadhsiinta iyo lacag bixinta Vipps.',
+    'del-tag':'Gaadhsiinta guriga','del-h2':'Waxaan kuu imaanaa.','del-p':'Ma jirto socdaal baabuur. Waxaan sindinaa oo wadnaa Kokkens Kassen albaabkaaga Strømmen.',
+    'footer-p':'Cunto guriga lagu sameeyo · Strømmen, Norway',
+    'footer-brand':'Cuntooyiin cusub oo guriga lagu sameeyo oo laguu keena albaabkaaga Strømmen. 2 cunto maalinba, 7 maalin usbuucii.',
+    'ft-nav-h':'Xiriirka',
+    'ft-nav-1':'Sida u shaqeyso',
+    'ft-nav-2':'Falsafad',
+    'ft-nav-3':'Aragtida Khabiirka',
+    'ft-nav-4':'Xidmooyinka',
+    'ft-nav-5':'Cuntooyinka',
+    'ft-pkg-h':'Xidmooyinka',
+    'ft-pkg-1':'Sanduuqa Tijaabada',
+    'ft-pkg-3':'Sanduuqa Qoyska',
+    'ft-pkg-4':'Sea Moss · Dhow',
+    'ft-pkg-5':'Shilajit · Dhow',
+    'ft-contact-h':'Xiriir',
+    'ft-contact-1':'Dalbo hada',
+    'ft-contact-3':'📍 Strømmen, Noorweey',
+    'ft-contact-4':'💳 Lacag bixinta Vipps',
+    'form-fname':'Magaca hore','form-lname':'Magaca dambe','form-phone':'Telefon','form-email':'Iimeel',
+    'form-addr':'Cinwaanka gaadhsiinta','form-pkg':'Dooro xidmada','form-day':'Maalinta gaadhsiinta','form-comment':'Faallo',
+    'form-comment-opt':'(ikhtiyaari)','form-ph-fname':'Cali','form-ph-lname':'Maxamed',
+    'form-ph-addr':'Jidka, Strømmen','form-ph-day':'Tusaale: Isniin','form-ph-comment':'Xasaasiyadda...',
+    'vipps-txt':'Ku bixi Vipps — 1,450 kr','order-note-txt':'Waxaan kuu diri doonaa xaqiijin SMS ah.',
+    'perk1-h':'Kartoon — microplastic la\'aan','perk1-p':'Cuntooyinka oo dhan waxaa lagu keenaa kartoonno nadiif ah. Blaasteek la\'aan.',
+    'perk2-h':'Gaadhsiinta albaabka Strømmen','perk2-p':'Waxaan u gaadhsiinnaa cinwaankaaga toos.',
+    'perk3-h':'Dalabka fudud','perk3-p':'Nala soo xiriir si aad u dalabto Kokkens Kasse.',
+    'phil-tag':'Falsafadeena','phil-h2-1':'Waxaan aaminsan nahay cunto','phil-h2-em':'kugu wanaagsan.',
+    'phil-p1':'Kokkens Takeout Meal waxaa la abuuray fikrad keli ah: cunto wanaagsan oo nafaqo leh ay u hesho dadka oo dhan.',
+    'phil-p2':'Waxaan isticmaalnaa khudaar cusub, kartoon aan microplastic lahayn.',
+    'val1-h':'Cunto nadiif ah','val1-p':'Microplastic la\'aan. Kaliya raashiin runta ah kartoon.',
+    'val2-h':'Caafimaadka hoosta','val2-p':'Cuntooyin dheellitiran oo leh borotiinka saxda ah iyo khudaarta.',
+    'val3-h':'Maxalli iyo shakhsi','val3-p':'Waxaan nahay Strømmen, waxaan u gaadhsiinnaa Strømmen.',
+    'nav-how-t':'Sida u shaqeyso','nav-filosofi-t':'Falsafad','nav-pakker-t':'Xidmooyinka','nav-meny-t':'Cuntooyinka','nav-bestill-t':'Dalbo',
+    'box-title':'Kokkens Kasse — 7 maalin × 2 cunto','box-sub':'Cunto kasta (maalin kasta × 7)',
+    'meal1':'Cunto 1 — Hilib / Digaag / Kalluun','meal2':'Cunto 2 — Hilib / Digaag / Kalluun',
+    'box-total':'cunto guud ahaan','box-per':'cunto kasta','box-footer-label':'Gaadhsiinta guriga oo ku jira',
+    'delivery-chip':'🚚 Albaabkaaga Strømmen laguu keenay',
+    'pkg1-h':'Sanduuqa Tijaabada','pkg1-sub':'3 maalin — 6 cunto.',
+    'pkg1-li1':'2 cunto maalin kasta 3 maalin','pkg1-li2':'150g borotiiin cunto kasta',
+    'pkg1-li3':'250g baradhada + 250g khudaar cunto kasta','pkg1-li4':'Gaadhsiinta guriga oo ku jira','pkg1-cta':'Dalbo sanduuqa tijaabada',
+    'pkg2-ribbon':'Kan ugu caansan','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 maalin — 14 cunto.',
+    'pkg2-li1':'2 cunto maalin kasta 7 maalin','pkg2-li2':'150g borotiiin cunto kasta',
+    'pkg2-li3':'250g baradhada + 250g khudaar cunto kasta','pkg2-li4':'Gaadhsiinta guriga oo ku jira',
+    'pkg2-per':'~104 kr cunto kasta','pkg2-cta':'Dalbo Kokkens Kasse',
+    'pkg3-h':'Sanduuqa Qoyska','pkg3-sub':'7 maalin — 14 cunto × 2 qayb.',
+    'pkg3-li1':'2 cunto × 2 qayb maalin kasta — qof labaaad','pkg3-li2':'300g borotiiin (hilib/digaag/kalluun) qayb kasta',
+    'pkg3-li3':'500g baradhada + 500g khudaar cunto kasta','pkg3-li4':'Gaadhsiinta guriga, hal sanduuq wada ah','pkg3-cta':'Dalbo sanduuqa qoyska',
+    'd1-tag1':'Hilib','d1-tag2':'Borotiiin sare','d1-h':'Fakhriga Khabiirka',
+    'd1-desc':'150g hilib lo jilicsan, la kariyay si fiican. Lala socdo 250g baradho iyo 250g khudaar.',
+    'd1-p1':'🥩 150g hilib lo','d1-p2':'🥔 250g baradhada','d1-p3':'🥦 250g khudaar','d1-p4':'🌿 Kartoon · microplastic la\'aan',
+    'd2-tag1':'Kalluun','d2-tag2':'Omega-3 badan','d2-h':'Kan Badda Ugu Wanaagsan',
+    'd2-desc':'150g salmon Noorwijka ah cusub — omega-3 badan. Lala socdo 250g baradho iyo 250g khudaar.',
+    'd2-p1':'🐟 150g salmon cusub','d2-p2':'🥔 250g baradhada','d2-p3':'🥦 250g khudaar','d2-p4':'🌿 Kartoon · microplastic la\'aan',
+    'd3-tag1':'Digaag','d3-tag2':'Kan Dahab ah','d3-h':'Kan Dahab ah',
+    'd3-desc':'Xariiryada digaagga jilicsan, la kariyay si dahabi ah. Lala socdo 250g baradho qaboqabo, epleskiver cusub, sweet chili iyo sawska carruurta. Ku habboon qoyska oo dhan.',
+    'd3-p1':'🍗 150g xariiryada digaagga · 🍎 Tufaax','d3-p2':'🥔 250g baradhada','d3-p3':'','d3-p4':'🌶 Sweet chili · 🍶 Sawska carruurta','d3-p5':'🌿 Kartoon · microplastic la\'aan',
+    'cs-h':'Cunto badan ayaa socota','cs-p':'Menhuhu si dhakhso ah buu u kordhayaa!','cs-btn':'Ii ogeysii',
+    'future-h':'🌱 Dhow — dukaan caafimaadka','future-p':'Dhawaan waxaan soo saari doonaa alaab caafimaad oo aad ku dari karto Kokkens Kasse.',
+    'future1':'Sea Moss — cunno caafimaad oo macdanta leh','future2':'Cabitaanada caafimaadka & shaaha','future3':'Alaab caafimaad badan ayaa socota...','future-soon':'Dhow',
+    'sm-badge':'🌊 Cunno Caafimaad',
+    'sm-desc':'Sea Moss waa khudrad cas oo ka timaada Badweynta Atlantik, loo isticmaali jiray boqolaal sano oo dawo dhaqameed. Waxay ka kooban tahay in ka badan 92 ka 102 macdanta jirkaagu u baahan yahay.',
+    'sm-m1':'Aayodiin',
+    'sm-m2':'Bir',
+    'sm-m3':'Kaalsiyam',
+    'sm-m4':'Magneesiyam',
+    'sm-m5':'Botaasiyam',
+    'sm-m6':'Sinc',
+    'sm-m7':'Foofoleet',
+    'sm-m8':'Omega-3',
+    'sm-b1':'Waxay taageeraa xididka thyroid ee joodiga ah',
+    'sm-b2':'Waxay xoojisaa difaaca jirka iyo caafimaadka xididdada',
+    'sm-b3':'Waxay bixisaa tamar oo yaraynaysaa daal',
+    'sm-b4':'Xannibaad xanuun iyo taageerada xubnahooda',
+    'sm-b5':'Xididka dabiiciga ah ee kollagen maqaarka iyo timaha',
+    'sh-badge':'⛰️ Ayurvedic',
+    'sh-desc':'Shilajit waa dheecaan dabiici ah oo ka soo baxa buuraha Himalaya kun kun sano. Loo isticmaali jiray dawo Ayurvedic in ka badan 3,000 sano.',
+    'sh-m1':'Fulvic Acid',
+    'sh-m2':'Bir',
+    'sh-m3':'Sinc',
+    'sh-m4':'Magneesiyam',
+    'sh-m5':'Naaxaas',
+    'sh-m6':'Seleeniyam',
+    'sh-m7':'80+ macdano',
+    'sh-b1':'Kordhisaa heerka tamarta si dabiici ah',
+    'sh-b2':'Taageeraa shaqada maskaxda iyo xoogga fekerka',
+    'sh-b3':'Gudaha unugyada quudinaysa fulvic acid',
+    'sh-b4':'Testosterone iyo dheellitirka hormoonka',
+    'sh-b5':'Antioxidant iyo saameynta ka-hortagga da\'weynta',
+    'd4-tag1':'Kalluun',
+    'd4-tag2':'Maraq',
+    'd4-h':'Maraqda Kalluunka Khabiirka',
+    'd4-desc':'Maraq kalluun oo macaan leh oo la kariyay caano qumbe. Torskefilet iyo candhooyin macaan, la dheellitiraye jiir macaan iyo baradho. Kulul, nafaqo leh.',
+    'd4-p1':'🐟 Toorsk & 🦐 Candhooyin — 150g',
+    'd4-p2':'🥥 Caano qumbe nadiif ah — ku dar la\'aan',
+    'd4-p3':'🥕 Jiir & 🥔 Baradho',
+    'd4-p4':'🌿 Kartoon · microplastic la\'aan',
+    'd4-surcharge':'+ 50 kr dheeraad · caano qumbe saafi ah',
+    'pkg-custom':'Adiga ayaa doorta cuntooyinka iyo tirooyinka. Maraqda kalluunka waxay ku kacday 50 kr dheeraad ah caano qumbe nadiif ah.',
+    'form-ph-comment':'Xasaasiyadda, qaybsanaanta cuntada (tusaale 4× maraq, 5× hilib, 5× kalluun)...',
+    'future4':'Shilajit — macdanta dabiiciga ah ee tamarta & xoogga',
+    'nav-super-t':'Aragtida Khabiirka',
+    'sel-opt0':'— Dooro Kokkens Kasse —',
+    'sel-opt1':'Sanduuqa Tijaabada — 3 maalin, 6 cunto',
+    'sel-opt2':'Kokkens Kasse — 7 maalin, 14 cunto (1,450 kr)',
+    'sel-opt3':'Sanduuqa Qoyska — 7 maalin, 14 × 2 qayb',
+    'super-kicker':'Aragtida Khabiirka',
+    'super-h2':'Cun si aad ugu shaqeyso si fiican.',
+    'super-p':'Cunto siinaysa tamarta, xoogga iyo garashada — maalintii oo dhan.',
+    'sp1-h':'Borotiiin heer sare',
+    'sp1-p':'150g borotiiin heer sare cunto kasta — hilib, digaag ama kalluun.',
+    'sp2-h':'Tamar nadiif ah',
+    'sp2-p':'Kaarbohaydreed baradhada iyo baradhada macaan si tamar joogto ah.',
+    'sp3-h':'Macdanta yar yar',
+    'sp3-p':'250g khudaar cusub cunto kasta — vitamiinadda iyo macdanta.',
+    'sp4-h':'Xumaan la\'aan',
+    'sp4-p':'Kartoon, ma aha blaasteek. Microplastic kuma jirto cuntadaada.',
+    'sp5-h':'Superfoods ayaa socota',
+    'sp5-p':'Dhawaan waxaan soo saari doonaa Sea Moss, Shilajit iyo superfoods kale.',
+    'sp6-h':'Joogteyntu waa muhiim',
+    'sp6-p':'Laba cunto maalin kasta, toddoba maalin — gurigaaga laguu keenay.',
+    'super-banner-h':'Cuntadu waa dawo. Dooro kan ugu fiican.',
+    'super-banner-p':'Kokkens Kasse waa nidaam caafimaad. Khudaar cusub, qadarka saxda ah, guriga loo keenay.',
+    'super-banner-btn':'Dalbo hada →'
+  },
+  ar: {
+    'nav-how':'كيف يعمل','nav-filosofi':'فلسفتنا','nav-pakker':'الباقات','nav-meny':'القائمة','nav-bestill':'اطلب','nav-cta':'اطلب الآن',
+    'hero-eyebrow':'توصيل منزلي · ستروميـن، النرويج',
+    'hero-h1':'وجبتان يومياً،',
+    'hero-h1-em':'توصّل إلى باب منزلك',
+    'hero-h1-end':'طوال الأسبوع.',
+    'hero-sub':'صباحاً ومساءً — أفضل ما يقدمه الشيف، معبأ لكامل الأسبوع. لا تسوق، لا ضغط. فقط طعام طازج يصل إلى بابك.',
+    'hero-btn1':'عرض الباقات →','hero-btn2':'عرض القائمة →',
+    'badge1':'١٤ وجبة أسبوعياً','badge2':'توصيل للباب','badge3':'عبوات ورقية — بدون بلاستيك دقيق','badge4':'١٤٥٠ كرون/أسبوع',
+    'how-tag':'كيف يعمل','how-h2':'طعام أسبوعي، بدون ضغط.','how-p':'من الطلب إلى مائدتك — أربع خطوات بسيطة.',
+    'step1-h':'اختر باقتك','step1-p':'اختر كوكنز كاسه بـ١٤ وجبة، صندوق تجريبي (٦ وجبات) أو باقة العائلة.',
+    'step2-h':'مطبخ الشيف يطبخ','step2-p':'جميع الأطباق تُحضَّر طازجة بمكونات مختارة من قِبل طهاتنا.',
+    'step3-h':'تعبئة الصندوق','step3-p':'جميع الـ١٤ وجبة تُعبَّأ بأمان وجاهزة للتوصيل.',
+    'step4-h':'نوصّل إلى بابك','step4-p':'لا داعي للاستلام. نوصّل مباشرة إلى بابك في ستروميـن.',
+    'pkg-tag':'الباقات','pkg-h2':'اختر كوكنز كاسه','pkg-p':'وجبتان يومياً، ٧ أيام — ١٤ حصة طازجة تُوصَّل إلى منزلك.',
+    'menu-tag':'القائمة','menu-h2':'أطباق الصندوق','menu-p':'جميع الأطباق مُحضَّرة بمكونات طازجة في عبوات ورقية صحية.',
+    'order-tag':'الطلب','order-h2':'مستعد لأسبوع من الطعام الجيد؟','order-p':'املأ النموذج وسنتواصل معك لتأكيد التوصيل والدفع عبر Vipps.',
+    'del-tag':'توصيل منزلي','del-h2':'نأتي إليك.','del-p':'لا سيارة، لا طابور. نعبئ ونوصّل كوكنز كاسه مباشرة إلى بابك.',
+    'footer-p':'وجبات منزلية أسبوعية · ستروميـن، النرويج',
+    'footer-brand':'وجبات طازجة منزلية تُوصَّل إلى بابك في ستروميـن. وجبتان يومياً، ٧ أيام في الأسبوع.',
+    'ft-nav-h':'التنقل',
+    'ft-nav-1':'كيف يعمل',
+    'ft-nav-2':'فلسفتنا',
+    'ft-nav-3':'رؤية الشيف',
+    'ft-nav-4':'الباقات',
+    'ft-nav-5':'القائمة',
+    'ft-pkg-h':'الباقات',
+    'ft-pkg-1':'صندوق تجريبي',
+    'ft-pkg-3':'صندوق العائلة',
+    'ft-pkg-4':'Sea Moss · قريباً',
+    'ft-pkg-5':'Shilajit · قريباً',
+    'ft-contact-h':'تواصل',
+    'ft-contact-1':'اطلب الآن',
+    'ft-contact-3':'📍 ستروميـن، النرويج',
+    'ft-contact-4':'💳 دفع Vipps',
+    'form-fname':'الاسم الأول','form-lname':'اسم العائلة','form-phone':'الهاتف','form-email':'البريد الإلكتروني',
+    'form-addr':'عنوان التوصيل','form-pkg':'اختر الباقة','form-day':'يوم التوصيل المفضل','form-comment':'تعليق',
+    'form-comment-opt':'(اختياري)','form-ph-fname':'محمد','form-ph-lname':'علي',
+    'form-ph-addr':'العنوان، ستروميـن','form-ph-day':'مثلاً: الاثنين','form-ph-comment':'الحساسية، طلبات خاصة...',
+    'vipps-txt':'الدفع عبر Vipps — ١٤٥٠ كرون','order-note-txt':'سنرسل لك رسالة تأكيد SMS فور استلام طلبك.',
+    'perk1-h':'عبوات ورقية — بدون بلاستيك دقيق','perk1-p':'جميع الوجبات في حاويات كرتونية صحية. بدون بلاستيك.',
+    'perk2-h':'توصيل للباب في ستروميـن','perk2-p':'نوصّل مباشرة إلى عنوانك.',
+    'perk3-h':'طلب سهل','perk3-p':'تواصل معنا لطلب كوكنز كاسه.',
+    'phil-tag':'فلسفتنا','phil-h2-1':'نؤمن بالطعام الذي','phil-h2-em':'يفيدك.',
+    'phil-p1':'تأسس كوكنز تيكاوت ميل بفكرة واحدة: الطعام الجيد يجب أن يكون متاحاً للجميع.',
+    'phil-p2':'نستخدم مكونات طازجة وعبوات ورقية خالية من البلاستيك الدقيق.',
+    'val1-h':'طعام نظيف، مواد نظيفة','val1-p':'بدون بلاستيك دقيق، بدون إضافات غير ضرورية.',
+    'val2-h':'الصحة في المقدمة','val2-p':'وجبات متوازنة بالبروتين والكربوهيدرات والخضروات.',
+    'val3-h':'محلي وشخصي','val3-p':'نحن من ستروميـن، نوصّل في ستروميـن.',
+    'nav-how-t':'كيف يعمل','nav-filosofi-t':'فلسفتنا','nav-pakker-t':'الباقات','nav-meny-t':'القائمة','nav-bestill-t':'اطلب',
+    'box-title':'كوكنز كاسه — ٧ أيام × ٢ وجبات','box-sub':'كل وجبة (يومياً × ٧)',
+    'meal1':'الوجبة ١ — لحم / دجاج / سمك','meal2':'الوجبة ٢ — لحم / دجاج / سمك',
+    'box-total':'وجبات إجمالاً','box-per':'لكل وجبة','box-footer-label':'التوصيل المنزلي مشمول',
+    'delivery-chip':'🚚 تم التوصيل إلى بابك في ستروميـن',
+    'pkg1-h':'صندوق تجريبي','pkg1-sub':'٣ أيام — ٦ وجبات.',
+    'pkg1-li1':'٢ وجبات يومياً لـ٣ أيام','pkg1-li2':'١٥٠ غ بروتين لكل وجبة',
+    'pkg1-li3':'٢٥٠ غ بطاطس + ٢٥٠ غ خضروات','pkg1-li4':'التوصيل المنزلي مشمول','pkg1-cta':'اطلب الصندوق التجريبي',
+    'pkg2-ribbon':'الأكثر شعبية','pkg2-h':'كوكنز كاسه','pkg2-sub':'٧ أيام — ١٤ وجبة.',
+    'pkg2-li1':'٢ وجبات يومياً لـ٧ أيام','pkg2-li2':'١٥٠ غ بروتين لكل وجبة',
+    'pkg2-li3':'٢٥٠ غ بطاطس + ٢٥٠ غ خضروات','pkg2-li4':'التوصيل إلى بابك مشمول',
+    'pkg2-per':'~١٠٤ كرون لكل وجبة','pkg2-cta':'اطلب كوكنز كاسه',
+    'pkg3-h':'صندوق العائلة','pkg3-sub':'٧ أيام — ١٤ وجبة × ٢ حصة.',
+    'pkg3-li1':'وجبتان × حصتان يومياً — لشخصين','pkg3-li2':'٣٠٠ غ بروتين (لحم/دجاج/سمك) لكل حصة',
+    'pkg3-li3':'٥٠٠ غ بطاطس + ٥٠٠ غ خضروات لكل وجبة','pkg3-li4':'توصيل منزلي، صندوق واحد مجمّع','pkg3-cta':'اطلب صندوق العائلة',
+    'd1-tag1':'لحم','d1-tag2':'بروتين عالٍ','d1-h':'فخر الشيف',
+    'd1-desc':'١٥٠ غ لحم — أطرى قطعة — متبّلة ومطبوخة لتكون طرية. مع ٢٥٠ غ بطاطس و٢٥٠ غ خضروات.',
+    'd1-p1':'🥩 ١٥٠ غ لحم','d1-p2':'🥔 ٢٥٠ غ بطاطس','d1-p3':'🥦 ٢٥٠ غ خضروات','d1-p4':'🌿 كرتون · بدون بلاستيك دقيق',
+    'd2-tag1':'مأكولات بحرية','d2-tag2':'غني بالأوميغا-3','d2-h':'أفضل ما في البحر',
+    'd2-desc':'١٥٠ غ سلمون نرويجي طازج — غني بالأوميغا-3. مع ٢٥٠ غ بطاطس و٢٥٠ غ خضروات.',
+    'd2-p1':'🐟 ١٥٠ غ سلمون طازج','d2-p2':'🥔 ٢٥٠ غ بطاطس','d2-p3':'🥦 ٢٥٠ غ خضروات','d2-p4':'🌿 كرتون · بدون بلاستيك دقيق',
+    'd3-tag1':'دجاج','d3-tag2':'المفضل الذهبي','d3-h':'المفضل الذهبي',
+    'd3-desc':'شرائح دجاج طرية ومقرمشة، مع ٢٥٠ غ بطاطس مقرمشة وشرائح تفاح طازجة وصلصة شيلي حلوة وصلصة خفيفة للأطفال.',
+    'd3-p1':'🍗 ١٥٠ غ شرائح دجاج · 🍎 تفاح','d3-p2':'🥔 ٢٥٠ غ بطاطس مقرمشة','d3-p3':'','d3-p4':'🌶 شيلي حلو · 🍶 صلصة الأطفال','d3-p5':'🌿 كرتون · بدون بلاستيك دقيق',
+    'cs-h':'المزيد من الأطباق قادم','cs-p':'القائمة ستتوسع قريباً!','cs-btn':'أبلغني',
+    'future-h':'🌱 قريباً — متجر الصحة','future-p':'قريباً سنطلق منتجات صحية يمكنك إضافتها إلى كوكنز كاسه.',
+    'future1':'Sea Moss — غذاء طبيعي فائق الفوائد','future2':'مشروبات صحية وشاي الأعشاب','future3':'المزيد من المنتجات قادم...','future-soon':'قريباً',
+    'sm-badge':'🌊 سوبرفود',
+    'sm-desc':'Sea Moss (Chondrus crispus) طحلب أحمر من المحيط الأطلسي، يُستخدم منذ مئات السنين في الطب التقليدي. يحتوي على أكثر من 92 من 102 معدنًا يحتاجها جسمك.',
+    'sm-m1':'اليود',
+    'sm-m2':'الحديد',
+    'sm-m3':'الكالسيوم',
+    'sm-m4':'المغنيسيوم',
+    'sm-m5':'البوتاسيوم',
+    'sm-m6':'الزنك',
+    'sm-m7':'حمض الفوليك',
+    'sm-m8':'أوميغا-3',
+    'sm-b1':'يدعم الغدة الدرقية بالأيود الطبيعي',
+    'sm-b2':'يقوي جهاز المناعة وصحة الأمعاء',
+    'sm-b3':'يمنح الطاقة ويقلل الإرهاق',
+    'sm-b4':'مضاد للالتهابات ويدعم المفاصل',
+    'sm-b5':'مصدر طبيعي للكولاجين للبشرة والشعر',
+    'sh-badge':'⛰️ أيورفيدي',
+    'sh-desc':'شيلاجيت راتنج طبيعي يتسرب من جبال الهيمالايا عبر آلاف السنين. يُستخدم في الطب الأيورفيدي منذ أكثر من 3000 عام.',
+    'sh-m1':'حمض الفولفيك',
+    'sh-m2':'الحديد',
+    'sh-m3':'الزنك',
+    'sh-m4':'المغنيسيوم',
+    'sh-m5':'النحاس',
+    'sh-m6':'السيلينيوم',
+    'sh-m7':'80+ معدن',
+    'sh-b1':'يزيد مستويات الطاقة والقدرة على التحمل',
+    'sh-b2':'يدعم وظائف الدماغ والتركيز',
+    'sh-b3':'ينقل العناصر الغذائية إلى الخلايا عبر حمض الفولفيك',
+    'sh-b4':'التستوستيرون وتوازن الهرمونات',
+    'sh-b5':'مضاد للأكسدة وتأثيرات مكافحة الشيخوخة',
+    'd4-tag1':'مأكولات بحرية',
+    'd4-tag2':'شوربة',
+    'd4-h':'شوربة السمك من الشيف',
+    'd4-desc':'شوربة سمك غنية ومعطرة مطبوخة بحليب جوز الهند الكريمي. فيليه سمك القد والروبيان مع الجزر الحلو والبطاطس الطرية. دافئة ومغذية.',
+    'd4-p1':'🐟 سمك القد & 🦐 روبيان — ١٥٠ غ',
+    'd4-p2':'🥥 حليب جوز الهند النقي — بدون إضافات',
+    'd4-p3':'🥕 جزر & 🥔 بطاطس',
+    'd4-p4':'🌿 كرتون · بدون بلاستيك دقيق',
+    'd4-surcharge':'+ ٥٠ كرون إضافية · حليب جوز الهند الطبيعي',
+    'pkg-custom':'تختار الأطباق وعدد كل منها بنفسك. شوربة السمك تكلف ٥٠ كرون إضافية بسبب حليب جوز الهند النقي بدون إضافات.',
+    'form-ph-comment':'الحساسية، توزيع الأطباق المطلوب (مثلاً ٤× شوربة، ٥× لحم، ٥× سلمون)...',
+    'future4':'Shilajit — راتنج معدني قديم للطاقة والحيوية',
+    'nav-super-t':'رؤية الشيف',
+    'sel-opt0':'— اختر كوكنز كاسه —',
+    'sel-opt1':'صندوق تجريبي — ٣ أيام، ٦ وجبات',
+    'sel-opt2':'كوكنز كاسه — ٧ أيام، ١٤ وجبة (١٤٥٠ كرون)',
+    'sel-opt3':'صندوق العائلة — ٧ أيام، ١٤ × ٢ حصة',
+    'super-kicker':'رؤية الشيف',
+    'super-h2':'كُل كآلة مصممة للأداء.',
+    'super-p':'نظام غذائي يمنحك الطاقة والتركيز والقوة — طوال اليوم، طوال الأسبوع.',
+    'sp1-h':'بروتين ممتاز',
+    'sp1-p':'١٥٠ غ بروتين عالي الجودة لكل وجبة — لحم أو دجاج أو سلمون.',
+    'sp2-h':'طاقة نظيفة',
+    'sp2-p':'كربوهيدرات معقدة من البطاطس والبطاطا الحلوة لطاقة مستقرة.',
+    'sp3-h':'المغذيات الدقيقة',
+    'sp3-p':'٢٥٠ غ خضروات طازجة لكل وجبة — الفيتامينات والمعادن.',
+    'sp4-h':'بدون سموم',
+    'sp4-p':'كرتون لا بلاستيك. لا بلاستيك دقيق في طعامك.',
+    'sp5-h':'سوبرفود قادم',
+    'sp5-p':'قريباً نطلق Sea Moss وShilajit وأغذية طبيعية خارقة.',
+    'sp6-h':'الاستمرارية هي المفتاح',
+    'sp6-p':'وجبتان يومياً، سبعة أيام في الأسبوع — توصّل إلى بابك.',
+    'super-banner-h':'الطعام دواء. اختر الأفضل.',
+    'super-banner-p':'كوكنز كاسه نظام للصحة المثلى. مكونات طازجة، الكمية الصحيحة، توصيل للمنزل.',
+    'super-banner-btn':'اطلب الآن →'
+  },
+  pl: {
+    'nav-how':'Jak to działa','nav-filosofi':'Filozofia','nav-pakker':'Pakiety','nav-meny':'Menu','nav-bestill':'Zamów','nav-cta':'Zamów teraz',
+    'hero-eyebrow':'Dostawa do domu · Strømmen, Norwegia',
+    'hero-h1':'Dwa posiłki dziennie,',
+    'hero-h1-em':'dostarczone do domu',
+    'hero-h1-end':'przez cały tydzień.',
+    'hero-sub':'Rano i wieczorem — to, co najlepsze od szefa kuchni, spakowane na cały tydzień. Bez zakupów. Bez stresu. Tylko dobre jedzenie pod Twoje drzwi.',
+    'hero-btn1':'Zobacz pakiety →','hero-btn2':'Zobacz menu →',
+    'badge1':'14 posiłków tygodniowo','badge2':'Dostawa pod drzwi','badge3':'Tektura — bez mikroplastiku','badge4':'1 450 kr/tydzień',
+    'how-tag':'Jak to działa','how-h2':'Jedzenie co tydzień, zero stresu.','how-p':'Od zamówienia do Twojego stołu — cztery proste kroki.',
+    'step1-h':'Wybierz pakiet','step1-p':'Wybierz Kokkens Kasse z 14 posiłkami, pudełko próbne (6 posiłków) lub pakiet rodzinny.',
+    'step2-h':'Kuchnia szefa gotuje','step2-p':'Wszystkie dania są świeżo przygotowywane przez naszych szefów kuchni.',
+    'step3-h':'Pakowanie pudełka','step3-p':'Wszystkie 14 posiłków jest bezpiecznie zapakowane, gotowe do dostawy.',
+    'step4-h':'Dowozimy do Twoich drzwi','step4-p':'Bez odbioru. Dowozimy prosto pod Twoje drzwi w okolicy Strømmen.',
+    'pkg-tag':'Pakiety','pkg-h2':'Wybierz swój Kokkens Kasse','pkg-p':'2 posiłki dziennie, 7 dni — 14 świeżych porcji dostarczonych do Twojego domu.',
+    'menu-tag':'Menu','menu-h2':'Dania w pudełku','menu-p':'Wszystkie dania przygotowane ze świeżych składników w higienicznych opakowaniach kartonowych.',
+    'order-tag':'Zamówienie','order-h2':'Gotowy na tydzień pysznego jedzenia?','order-p':'Wypełnij formularz, a my skontaktujemy się, aby potwierdzić dostawę i płatność przez Vipps.',
+    'del-tag':'Dostawa do domu','del-h2':'Przyjeżdżamy do Ciebie.','del-p':'Bez jazdy samochodem, bez kolejki. Pakujemy i dowozimy Kokkens Kassen prosto pod Twoje drzwi.',
+    'footer-p':'Domowe jedzenie co tydzień · Strømmen, Norwegia',
+    'footer-brand':'Świeże, domowe posiłki dostarczone pod Twoje drzwi w Strømmen. 2 posiłki dziennie, 7 dni w tygodniu.',
+    'ft-nav-h':'Nawigacja',
+    'ft-nav-1':'Jak to działa',
+    'ft-nav-2':'Filozofia',
+    'ft-nav-3':'Kokkens Visjon',
+    'ft-nav-4':'Pakiety',
+    'ft-nav-5':'Menu',
+    'ft-pkg-h':'Pakiety',
+    'ft-pkg-1':'Pudełko próbne',
+    'ft-pkg-3':'Pudełko rodzinne',
+    'ft-pkg-4':'Sea Moss · Wkrótce',
+    'ft-pkg-5':'Shilajit · Wkrótce',
+    'ft-contact-h':'Kontakt',
+    'ft-contact-1':'Zamów teraz',
+    'ft-contact-3':'📍 Strømmen, Norwegia',
+    'ft-contact-4':'💳 Płatność Vipps',
+    'form-fname':'Imię','form-lname':'Nazwisko','form-phone':'Telefon','form-email':'E-mail',
+    'form-addr':'Adres dostawy','form-pkg':'Wybierz pakiet','form-day':'Preferowany dzień dostawy','form-comment':'Komentarz',
+    'form-comment-opt':'(opcjonalnie)','form-ph-fname':'Jan','form-ph-lname':'Kowalski',
+    'form-ph-addr':'Ulica, Strømmen','form-ph-day':'Np. poniedziałek lub wtorek',
+    'form-ph-comment':'Alergie, życzenia specjalne...',
+    'vipps-txt':'Zapłać przez Vipps — 1 450 kr',
+    'order-note-txt':'Wyślemy potwierdzenie SMS natychmiast po otrzymaniu zamówienia.',
+    'perk1-h':'Opakowanie tekturowe — bez mikroplastiku','perk1-p':'Wszystkie posiłki dostarczane w higienicznych pojemnikach kartonowych. Bez plastiku, bez mikroplastiku.',
+    'perk2-h':'Dostawa pod drzwi w Strømmen','perk2-p':'Dowozimy bezpośrednio na Twój adres. Nie musisz wychodzić z domu.',
+    'perk3-h':'Łatwe zamawianie','perk3-p':'Skontaktuj się, aby zamówić swój Kokkens Kasse. Ustalimy dostawę w dogodnym czasie.',
+    'phil-tag':'Nasza filozofia','phil-h2-1':'Wierzymy w jedzenie,','phil-h2-em':'które Ci służy.','phil-p1':'Kokkens Takeout Meal powstało z jedną myślą: dobra, pożywna żywność powinna być łatwo dostępna dla każdego.','phil-p2':'Używamy świeżych składników, opakowań kartonowych bez mikroplastiku i gotujemy z troską.',
+    'val1-h':'Czyste jedzenie, czyste opakowania','val1-p':'Bez mikroplastiku, bez zbędnych dodatków. Tylko prawdziwe składniki w kartonowych opakowaniach.',
+    'val2-h':'Zdrowie na pierwszym miejscu','val2-p':'Zbilansowane posiłki z odpowiednim białkiem, węglowodanami i warzywami.',
+    'val3-h':'Lokalnie i personalnie','val3-p':'Jesteśmy ze Strømmen, dostarczamy do Strømmen. Zawsze rozmawiasz bezpośrednio z nami.',
+    'nav-how-t':'Jak to działa','nav-filosofi-t':'Filozofia','nav-pakker-t':'Pakiety','nav-meny-t':'Menu','nav-bestill-t':'Zamów',
+    'box-title':'Kokkens Kasse — 7 dni × 2 posiłki','box-sub':'Każdy posiłek (codziennie × 7)',
+    'meal1':'Posiłek 1 — Wołowina / Kurczak / Ryba','meal2':'Posiłek 2 — Wołowina / Kurczak / Ryba',
+    'box-total':'posiłków łącznie','box-per':'za posiłek','box-footer-label':'Dostawa do domu w cenie',
+    'delivery-chip':'🚚 Dostarczone pod Twoje drzwi w Strømmen',
+    'pkg1-h':'Pudełko próbne','pkg1-sub':'3 dni — 6 posiłków. Idealne do wypróbowania.',
+    'pkg1-li1':'2 posiłki dziennie przez 3 dni','pkg1-li2':'150g białka (wołowina/kurczak/ryba) na posiłek',
+    'pkg1-li3':'250g ziemniaków + 250g warzyw na posiłek','pkg1-li4':'Dostawa do domu w cenie','pkg1-cta':'Zamów pudełko próbne',
+    'pkg2-ribbon':'Najpopularniejszy','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 dni — 14 posiłków. Cały tydzień pokryty.',
+    'pkg2-li1':'2 posiłki dziennie przez 7 dni','pkg2-li2':'150g białka (wołowina/kurczak/ryba) na posiłek',
+    'pkg2-li3':'250g ziemniaków + 250g warzyw na posiłek','pkg2-li4':'Dostawa pod drzwi w cenie',
+    'pkg2-per':'~104 kr za posiłek','pkg2-cta':'Zamów Kokkens Kasse',
+    'pkg3-h':'Pudełko rodzinne','pkg3-sub':'7 dni — 14 posiłków × 2 porcje. Dla par lub rodzin.',
+    'pkg3-li1':'2 posiłki × 2 porcje dziennie — dla dwóch osób','pkg3-li2':'300g białka (wołowina/kurczak/ryba) na porcję',
+    'pkg3-li3':'500g ziemniaków ze słodkim ziemniakiem + 500g warzyw','pkg3-li4':'Dostawa do domu, jedno zbiorcze pudełko','pkg3-cta':'Zamów pudełko rodzinne',
+    'd1-tag1':'Mięso','d1-tag2':'Wysokie białko','d1-h':'Duma Szefa',
+    'd1-desc':'Prawdziwy klasyk z kuchni szefa. 150g polędwicy — najdelikatniejszy kawałek — przyprawiony i usmażony do soczystej perfekcji. Z 250g ziemniaków i 250g warzyw.',
+    'd1-p1':'🥩 150g polędwica','d1-p2':'🥔 250g ziemniaki ze słodkim ziemniakiem','d1-p3':'🥦 250g warzywa','d1-p4':'🌿 Karton · bez mikroplastiku',
+    'd2-tag1':'Owoce morza','d2-tag2':'Bogaty w Omega-3','d2-h':'Najlepsze z Morza',
+    'd2-desc':'Świeży norweski filet z łososia 150g — bogaty w omega-3 i pełen smaku. Starannie przygotowany przez szefa. Z 250g ziemniaków i 250g warzyw.',
+    'd2-p1':'🐟 150g świeży łosoś','d2-p2':'🥔 250g ziemniaki ze słodkim ziemniakiem','d2-p3':'🥦 250g warzywa','d2-p4':'🌿 Karton · bez mikroplastiku',
+    'd3-tag1':'Kurczak','d3-tag2':'Złoty Faworyt','d3-h':'Złoty Faworyt',
+    'd3-desc':'Soczyste, delikatne stripsy z kurczaka usmażone na złoto. Z 250g chrupiącymi ziemniakami, świeżymi plasterkami jabłka, sosem sweet chili i łagodnym sosem dla dzieci.',
+    'd3-p1':'🍗 150g stripsy z kurczaka · 🍎 Jabłko','d3-p2':'🥔 250g chrupiące ziemniaki','d3-p3':'','d3-p4':'🌶 Sweet chili · 🍶 Sos dla dzieci','d3-p5':'🌿 Karton · bez mikroplastiku',
+    'cs-h':'Więcej dań wkrótce','cs-p':'Kuchnia szefa pracuje nad nowymi daniami. Menu wkrótce się powiększy!','cs-btn':'Powiadom mnie',
+    'future-h':'🌱 Wkrótce — sklep zdrowia','future-p':'Budujemy coś większego. Wkrótce uruchomimy produkty zdrowotne do Kokkens Kasse.',
+    'future1':'Sea Moss — naturalny superfood bogaty w minerały','future2':'Napoje zdrowotne i herbaty ziołowe','future3':'Więcej produktów zdrowotnych w drodze...','future-soon':'Wkrótce',
+    'sm-badge':'🌊 Superfood',
+    'sm-desc':'Sea Moss (Chondrus crispus) to czerwona alga z Oceanu Atlantyckiego, używana od setek lat w tradycyjnej medycynie. Zawiera ponad 92 ze 102 minerałów potrzebnych Twojemu ciału.',
+    'sm-m1':'Jod',
+    'sm-m2':'Żelazo',
+    'sm-m3':'Wapń',
+    'sm-m4':'Magnez',
+    'sm-m5':'Potas',
+    'sm-m6':'Cynk',
+    'sm-m7':'Kwas foliowy',
+    'sm-m8':'Omega-3',
+    'sm-b1':'Wspiera tarczycę naturalnym jodem',
+    'sm-b2':'Wzmacnia układ odpornościowy i zdrowie jelit',
+    'sm-b3':'Dodaje energii i redukuje zmęczenie',
+    'sm-b4':'Przeciwzapalne i wspiera stawy',
+    'sm-b5':'Naturalne źródło kolagenu dla skóry i włosów',
+    'sh-badge':'⛰️ Ajurwedyczny',
+    'sh-desc':'Shilajit to naturalna żywica sącząca się z gór Himalajów przez tysiące lat. Stosowana w medycynie ajurwedyjskiej od ponad 3000 lat.',
+    'sh-m1':'Kwas fulwowy',
+    'sh-m2':'Żelazo',
+    'sh-m3':'Cynk',
+    'sh-m4':'Magnez',
+    'sh-m5':'Miedź',
+    'sh-m6':'Selen',
+    'sh-m7':'80+ minerałów',
+    'sh-b1':'Naturalnie zwiększa poziom energii i wytrzymałość',
+    'sh-b2':'Wspiera funkcje mózgu i koncentrację',
+    'sh-b3':'Transportuje składniki odżywcze do komórek przez kwas fulwowy',
+    'sh-b4':'Testosteron i równowaga hormonalna',
+    'sh-b5':'Właściwości antyoksydacyjne i przeciwstarzeniowe',
+    'd4-tag1':'Owoce morza',
+    'd4-tag2':'Zupa',
+    'd4-h':'Zupa Rybna Szefa',
+    'd4-desc':'Sycąca zupa rybna gotowana na kremowym mleku kokosowym. Filet z dorsza i soczyste krewetki z marchewką i ziemniakami. Ciepła i pożywna.',
+    'd4-p1':'🐟 Dorsz & 🦐 Krewetki — 150g',
+    'd4-p2':'🥥 Czyste mleko kokosowe — bez dodatków',
+    'd4-p3':'🥕 Marchew & 🥔 Ziemniaki',
+    'd4-p4':'🌿 Karton · bez mikroplastiku',
+    'd4-surcharge':'+ 50 kr dopłata · czyste mleko kokosowe bez dodatków',
+    'pkg-custom':'Sam wybierasz dania i ile każdego. Zupa rybna kosztuje 50 kr więcej za posiłek z powodu czystego mleka kokosowego bez dodatków.',
+    'form-ph-comment':'Alergie, podział dań (np. 4× zupa, 5× wołowina, 5× łosoś)...',
+    'future4':'Shilajit — starożytna żywica mineralna dla energii i witalności',
+    'nav-super-t':'Wizja Szefa',
+    'sel-opt0':'— Wybierz Kokkens Kasse —',
+    'sel-opt1':'Pudełko próbne — 3 dni, 6 posiłków',
+    'sel-opt2':'Kokkens Kasse — 7 dni, 14 posiłków (1 450 kr)',
+    'sel-opt3':'Pudełko rodzinne — 7 dni, 14 × 2 porcje',
+    'super-kicker':'Wizja Szefa',
+    'super-h2':'Jedz jak maszyna stworzona do działania.',
+    'super-p':'Dieta, która daje Ci energię, skupienie i siłę — przez cały dzień, cały tydzień.',
+    'sp1-h':'Premium białko',
+    'sp1-p':'150g wysokiej jakości białka na posiłek — wołowina, kurczak lub łosoś.',
+    'sp2-h':'Czysta energia',
+    'sp2-p':'Złożone węglowodany z ziemniaków i słodkich ziemniaków dają stabilną energię.',
+    'sp3-h':'Mikroskładniki',
+    'sp3-p':'250g świeżych warzyw na posiłek — witaminy i minerały.',
+    'sp4-h':'Bez toksyn',
+    'sp4-p':'Karton, nie plastik. Żadnego mikroplastiku w Twoim jedzeniu.',
+    'sp5-h':'Superfoods już wkrótce',
+    'sp5-p':'Wkrótce uruchomimy Sea Moss, Shilajit i naturalne superfoods.',
+    'sp6-h':'Konsekwencja to klucz',
+    'sp6-p':'Dwa posiłki dziennie, siedem dni w tygodniu — dostarczone pod drzwi.',
+    'super-banner-h':'Jedzenie to lekarstwo. Wybierz najlepsze.',
+    'super-banner-p':'Kokkens Kasse to system optymalnego zdrowia. Świeże składniki, właściwa ilość, dostawa do domu.',
+    'super-banner-btn':'Zamów teraz →'
+  },
+  uk: {
+    'nav-how':'Як це працює','nav-filosofi':'Філософія','nav-pakker':'Пакети','nav-meny':'Меню','nav-bestill':'Замовити','nav-cta':'Замовити зараз',
+    'hero-eyebrow':'Доставка додому · Стрьоммен, Норвегія',
+    'hero-h1':'Два прийоми їжі на день,',
+    'hero-h1-em':'доставлені додому',
+    'hero-h1-end':'кожного тижня.',
+    'hero-sub':'Вранці та ввечері — найкраще від шефа, упаковане на весь тиждень. Без походів до магазину. Без стресу. Просто смачна їжа прямо до вашого порогу.',
+    'hero-btn1':'Переглянути пакети →','hero-btn2':'Переглянути меню →',
+    'badge1':'14 страв на тиждень','badge2':'Доставка до дверей','badge3':'Картон — без мікропластику','badge4':'1 450 кр/тиждень',
+    'how-tag':'Як це працює','how-h2':'Щотижнева їжа, нуль стресу.','how-p':'Від замовлення до вашого столу — чотири прості кроки.',
+    'step1-h':'Оберіть пакет','step1-p':'Оберіть Kokkens Kasse з 14 стравами, пробний набір (6 страв) або сімейний пакет.',
+    'step2-h':'Кухня шефа готує','step2-p':'Усі страви свіжо готуються нашими шеф-кухарями з відібраних інгредієнтів.',
+    'step3-h':'Коробку пакують','step3-p':'Усі 14 страв безпечно упаковані та готові до доставки.',
+    'step4-h':'Ми доставляємо до вашого порогу','step4-p':'Не потрібно нікуди їхати. Ми привеземо прямо до ваших дверей у районі Стрьоммен.',
+    'pkg-tag':'Пакети','pkg-h2':'Оберіть свій Kokkens Kasse','pkg-p':'2 страви на день, 7 днів — 14 свіжих порцій доставлених до вашого дому.',
+    'menu-tag':'Меню','menu-h2':'Страви в коробці','menu-p':'Усі страви приготовлені зі свіжих інгредієнтів у гігієнічних картонних контейнерах — без мікропластику, лише смачна їжа.',
+    'order-tag':'Замовлення','order-h2':'Готові до тижня смачної їжі?','order-p':'Заповніть форму і ми зв\'яжемось для підтвердження доставки та оплати через Vipps.',
+    'del-tag':'Доставка додому','del-h2':'Ми приїдемо до вас.','del-p':'Без поїздок, без черг. Ми пакуємо та доставляємо Kokkens Kassen прямо до ваших дверей у Стрьоммен.',
+    'footer-p':'Домашній щотижневий тейкаут · Стрьоммен, Норвегія',
+    'footer-brand':'Свіжі, домашні страви доставлені до вашого порогу в Стрьоммен. 2 страви на день, 7 днів на тиждень.',
+    'ft-nav-h':'Навігація',
+    'ft-nav-1':'Як це працює',
+    'ft-nav-2':'Філософія',
+    'ft-nav-3':'Kokkens Visjon',
+    'ft-nav-4':'Пакети',
+    'ft-nav-5':'Меню',
+    'ft-pkg-h':'Пакети',
+    'ft-pkg-1':'Пробний набір',
+    'ft-pkg-3':'Сімейна коробка',
+    'ft-pkg-4':'Sea Moss · Незабаром',
+    'ft-pkg-5':'Shilajit · Незабаром',
+    'ft-contact-h':'Контакт',
+    'ft-contact-1':'Замовити зараз',
+    'ft-contact-3':'📍 Стрьоммен, Норвегія',
+    'ft-contact-4':'💳 Оплата Vipps',
+    'form-fname':'Ім\'я','form-lname':'Прізвище','form-phone':'Телефон','form-email':'Ел. пошта',
+    'form-addr':'Адреса доставки','form-pkg':'Оберіть пакет','form-day':'Бажаний день доставки','form-comment':'Коментар',
+    'form-comment-opt':'(необов\'язково)','form-ph-fname':'Іван','form-ph-lname':'Петренко',
+    'form-ph-addr':'Вулиця, Стрьоммен','form-ph-day':'Напр. понеділок або вівторок',
+    'form-ph-comment':'Алергії, особливі побажання...',
+    'vipps-txt':'Оплатити через Vipps — 1 450 кр',
+    'order-note-txt':'Ми надішлемо SMS-підтвердження одразу після отримання замовлення.',
+    'perk1-h':'Картонне пакування — без мікропластику','perk1-p':'Усі страви доставляються у гігієнічних картонних контейнерах. Без пластику, без мікропластику.',
+    'perk2-h':'Доставка до дверей у Стрьоммен','perk2-p':'Доставляємо безпосередньо на вашу адресу. Вам не потрібно виходити з дому.',
+    'perk3-h':'Просте замовлення','perk3-p':'Зв\'яжіться з нами для замовлення Kokkens Kasse. Домовимось про зручний час доставки.',
+    'phil-tag':'Наша філософія','phil-h2-1':'Ми віримо в їжу,','phil-h2-em':'яка йде вам на користь.','phil-p1':'Kokkens Takeout Meal з\'явився з однією думкою: хороша, поживна їжа має бути легкодоступною для всіх.','phil-p2':'Ми використовуємо свіжі інгредієнти, картонні упаковки без мікропластику і готуємо з турботою.',
+    'val1-h':'Чиста їжа, чисті матеріали','val1-p':'Без мікропластику, без зайвих добавок. Лише справжні інгредієнти в картонних упаковках.',
+    'val2-h':'Здоров\'я в пріоритеті','val2-p':'Збалансовані страви з правильним білком, вуглеводами та овочами.',
+    'val3-h':'Місцево та особисто','val3-p':'Ми зі Стрьоммен, доставляємо до Стрьоммен. Ви завжди спілкуєтесь безпосередньо з нами.',
+    'nav-how-t':'Як це працює','nav-filosofi-t':'Філософія','nav-pakker-t':'Пакети','nav-meny-t':'Меню','nav-bestill-t':'Замовити',
+    'box-title':'Kokkens Kasse — 7 днів × 2 страви','box-sub':'Кожна страва (щодня × 7)',
+    'meal1':'Страва 1 — Яловичина / Курка / Риба','meal2':'Страва 2 — Яловичина / Курка / Риба',
+    'box-total':'страв загалом','box-per':'за страву','box-footer-label':'Доставка додому включена',
+    'delivery-chip':'🚚 Доставлено до ваших дверей у Стрьоммен',
+    'pkg1-h':'Пробний набір','pkg1-sub':'3 дні — 6 страв. Ідеально для знайомства.',
+    'pkg1-li1':'2 страви на день протягом 3 днів','pkg1-li2':'150г білка (яловичина/курка/риба) на страву',
+    'pkg1-li3':'250г картоплі + 250г овочів на страву','pkg1-li4':'Доставка додому включена','pkg1-cta':'Замовити пробний набір',
+    'pkg2-ribbon':'Найпопулярніший','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 днів — 14 страв. Весь тиждень покрито.',
+    'pkg2-li1':'2 страви на день протягом 7 днів','pkg2-li2':'150г білка (яловичина/курка/риба) на страву',
+    'pkg2-li3':'250г картоплі + 250г овочів на страву','pkg2-li4':'Доставка до дверей включена',
+    'pkg2-per':'~104 кр за страву','pkg2-cta':'Замовити Kokkens Kasse',
+    'pkg3-h':'Сімейна коробка','pkg3-sub':'7 днів — 14 страв × 2 порції. Для пар або сімей.',
+    'pkg3-li1':'2 страви × 2 порції на день — для двох людей','pkg3-li2':'300г білка (яловичина/курка/риба) на порцію на страву',
+    'pkg3-li3':'500г картоплі зі солодкою картоплею + 500г овочів','pkg3-li4':'Доставка додому, одна спільна коробка','pkg3-cta':'Замовити сімейну коробку',
+    'd1-tag1':'М\'ясо','d1-tag2':'Високий білок','d1-h':'Гордість Шефа',
+    'd1-desc':'Справжня класика з кухні шефа. 150г вирізки — найніжніший шматок — приправлений та приготований до соковитої досконалості. З 250г хрусткої картоплі та 250г овочів.',
+    'd1-p1':'🥩 150г вирізка','d1-p2':'🥔 250г картопля зі солодкою картоплею','d1-p3':'🥦 250г овочі','d1-p4':'🌿 Картон · без мікропластику',
+    'd2-tag1':'Морепродукти','d2-tag2':'Багатий на Омега-3','d2-h':'Найкраще з Моря',
+    'd2-desc':'Свіже норвезьке філе лосося 150г — багате на омега-3 і повне смаку. Обережно приготоване шефом. З 250г картоплі та 250г овочів.',
+    'd2-p1':'🐟 150г свіжий лосось','d2-p2':'🥔 250г картопля зі солодкою картоплею','d2-p3':'🥦 250г овочі','d2-p4':'🌿 Картон · без мікропластику',
+    'd3-tag1':'Курка','d3-tag2':'Золотий Фаворит','d3-h':'Золотий Фаворит',
+    'd3-desc':'Соковиті, ніжні смужки курки, смажені до золотистої досконалості. З 250г хрусткою картоплею, свіжими скибочками яблука, соусом sweet chili та м\'яким дитячим соусом.',
+    'd3-p1':'🍗 150г смужки курки · 🍎 Яблуко','d3-p2':'🥔 250г хрустка картопля','d3-p3':'','d3-p4':'🌶 Sweet chili · 🍶 Дитячий соус','d3-p5':'🌿 Картон · без мікропластику',
+    'cs-h':'Більше страв незабаром','cs-p':'Кухня шефа працює над новими сезонними стравами. Меню незабаром розшириться!','cs-btn':'Сповістити мене',
+    'future-h':'🌱 Незабаром — магазин здоров\'я','future-p':'Ми будуємо щось більше. Незабаром запустимо асортимент товарів для здоров\'я.',
+    'future1':'Sea Moss — натуральний суперфуд багатий на мінерали','future2':'Оздоровчі напої та трав\'яні чаї','future3':'Більше товарів для здоров\'я в дорозі...','future-soon':'Незабаром',
+    'sm-badge':'🌊 Суперфуд',
+    'sm-desc':'Sea Moss (Chondrus crispus) — червона водорость з Атлантичного океану, яку використовують сотні років у традиційній медицині. Містить понад 92 зі 102 мінералів, необхідних вашому тілу.',
+    'sm-m1':'Йод',
+    'sm-m2':'Залізо',
+    'sm-m3':'Кальцій',
+    'sm-m4':'Магній',
+    'sm-m5':'Калій',
+    'sm-m6':'Цинк',
+    'sm-m7':'Фолієва кислота',
+    'sm-m8':'Омега-3',
+    'sm-b1':'Підтримує щитовидну залозу природним йодом',
+    'sm-b2':'Зміцнює імунітет та здоров\'я кишківника',
+    'sm-b3':'Дає енергію та зменшує втому',
+    'sm-b4':'Протизапальна дія та підтримка суглобів',
+    'sm-b5':'Природне джерело колагену для шкіри та волосся',
+    'sh-badge':'⛰️ Аюрведа',
+    'sh-desc':'Шіладжит — природна смола, що сочиться з гімалайських гір тисячоліттями. Використовується в аюрведичній медицині понад 3000 років.',
+    'sh-m1':'Фульвова кислота',
+    'sh-m2':'Залізо',
+    'sh-m3':'Цинк',
+    'sh-m4':'Магній',
+    'sh-m5':'Мідь',
+    'sh-m6':'Селен',
+    'sh-m7':'80+ мінералів',
+    'sh-b1':'Природно підвищує рівень енергії та витривалість',
+    'sh-b2':'Підтримує функції мозку та концентрацію',
+    'sh-b3':'Транспортує поживні речовини в клітини через фульвову кислоту',
+    'sh-b4':'Тестостерон та гормональний баланс',
+    'sh-b5':'Антиоксидантні та антивікові ефекти',
+    'd4-tag1':'Морепродукти',
+    'd4-tag2':'Суп',
+    'd4-h':'Рибний суп шефа',
+    'd4-desc':'Насичений рибний суп на кремовому кокосовому молоці. Філе тріски та соковиті креветки з морквою та картоплею. Теплий та поживний.',
+    'd4-p1':'🐟 Тріска & 🦐 Креветки — 150г',
+    'd4-p2':'🥥 Чисте кокосове молоко — без добавок',
+    'd4-p3':'🥕 Морква & 🥔 Картопля',
+    'd4-p4':'🌿 Картон · без мікропластику',
+    'd4-surcharge':'+ 50 кр доплата · чисте кокосове молоко без добавок',
+    'pkg-custom':'Ви самі обираєте страви та кількість кожної. Рибний суп коштує на 50 кр більше через чисте кокосове молоко без добавок.',
+    'form-ph-comment':'Алергії, бажаний розподіл страв (напр. 4× суп, 5× яловичина, 5× лосось)...',
+    'future4':'Shilajit — стародавня мінеральна смола для енергії та життєвої сили',
+    'nav-super-t':'Бачення Шефа',
+    'sel-opt0':'— Оберіть Kokkens Kasse —',
+    'sel-opt1':'Пробний набір — 3 дні, 6 страв',
+    'sel-opt2':'Kokkens Kasse — 7 днів, 14 страв (1 450 кр)',
+    'sel-opt3':'Сімейна коробка — 7 днів, 14 × 2 порції',
+    'super-kicker':'Бачення Шефа',
+    'super-h2':'Їж як машина, створена для результатів.',
+    'super-p':'Харчування, що дає вам енергію, фокус і силу — цілий день, цілий тиждень.',
+    'sp1-h':'Преміум білок',
+    'sp1-p':'150г якісного білка на страву — яловичина, курка або лосось.',
+    'sp2-h':'Чиста енергія',
+    'sp2-p':'Складні вуглеводи з картоплі та солодкої картоплі дають стабільну енергію.',
+    'sp3-h':'Мікроелементи',
+    'sp3-p':'250г свіжих овочів на страву — вітаміни та мінерали.',
+    'sp4-h':'Без токсинів',
+    'sp4-p':'Картон, не пластик. Жодного мікропластику у вашій їжі.',
+    'sp5-h':'Суперфуди незабаром',
+    'sp5-p':'Незабаром запустимо Sea Moss, Shilajit та природні суперфуди.',
+    'sp6-h':'Послідовність — ключ',
+    'sp6-p':'Дві страви на день, сім днів на тиждень — доставлені до дверей.',
+    'super-banner-h':'Їжа — це ліки. Вибирайте найкраще.',
+    'super-banner-p':'Kokkens Kasse — система оптимального здоров\'я. Свіжі інгредієнти, правильна кількість, доставка додому.',
+    'super-banner-btn':'Замовити зараз →'
+  }
+};
+
+const flags = {no:'🇳🇴',en:'🇬🇧',so:'🇸🇴',ar:'🇸🇦',pl:'🇵🇱',uk:'🇺🇦'};
+const labels = {no:'NO',en:'EN',so:'SO',ar:'AR',pl:'PL',uk:'UA'};
+let currentLang = 'no';
+
+// ── Auto year ──
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ── Restore saved language ──
+function restoreLang() {
+  var savedLang = localStorage.getItem('kokkens-lang');
+  if (savedLang && savedLang !== 'no') setLang(savedLang);
+}
+restoreLang();
+window.addEventListener('pageshow', restoreLang);
+
+// ── Scroll-to-top visibility ──
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollBtn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ── Active nav scroll spy ──
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = ['how','filosofi','superhuman','pakker','meny','bestill'].map(id => document.getElementById(id)).filter(Boolean);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      navLinks.forEach(l => l.classList.remove('nav-active'));
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if(active) active.classList.add('nav-active');
+    }
+  });
+}, {rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(s => observer.observe(s));
+
+// ── Meal distribution & price calculator ──
+const pkgConfig = {
+  'prøveboks':  {meals:6,  basePrice:725,  label:'6'},
+  'kokkenskasse': {meals:14, basePrice:1450, label:'14'},
+  'familieboks':  {meals:14, basePrice:2900, label:'14'},
+};
+const mealCounts = {d1:0, d2:0, d3:0, d4:0};
+const SURCHARGE = 50;
+
+function updatePrice(){
+  const pkg = document.getElementById('pkg-select').value;
+  const group = document.getElementById('meal-dist-group');
+  if(!pkg){ group.style.display='none'; return; }
+  group.style.display='block';
+  const cfg = pkgConfig[pkg];
+  document.getElementById('meals-total').textContent = cfg.label;
+  Object.keys(mealCounts).forEach(k => mealCounts[k] = 0);
+  ['d1','d2','d3','d4'].forEach(k => document.getElementById(k+'-count').textContent = '0');
+  refreshSummary();
+}
+
+function adjustMeal(dish, delta){
+  const pkg = document.getElementById('pkg-select').value;
+  if(!pkg) return;
+  const cfg = pkgConfig[pkg];
+  const total = Object.values(mealCounts).reduce((a,b)=>a+b,0);
+  const newVal = mealCounts[dish] + delta;
+  if(newVal < 0) return;
+  if(delta > 0 && total >= cfg.meals) return;
+  mealCounts[dish] = newVal;
+  document.getElementById(dish+'-count').textContent = newVal;
+  refreshSummary();
+}
+
+function refreshSummary(){
+  const pkg = document.getElementById('pkg-select').value;
+  if(!pkg) return;
+  const cfg = pkgConfig[pkg];
+  const used = Object.values(mealCounts).reduce((a,b)=>a+b,0);
+  const remaining = cfg.meals - used;
+  const surchargeTotal = mealCounts.d4 * SURCHARGE;
+  const total = cfg.basePrice + surchargeTotal;
+  document.getElementById('remaining-count').textContent = remaining;
+  document.getElementById('total-price').textContent = total.toLocaleString('nb-NO') + ' kr';
+  const priceEl = document.getElementById('vipps-price');
+  if(priceEl) priceEl.textContent = total.toLocaleString('nb-NO') + ' kr';
+  const summaryEl = document.getElementById('price-display');
+  if(summaryEl) summaryEl.classList.toggle('over-budget', remaining < 0);
+  const remLabel = document.getElementById('remaining-label');
+  if(remLabel) remLabel.textContent = remaining === 0 ? '✓ Alle måltider valgt!' : 'måltider gjenstår';
+}
+
+// ── Vipps handler ──
+function handleVipps(e){
+  e.preventDefault();
+  const fname = document.getElementById('form-fname-input').value.trim();
+  const addr = document.getElementById('form-addr-input').value.trim();
+  if(!fname || !addr){
+    alert('Fyll ut navn og adresse før du betaler med Vipps 😊');
+    document.getElementById('form-fname-input').focus();
+    return;
+  }
+  alert('Vipps-kobling kommer snart! Vi tar kontakt på SMS for å bekrefte bestillingen din. 🙌');
+}
+
+function toggleMobileMenu(){
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+function toggleInfo(ttId, btnId){
+  const tt = document.getElementById(ttId);
+  const btn = document.getElementById(btnId);
+  const isOpen = tt.classList.contains('active');
+  document.querySelectorAll('.product-tooltip').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.info-btn').forEach(b => b.classList.remove('open'));
+  if(!isOpen){ tt.classList.add('active'); btn.classList.add('open'); }
+}
+function toggleLang(){
+  document.getElementById('langDropdown').classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.lang-switcher')) document.getElementById('langDropdown').classList.remove('open');
+});
+
+function setLang(lang){
+  currentLang = lang;
+  localStorage.setItem('kokkens-lang', lang);
+  const t = translations[lang];
+  document.getElementById('langBtn').innerHTML = '<span class="flag">'+flags[lang]+'</span><span class="lang-code">'+labels[lang]+'</span> ▾';
+  document.getElementById('langDropdown').classList.remove('open');
+  document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
+  document.querySelectorAll('.lang-option').forEach(o => { if(o.onclick.toString().includes("'"+lang+"'")) o.classList.add('active'); });
+  if(lang==='ar') document.documentElement.setAttribute('dir','rtl');
+  else document.documentElement.removeAttribute('dir');
+
+  const set = (id, val) => { const el = document.getElementById(id); if(el && val) el.textContent = val; };
+  const setph = (id, val) => { const el = document.getElementById(id); if(el && val) el.placeholder = val; };
+
+  const footerEl = document.getElementById('footer-copy');
+  if(footerEl && t['footer-p']) footerEl.innerHTML = t['footer-p'] + ' · © <span id="yr">' + new Date().getFullYear() + '</span>';
+  set('nav-cta-btn', t['nav-cta']);
+  set('nav-how-txt', t['nav-how-t']||t['nav-how']);
+  set('nav-filosofi-txt', t['nav-filosofi-t']||t['nav-filosofi']);
+  set('nav-pakker-txt', t['nav-pakker-t']||t['nav-pakker']);
+  set('nav-meny-txt', t['nav-meny-t']||t['nav-meny']);
+  set('nav-bestill-txt', t['nav-bestill-t']||t['nav-bestill']);
+  set('footer-copy', t['footer-p']);
+  set('footer-brand-txt', t['footer-brand']);
+  set('ft-nav-h', t['ft-nav-h']); set('ft-nav-1', t['ft-nav-1']); set('ft-nav-2', t['ft-nav-2']); set('ft-nav-3', t['ft-nav-3']); set('ft-nav-4', t['ft-nav-4']); set('ft-nav-5', t['ft-nav-5']);
+  set('ft-pkg-h', t['ft-pkg-h']); set('ft-pkg-1', t['ft-pkg-1']); set('ft-pkg-3', t['ft-pkg-3']); set('ft-pkg-4', t['ft-pkg-4']); set('ft-pkg-5', t['ft-pkg-5']);
+  set('ft-contact-h', t['ft-contact-h']); set('ft-contact-1', t['ft-contact-1']); set('ft-contact-3', t['ft-contact-3']); set('ft-contact-4', t['ft-contact-4']);
+  set('hero-eyebrow-txt', t['hero-eyebrow']);
+  set('hero-h1-txt', t['hero-h1']); set('hero-h1-em-txt', t['hero-h1-em']); set('hero-h1-end-txt', t['hero-h1-end']);
+  set('hero-sub-txt', t['hero-sub']); set('hero-btn1-txt', t['hero-btn1']); set('hero-btn2-txt', t['hero-btn2']);
+  set('badge1-txt', t['badge1']); set('badge2-txt', t['badge2']); set('badge3-txt', t['badge3']); set('badge4-txt', t['badge4']);
+  set('box-title-txt', t['box-title']); set('box-sub-txt', t['box-sub']);
+  set('meal1-txt', t['meal1']); set('meal2-txt', t['meal2']);
+  set('box-total-txt', t['box-total']); set('box-per-txt', t['box-per']);
+  set('box-footer-label-txt', t['box-footer-label']); set('delivery-chip-txt', t['delivery-chip']);
+  set('how-tag-txt', t['how-tag']); set('how-h2-txt', t['how-h2']); set('how-p-txt', t['how-p']);
+  set('step1-h-txt', t['step1-h']); set('step1-p-txt', t['step1-p']);
+  set('step2-h-txt', t['step2-h']); set('step2-p-txt', t['step2-p']);
+  set('step3-h-txt', t['step3-h']); set('step3-p-txt', t['step3-p']);
+  set('step4-h-txt', t['step4-h']); set('step4-p-txt', t['step4-p']);
+  set('pkg-tag-txt', t['pkg-tag']); set('pkg-h2-txt', t['pkg-h2']); set('pkg-p-txt', t['pkg-p']);
+  set('pkg1-h-txt', t['pkg1-h']); set('pkg1-sub-txt', t['pkg1-sub']);
+  set('pkg1-li1-txt', t['pkg1-li1']); set('pkg1-li2-txt', t['pkg1-li2']);
+  set('pkg1-li3-txt', t['pkg1-li3']); set('pkg1-li4-txt', t['pkg1-li4']); set('pkg1-cta-txt', t['pkg1-cta']);
+  set('pkg2-ribbon-txt', t['pkg2-ribbon']); set('pkg2-h-txt', t['pkg2-h']); set('pkg2-sub-txt', t['pkg2-sub']);
+  set('pkg2-li1-txt', t['pkg2-li1']); set('pkg2-li2-txt', t['pkg2-li2']);
+  set('pkg2-li3-txt', t['pkg2-li3']); set('pkg2-li4-txt', t['pkg2-li4']);
+  set('pkg2-per-txt', t['pkg2-per']); set('pkg2-cta-txt', t['pkg2-cta']);
+  set('pkg3-h-txt', t['pkg3-h']); set('pkg3-sub-txt', t['pkg3-sub']);
+  set('pkg3-li1-txt', t['pkg3-li1']); set('pkg3-li2-txt', t['pkg3-li2']);
+  set('pkg3-li3-txt', t['pkg3-li3']); set('pkg3-li4-txt', t['pkg3-li4']); set('pkg3-cta-txt', t['pkg3-cta']);
+  set('menu-tag-txt', t['menu-tag']); set('menu-h2-txt', t['menu-h2']); set('menu-p-txt', t['menu-p']);
+  set('d1-tag1-txt', t['d1-tag1']); set('d1-tag2-txt', t['d1-tag2']); set('d1-h-txt', t['d1-h']); set('d1-desc-txt', t['d1-desc']);
+  set('d1-p1-txt', t['d1-p1']); set('d1-p2-txt', t['d1-p2']); set('d1-p3-txt', t['d1-p3']); set('d1-p4-txt', t['d1-p4']);
+  set('d2-tag1-txt', t['d2-tag1']); set('d2-tag2-txt', t['d2-tag2']); set('d2-h-txt', t['d2-h']); set('d2-desc-txt', t['d2-desc']);
+  set('d2-p1-txt', t['d2-p1']); set('d2-p2-txt', t['d2-p2']); set('d2-p3-txt', t['d2-p3']); set('d2-p4-txt', t['d2-p4']);
+  set('d3-tag1-txt', t['d3-tag1']); set('d3-tag2-txt', t['d3-tag2']); set('d3-h-txt', t['d3-h']); set('d3-desc-txt', t['d3-desc']);
+  set('d3-p1-txt', t['d3-p1']); set('d3-p2-txt', t['d3-p2']); set('d3-p3-txt', t['d3-p3']); set('d3-p4-txt', t['d3-p4']); set('d3-p5-txt', t['d3-p5']);
+  set('d4-tag1-txt', t['d4-tag1']); set('d4-tag2-txt', t['d4-tag2']); set('d4-h-txt', t['d4-h']); set('d4-desc-txt', t['d4-desc']);
+  set('d4-p1-txt', t['d4-p1']); set('d4-p2-txt', t['d4-p2']); set('d4-p3-txt', t['d4-p3']); set('d4-p4-txt', t['d4-p4']);
+  if(t['d4-surcharge']) set('d4-surcharge-txt', t['d4-surcharge']);
+  set('d4-surcharge-txt', t['d4-surcharge']);
+  set('pkg-custom-txt', t['pkg-custom']);
+  setph('form-comment-input', t['form-ph-comment']);
+  set('cs-h-txt', t['cs-h']); set('cs-p-txt', t['cs-p']); set('cs-btn-txt', t['cs-btn']);
+  set('future-h-txt', t['future-h']); set('future-p-txt', t['future-p']);
+  set('future1-txt', t['future1']); set('future2-txt', t['future2']); set('future3-txt', t['future3']); set('future-soon-txt', t['future-soon']);
+  set('order-tag-txt', t['order-tag']); set('order-h2-txt', t['order-h2']); set('order-p-txt', t['order-p']);
+  set('del-tag-txt', t['del-tag']); set('del-h2-txt', t['del-h2']); set('del-p-txt', t['del-p']);
+  set('perk1-h-txt', t['perk1-h']); set('perk1-p-txt', t['perk1-p']);
+  set('perk2-h-txt', t['perk2-h']); set('perk2-p-txt', t['perk2-p']);
+  set('perk3-h-txt', t['perk3-h']); set('perk3-p-txt', t['perk3-p']);
+  set('phil-tag-txt', t['phil-tag']); set('phil-h2-1-txt', t['phil-h2-1']);
+  set('phil-h2-em-txt', t['phil-h2-em']); set('phil-p1-txt', t['phil-p1']); set('phil-p2-txt', t['phil-p2']);
+  set('val1-h-txt', t['val1-h']); set('val1-p-txt', t['val1-p']);
+  set('val2-h-txt', t['val2-h']); set('val2-p-txt', t['val2-p']);
+  set('val3-h-txt', t['val3-h']); set('val3-p-txt', t['val3-p']);
+  set('form-fname-lbl', t['form-fname']); set('form-lname-lbl', t['form-lname']);
+  set('form-phone-lbl', t['form-phone']); set('form-email-lbl', t['form-email']);
+  set('form-addr-lbl', t['form-addr']); set('form-pkg-lbl', t['form-pkg']);
+  set('form-day-lbl', t['form-day']); set('form-comment-lbl', t['form-comment']);
+  set('form-comment-opt-txt', t['form-comment-opt']);
+  set('vipps-btn-txt', t['vipps-txt']); set('order-note-txt-el', t['order-note-txt']);
+  setph('form-fname-input', t['form-ph-fname']); setph('form-lname-input', t['form-ph-lname']);
+  setph('form-addr-input', t['form-ph-addr']); setph('form-day-input', t['form-ph-day']);
+  setph('form-comment-input', t['form-ph-comment']);
+  set('nav-super-txt', t['nav-super-t']);
+  set('mob-how-txt', t['nav-how-t']||t['nav-how']);
+  set('mob-filosofi-txt', t['nav-filosofi-t']||t['nav-filosofi']);
+  set('mob-super-txt', t['nav-super-t']);
+  set('mob-pakker-txt', t['nav-pakker-t']||t['nav-pakker']);
+  set('mob-meny-txt', t['nav-meny-t']||t['nav-meny']);
+  set('mob-bestill-txt', t['nav-cta']);
+  set('super-kicker-txt', t['super-kicker']);
+  set('super-h2-txt', t['super-h2']);
+  set('super-p-txt', t['super-p']);
+  set('sp1-h-txt', t['sp1-h']); set('sp1-p-txt', t['sp1-p']);
+  set('sp2-h-txt', t['sp2-h']); set('sp2-p-txt', t['sp2-p']);
+  set('sp3-h-txt', t['sp3-h']); set('sp3-p-txt', t['sp3-p']);
+  set('sp4-h-txt', t['sp4-h']); set('sp4-p-txt', t['sp4-p']);
+  set('sp5-h-txt', t['sp5-h']); set('sp5-p-txt', t['sp5-p']);
+  set('sp6-h-txt', t['sp6-h']); set('sp6-p-txt', t['sp6-p']);
+  set('super-banner-h-txt', t['super-banner-h']);
+  set('super-banner-p-txt', t['super-banner-p']);
+  set('super-banner-btn-txt', t['super-banner-btn']);
+  set('future4-txt', t['future4']);
+  set('sm-badge-txt', t['sm-badge']); set('sm-desc-txt', t['sm-desc']);
+  set('sm-m1-txt', t['sm-m1']); set('sm-m2-txt', t['sm-m2']); set('sm-m3-txt', t['sm-m3']); set('sm-m4-txt', t['sm-m4']);
+  set('sm-m5-txt', t['sm-m5']); set('sm-m6-txt', t['sm-m6']); set('sm-m7-txt', t['sm-m7']); set('sm-m8-txt', t['sm-m8']);
+  set('sm-b1-txt', t['sm-b1']); set('sm-b2-txt', t['sm-b2']); set('sm-b3-txt', t['sm-b3']); set('sm-b4-txt', t['sm-b4']); set('sm-b5-txt', t['sm-b5']);
+  set('sh-badge-txt', t['sh-badge']); set('sh-desc-txt', t['sh-desc']);
+  set('sh-m1-txt', t['sh-m1']); set('sh-m2-txt', t['sh-m2']); set('sh-m3-txt', t['sh-m3']); set('sh-m4-txt', t['sh-m4']);
+  set('sh-m5-txt', t['sh-m5']); set('sh-m6-txt', t['sh-m6']); set('sh-m7-txt', t['sh-m7']);
+  set('sh-b1-txt', t['sh-b1']); set('sh-b2-txt', t['sh-b2']); set('sh-b3-txt', t['sh-b3']); set('sh-b4-txt', t['sh-b4']); set('sh-b5-txt', t['sh-b5']);
+  const sel = document.getElementById('pkg-select');
+  if(sel && t['sel-opt0']){
+    sel.options[0].text = t['sel-opt0'];
+    sel.options[1].text = t['sel-opt1'];
+    sel.options[2].text = t['sel-opt2'];
+    sel.options[3].text = t['sel-opt3'];
+  }
+}
+</script>
+</body>
+</html>
