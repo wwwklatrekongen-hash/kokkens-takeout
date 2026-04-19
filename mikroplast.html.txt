@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikroplast i mat — Kokkens Takeout Meal</title>
+    <meta name="description" content="Hvorfor vi bruker pappemballasje uten mikroplast. Les om hvordan mikroplast kommer inn i maten og hvorfor det er viktig for helsen din.">
+    <style>
+        :root {
+            --terracotta: #c26b4a;
+            --sage: #8a9a6f;
+            --cream: #f8f1e9;
+            --dark: #2c2118;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.7; }
+        h1, h2, h3 { font-family: Georgia, serif; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .nav { position: sticky; top: 0; background: white; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), #2c2118; color: white; padding: 140px 0 80px; text-align: center; }
+        .section { padding: 80px 0; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 14px 32px; background: var(--terracotta); color: white; border-radius: 50px; text-decoration: none; font-weight: 600; }
+        footer { background: var(--dark); color: #ccc; padding: 60px 0 30px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="index.html" style="font-size:24px; font-weight:700; color:var(--terracotta); text-decoration:none;">← Tilbake til forsiden</a>
+            <div style="font-size:22px; font-weight:700; color:var(--terracotta);">Kokkens Kasse</div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-size:3.2rem; margin-bottom:20px;">Mikroplast i maten</h1>
+            <p style="font-size:1.3rem; max-width:700px; margin:0 auto;">Det ingen snakker om — men som påvirker helsen din hver eneste dag.</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="section" style="background:white;">
+        <div class="container">
+
+            <h2 style="font-size:2.4rem; margin-bottom:30px; text-align:center;">Hva er mikroplast?</h2>
+            <p style="font-size:1.1rem; max-width:800px; margin:0 auto 40px; text-align:center;">
+                Mikroplast er bittesmå plastpartikler under 5 mm. De finnes overalt — i havet, i luften, i maten og til og med i blodet vårt.
+            </p>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-bottom:60px;">
+                <div class="card">
+                    <h3>5 gram per uke</h3>
+                    <p>Det er omtrent vekten av et kredittkort. Så mye mikroplast spiser gjennomsnittspersonen hver uke.</p>
+                </div>
+                <div class="card">
+                    <h3>74% av mennesker</h3>
+                    <p>har mikroplast i blodet ifølge nyere studier.</p>
+                </div>
+                <div class="card">
+                    <h3>250 000 partikler</h3>
+                    <p>per liter flaskevann — ifølge forskning fra Columbia University.</p>
+                </div>
+            </div>
+
+            <h2 style="font-size:2.2rem; margin:50px 0 30px;">Hvordan kommer mikroplast inn i maten?</h2>
+            <div style="background:#f8f1e9; padding:30px; border-radius:16px; margin-bottom:50px;">
+                <ol style="max-width:700px; margin:0 auto; font-size:1.05rem; line-height:2;">
+                    <li><strong>Varm mat + plastemballasje</strong> — varmen får plasten til å slippe mikroplastpartikler.</li>
+                    <li><strong>Fett i maten</strong> — mikroplast fester seg lettere til fettrike matvarer.</li>
+                    <li><strong>Lang lagring</strong> — jo lenger maten står i plast, jo mer mikroplast migrerer over.</li>
+                    <li><strong>Nano-plast</strong> — de minste partiklene kan trenge gjennom cellevegger og inn i blodbanen.</li>
+                </ol>
+            </div>
+
+            <h2 style="font-size:2.2rem; margin:60px 0 30px; text-align:center;">Derfor velger vi pappemballasje</h2>
+            <p style="text-align:center; font-size:1.15rem; max-width:800px; margin:0 auto 40px;">
+                Vi vil ikke at du skal få i deg unødvendig plast hver gang du spiser. Derfor bruker vi kun hygieniske pappesker — ingen plastbokser, ingen mikroplast i maten din.
+            </p>
+
+            <div style="text-align:center; margin:60px 0;">
+                <a href="index.html" class="btn" style="font-size:1.1rem; padding:18px 40px;">Tilbake til bestilling →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Kokkens Takeout Meal • Strømmen, Norge</p>
+            <p style="margin-top:10px; font-size:0.9rem;">Vi velger papp for din helse og miljøet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
