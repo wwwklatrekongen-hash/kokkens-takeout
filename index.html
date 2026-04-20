@@ -930,7 +930,12 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
 
 
       <div class="dish-card">
-        <div class="dish-img" style="background:linear-gradient(135deg,#F5E6D0 0%,#E8C49A 50%,#C4874A 100%)">🫕</div>
+        <div class="dish-img" style="background:linear-gradient(135deg,#C4874A 0%,#8B4513 100%);padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&q=80" 
+               alt="Marrokansk gryte" 
+               style="width:100%;height:100%;object-fit:cover;display:block"
+               onerror="this.parentElement.innerHTML='🥘';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontSize='5.5rem'">
+        </div>
         <div class="dish-body">
           <div class="dish-meta">
             <span class="tag tag-butter" id="d5-tag1-txt">Kylling</span>
@@ -941,7 +946,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
           <div class="dish-footer">
             <div class="dish-pills">
               <span class="dish-pill" id="d5-p1-txt">🍗 150g kyllinglår</span>
-              <span class="dish-pill" id="d5-p2-txt">🫙 250g couscous m/ smør</span>
+              <span class="dish-pill" id="d5-p2-txt">🍚 250g couscous m/ smør</span>
               <span class="dish-pill" id="d5-p3-txt">🥕 250g grønnsaker (gulrot, squash & tomat)</span>
               <a href="mikroplast.html" class="dish-pill dish-pill-link" id="d5-p5-txt" title="Les om mikroplast">🌿 Pappemballasje · ingen mikroplast ↗</a>
             </div>
@@ -1101,7 +1106,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
             </div>
             <div class="meal-dist-item">
               <div class="meal-dist-info">
-                <span class="meal-dist-emoji">🫕</span>
+                <span class="meal-dist-emoji">🥘</span>
                 <div>
                   <div class="meal-dist-name" id="dist-d5-name">Marrokansk gryte</div>
                   <div class="meal-dist-price">Inkludert</div>
@@ -1359,7 +1364,7 @@ const translations = {
     'd5-h':'Marrokansk gryte',
     'd5-desc':'Saftige kyllinglår tilberedt slik kokkens mor lærte ham — varme marokkanske krydder, sakte kokt til det faller fra beinet. Servert med smørdampet couscous, søt gulrot, myk squash og modne tomater. En rett som bærer historien fra Marokko direkte til bordet ditt.',
     'd5-p1':'🍗 150g kyllinglår',
-    'd5-p2':'🫙 250g couscous m/ smør',
+    'd5-p2':'🍚 250g couscous m/ smør',
     'd5-p3':'🥕 250g grønnsaker (gulrot, squash & tomat)',
     'd5-p5':'🌿 Pappemballasje · ingen mikroplast',
     'dist-d5':'Marrokansk gryte',
@@ -1524,7 +1529,7 @@ const translations = {
     'd5-h':'Moroccan Stew',
     'd5-desc':'Tender chicken thighs cooked the way the chef\'s mother taught him — warm Moroccan spices, slow-cooked until the meat falls off the bone. Served with buttery couscous, sweet carrot, soft squash and ripe tomatoes. A dish that carries the soul of Morocco straight to your table.',
     'd5-p1':'🍗 150g chicken thighs',
-    'd5-p2':'🫙 250g couscous with butter',
+    'd5-p2':'🍚 250g couscous with butter',
     'd5-p3':'🥕 250g vegetables (carrot, squash & tomato)',
     'd5-p5':'🌿 Cardboard · no microplastics',
     'dist-d5':'Moroccan Stew',
@@ -1689,7 +1694,7 @@ const translations = {
     'd5-h':'Maraq Marokaani',
     'd5-desc':'Lugaha digaagga jilicsan oo la kariyay si hooyadii khabiirka u baray — xawaash kulul oo Marokaanka ah, oo si tartiib ah loo kariyay ilaa ay ka go\'aan lafaha. La socdo couscous subagsan, jiir macaan, squash jilicsan iyo yaanyada bislaada. Cunto ku soo shidan taariikhda Maraakash.',
     'd5-p1':'🍗 150g lugaha digaagga',
-    'd5-p2':'🫙 250g couscous + subag',
+    'd5-p2':'🍚 250g couscous + subag',
     'd5-p3':'🥕 250g khudaar (jiir, squash & yaanyada)',
     'd5-p5':'🌿 Kartoon · microplastic laaan',
     'dist-d5':'Maraq Marokaani',
@@ -1854,7 +1859,7 @@ const translations = {
     'd5-h':'اليخنة المغربية',
     'd5-desc':'أفخاذ دجاج طرية مطبوخة كما علّمته والدته — بهارات مغربية دافئة، تُطهى ببطء حتى ينفصل اللحم عن العظم. تُقدَّم مع كسكس بالزبدة، جزر حلو، كوسا طرية وطماطم ناضجة. طبق يحمل روح المغرب مباشرة إلى مائدتك.',
     'd5-p1':'🍗 ١٥٠ غ أفخاذ الدجاج',
-    'd5-p2':'🫙 ٢٥٠ غ كسكس بالزبدة',
+    'd5-p2':'🍚 ٢٥٠ غ كسكس بالزبدة',
     'd5-p3':'🥕 ٢٥٠ غ خضروات (جزر، كوسا وطماطم)',
     'd5-p5':'🌿 كرتون · بدون بلاستيك دقيق',
     'dist-d5':'اليخنة المغربية',
@@ -2019,7 +2024,7 @@ const translations = {
     'd5-h':'Marokańska potrawka',
     'd5-desc':'Delikatne uda kurczaka przyrządzone tak, jak nauczyła szefa jego mama — ciepłe marokańskie przyprawy, duszone powoli aż mięso samo odpada od kości. Podawane z kuskusem z masłem, słodką marchewką, miękką cukinią i dojrzałymi pomidorami. Potrawa, która przenosi duszę Maroka prosto na Twój stół.',
     'd5-p1':'🍗 150g uda kurczaka',
-    'd5-p2':'🫙 250g kuskus z masłem',
+    'd5-p2':'🍚 250g kuskus z masłem',
     'd5-p3':'🥕 250g warzywa (marchew, cukinia & pomidory)',
     'd5-p5':'🌿 Karton · bez mikroplastiku',
     'dist-d5':'Marokańska potrawka',
@@ -2184,7 +2189,7 @@ const translations = {
     'd5-h':'Марокканське рагу',
     'd5-desc':'Ніжні стегна курки, приготовані так, як навчила шефа його мати — теплі марокканські прянощі, тушковані повільно до відокремлення від кістки. Подаються з кускусом з маслом, солодкою морквою, м\'яким кабачком та стиглими помідорами. Страва, що несе душу Марокко прямо до вашого столу.',
     'd5-p1':'🍗 150г стегна курки',
-    'd5-p2':'🫙 250г кускус з маслом',
+    'd5-p2':'🍚 250г кускус з маслом',
     'd5-p3':'🥕 250г овочі (морква, кабачок & помідори)',
     'd5-p5':'🌿 Картон · без мікропластику',
     'dist-d5':'Марокканське рагу',
