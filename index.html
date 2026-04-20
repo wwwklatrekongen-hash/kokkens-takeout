@@ -492,7 +492,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
       <div class="box-card">
         <div class="box-card-header">
           <span class="box-card-title" id="box-title-txt">Kokkens Kasse<br>7 dager × 2 måltider</span>
-          <span class="box-badge">1 450<br>KR</span>
+          <span class="box-badge">1 450<br><span id="box-curr">KR</span></span>
         </div>
         <div class="box-sub-label" id="box-sub-txt">Hvert måltid (daglig × 7)</div>
         <div class="meal-list">
@@ -520,7 +520,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         </div>
         <div class="box-footer">
           <span class="box-footer-label" id="box-footer-label-txt">Hjemlevering inkludert</span>
-          <span class="box-footer-val">1 450 kr/uke</span>
+          <span class="box-footer-val" id="box-footer-price">1 450 kr/uke</span>
         </div>
       </div>
       <div class="delivery-chip" id="delivery-chip-txt">
@@ -787,8 +787,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         </ul>
         <div class="pkg-divider"></div>
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
-          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">725 kr</span>
-          <span style="font-size:.82rem;color:var(--ink2)">~121 kr per måltid</span>
+          <span id="pkg1-price-txt" style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">725 kr</span>
+          <span id="pkg1-per-txt" style="font-size:.82rem;color:var(--ink2)">~121 kr per måltid</span>
         </div>
         <a href="#bestill" class="pkg-cta" id="pkg1-cta-txt">Bestill prøveboks</a>
       </div>
@@ -806,7 +806,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         </ul>
         <div class="pkg-divider"></div>
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
-          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">1 450 kr</span>
+          <span id="pkg2-price-txt" style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">1 450 kr</span>
           <span id="pkg2-per-txt" style="font-size:.82rem;color:var(--ink2)">~104 kr per måltid</span>
         </div>
         <a href="#bestill" class="pkg-cta" id="pkg2-cta-txt">Bestill Kokkens Kasse</a>
@@ -824,7 +824,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         </ul>
         <div class="pkg-divider"></div>
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem">
-          <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">2 900 kr</span>
+          <span id="pkg3-price-txt" style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--terra)">2 900 kr</span>
           <span style="font-size:.82rem;color:var(--ink2)">~104 kr per porsjon</span>
         </div>
         <a href="#bestill" class="pkg-cta" id="pkg3-cta-txt">Bestill familieboks</a>
@@ -1055,7 +1055,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
 
         <!-- MEAL DISTRIBUTION -->
         <div class="form-group" id="meal-dist-group" style="display:none">
-          <label id="form-dist-lbl">Fordeling av retter <span style="font-weight:400;color:var(--ink2)" id="form-dist-sub">(<span id="form-dist-pre">velg antall av hver rett — totalt</span> <span id="meals-total">14</span> <span id="form-dist-suf">måltider</span>)</span></label>
+          <label><span id="form-dist-lbl">Fordeling av retter</span> <span style="font-weight:400;color:var(--ink2)" id="form-dist-sub">(<span id="form-dist-pre">velg antall av hver rett — totalt</span> <span id="meals-total">14</span> <span id="form-dist-suf">måltider</span>)</span></label>
           <div class="meal-dist-grid">
             <div class="meal-dist-item">
               <div class="meal-dist-info">
@@ -1118,7 +1118,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
                 <span class="meal-dist-emoji">🍲</span>
                 <div>
                   <div class="meal-dist-name" id="dist-d4-name">Kokkens Fiskesuppe</div>
-                  <div class="meal-dist-price meal-dist-surcharge">+ 50 kr per måltid</div>
+                  <div class="meal-dist-price meal-dist-surcharge" id="dist-d4-price">+ 50 kr per måltid</div>
                 </div>
               </div>
               <div class="meal-dist-counter">
@@ -1244,8 +1244,16 @@ const translations = {
     'order-tag':'Bestilling','order-h2':'Klar for en uke med god mat?','order-p':'Fyll ut skjemaet så tar vi kontakt for å bekrefte levering og betaling via Vipps.',
     'del-tag':'Hjemlevering','del-h2':'Vi kommer til deg.','del-p':'Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.',
     'footer-p':'Hjemmelaget ukentlig takeout · Strømmen, Norge',
+    'curr':'kr',
+    'box-curr':'KR',
+    'box-footer-price':'1 450 kr/uke',
+    'pkg1-price':'725 kr',
+    'pkg1-per':'~121 kr per måltid',
+    'pkg2-price':'1 450 kr',
+    'pkg3-price':'2 900 kr',
     'total-label':'Totalt:',
     'included':'Inkludert',
+    'dist-d4-price':'+ 50 kr per måltid',
     'remaining-more':'måltider gjenstår',
     'remaining-all':'✓ Alle måltider valgt!',
     'form-dist-lbl':'Fordeling av retter',
@@ -1390,7 +1398,7 @@ const translations = {
     'hero-h1-end':'every week.',
     'hero-sub':'Morning and evening — the chef\'s best, packed for the whole week. No grocery run. No stress. Just great food delivered to your door.',
     'hero-btn1':'See packages →','hero-btn2':'See menu →',
-    'badge1':'14 meals per week','badge2':'Door delivery','badge3':'Cardboard — no microplastics','badge4':'1,450 kr/week',
+    'badge1':'14 meals per week','badge2':'Door delivery','badge3':'Cardboard — no microplastics','badge4':'$154/week',
     'how-tag':'How it works','how-h2':'Weekly food, zero stress.','how-p':'From order to your dinner table — four simple steps.',
     'step1-h':'Choose a package','step1-p':'Choose Kokkens Kasse with 14 meals, a trial box (6 meals) or family package.',
     'step2-h':'The chef\'s kitchen cooks','step2-p':'All dishes are freshly prepared with selected ingredients by our chefs.',
@@ -1401,8 +1409,16 @@ const translations = {
     'order-tag':'Order','order-h2':'Ready for a week of great food?','order-p':'Fill in the form and we will contact you to confirm delivery and payment via Vipps.',
     'del-tag':'Home delivery','del-h2':'We come to you.','del-p':'No car trip, no queue. We pack, drive and deliver Kokkens Kassen straight to your door in Strømmen.',
     'footer-p':'Homemade weekly takeout · Strømmen, Norway',
+    'curr':'$',
+    'box-curr':'$',
+    'box-footer-price':'$154/week',
+    'pkg1-price':'$77',
+    'pkg1-per':'~$13 per meal',
+    'pkg2-price':'$154',
+    'pkg3-price':'$307',
     'total-label':'Total:',
     'included':'Included',
+    'dist-d4-price':'+ $5 per meal',
     'remaining-more':'meals remaining',
     'remaining-all':'✓ All meals selected!',
     'form-dist-lbl':'Meal breakdown',
@@ -1429,7 +1445,7 @@ const translations = {
     'form-comment-opt':'(optional)','form-ph-fname':'John','form-ph-lname':'Smith',
     'form-ph-addr':'Street address, Strømmen','form-ph-day':'E.g. Monday or Tuesday',
     'form-ph-comment':'Allergies, special requests...',
-    'vipps-txt':'Pay with Vipps — 1,450 kr',
+    'vipps-txt':'Pay with Vipps — $154',
     'order-note-txt':'We will send you an SMS confirmation as soon as your order is received.',
     'perk1-h':'Cardboard packaging — no microplastics','perk1-p':'All meals delivered in hygienic cardboard containers. No plastic, no microplastics — safe for you and good for the environment.',
     'perk2-h':'Door delivery in Strømmen','perk2-p':'We deliver directly to your address. You don\'t need to leave your home.',
@@ -1449,7 +1465,7 @@ const translations = {
     'pkg2-ribbon':'Most popular','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 days — 14 meals. The whole week covered.',
     'pkg2-li1':'2 meals per day for 7 days','pkg2-li2':'150g protein (beef/chicken/fish) per meal',
     'pkg2-li3':'250g boat potatoes w/ sweet potato + 250g vegetables per meal','pkg2-li4':'Home delivery to your door included',
-    'pkg2-per':'~104 kr per meal','pkg2-cta':'Order Kokkens Kasse',
+    'pkg2-per':'~$11 per meal','pkg2-cta':'Order Kokkens Kasse',
     'pkg3-h':'Family Box','pkg3-sub':'7 days — 14 meals × 2 portions. For couples or families.',
     'pkg3-li1':'2 meals × 2 portions per day — for two people','pkg3-li2':'300g protein (beef/chicken/fish) per portion per meal',
     'pkg3-li3':'500g boat potatoes w/ sweet potato + 500g vegetables per meal','pkg3-li4':'Home delivery to your door, one combined box','pkg3-cta':'Order family box',
@@ -1502,7 +1518,7 @@ const translations = {
     'd4-p2':'🥥 Pure coconut milk — no additives',
     'd4-p3':'🥕 Carrot & 🥔 Potato',
     'd4-p4':'🌿 Cardboard · no microplastics',
-    'd4-surcharge':'+ 50 kr surcharge · pure coconut milk, no additives',
+    'd4-surcharge':'+ $5 surcharge · pure coconut milk, no additives',
     'd5-tag1':'Chicken',
     'd5-tag2':'Moroccan',
     'd5-h':'Moroccan Stew',
@@ -1512,13 +1528,13 @@ const translations = {
     'd5-p3':'🥕 250g vegetables (carrot, squash & tomato)',
     'd5-p5':'🌿 Cardboard · no microplastics',
     'dist-d5':'Moroccan Stew',
-    'pkg-custom':'You choose which dishes and how many of each. The fish soup costs 50 kr extra per meal due to pure coconut milk with no additives.',
+    'pkg-custom':'You choose which dishes and how many of each. The fish soup costs $5 extra per meal due to pure coconut milk with no additives.',
     'form-ph-comment':'Allergies, preferred dish split (e.g. 4× fish soup, 5× beef, 5× salmon)...',
     'future4':'Shilajit — ancient mineral resin for energy & vitality',
     'nav-super-t':'Kokkens Visjon',
     'sel-opt0':'— Choose your Kokkens Kasse —',
     'sel-opt1':'Trial Box — 3 days, 6 meals',
-    'sel-opt2':'Kokkens Kasse — 7 days, 14 meals (1,450 kr)',
+    'sel-opt2':'Kokkens Kasse — 7 days, 14 meals ($154)',
     'sel-opt3':'Family Box — 7 days, 14 × 2 portions',
     'super-kicker':'Superhuman diet',
     'super-h2':'Eat like a machine built to perform.',
@@ -1558,8 +1574,16 @@ const translations = {
     'order-tag':'Dalbo','order-h2':'Ma diyaar tahay usbuuc cunto fiican?','order-p':'Buuxi foomka, waxaanna kula xiriiri si loo xaqiijiyo gaadhsiinta iyo lacag bixinta Vipps.',
     'del-tag':'Gaadhsiinta guriga','del-h2':'Waxaan kuu imaanaa.','del-p':'Ma jirto socdaal baabuur. Waxaan sindinaa oo wadnaa Kokkens Kassen albaabkaaga Strømmen.',
     'footer-p':'Cunto guriga lagu sameeyo · Strømmen, Norway',
+    'curr':'kr',
+    'box-curr':'KR',
+    'box-footer-price':'1 450 kr/usbuuc',
+    'pkg1-price':'725 kr',
+    'pkg1-per':'~121 kr cunto kasta',
+    'pkg2-price':'1 450 kr',
+    'pkg3-price':'2 900 kr',
     'total-label':'Wadarta:',
     'included':'Ku jira',
+    'dist-d4-price':'+ 50 kr cunto kasta',
     'remaining-more':'cunto oo hadhay',
     'remaining-all':'✓ Dhammaan cuntooyinka la doortay!',
     'form-dist-lbl':'Qaybsanaanta cuntada',
@@ -1715,8 +1739,16 @@ const translations = {
     'order-tag':'الطلب','order-h2':'مستعد لأسبوع من الطعام الجيد؟','order-p':'املأ النموذج وسنتواصل معك لتأكيد التوصيل والدفع عبر Vipps.',
     'del-tag':'توصيل منزلي','del-h2':'نأتي إليك.','del-p':'لا سيارة، لا طابور. نعبئ ونوصّل كوكنز كاسه مباشرة إلى بابك.',
     'footer-p':'وجبات منزلية أسبوعية · ستروميـن، النرويج',
+    'curr':'kr',
+    'box-curr':'KR',
+    'box-footer-price':'1 450 kr/أسبوع',
+    'pkg1-price':'725 kr',
+    'pkg1-per':'~104 kr لكل وجبة',
+    'pkg2-price':'1 450 kr',
+    'pkg3-price':'2 900 kr',
     'total-label':'الإجمالي:',
     'included':'مشمول',
+    'dist-d4-price':'+ ٥٠ كرون لكل وجبة',
     'remaining-more':'وجبات متبقية',
     'remaining-all':'✓ تم اختيار جميع الوجبات!',
     'form-dist-lbl':'توزيع الوجبات',
@@ -1861,7 +1893,7 @@ const translations = {
     'hero-h1-end':'przez cały tydzień.',
     'hero-sub':'Rano i wieczorem — to, co najlepsze od szefa kuchni, spakowane na cały tydzień. Bez zakupów. Bez stresu. Tylko dobre jedzenie pod Twoje drzwi.',
     'hero-btn1':'Zobacz pakiety →','hero-btn2':'Zobacz menu →',
-    'badge1':'14 posiłków tygodniowo','badge2':'Dostawa pod drzwi','badge3':'Tektura — bez mikroplastiku','badge4':'1 450 kr/tydzień',
+    'badge1':'14 posiłków tygodniowo','badge2':'Dostawa pod drzwi','badge3':'Tektura — bez mikroplastiku','badge4':'1 450 zł/tydzień',
     'how-tag':'Jak to działa','how-h2':'Jedzenie co tydzień, zero stresu.','how-p':'Od zamówienia do Twojego stołu — cztery proste kroki.',
     'step1-h':'Wybierz pakiet','step1-p':'Wybierz Kokkens Kasse z 14 posiłkami, pudełko próbne (6 posiłków) lub pakiet rodzinny.',
     'step2-h':'Kuchnia szefa gotuje','step2-p':'Wszystkie dania są świeżo przygotowywane przez naszych szefów kuchni.',
@@ -1872,8 +1904,16 @@ const translations = {
     'order-tag':'Zamówienie','order-h2':'Gotowy na tydzień pysznego jedzenia?','order-p':'Wypełnij formularz, a my skontaktujemy się, aby potwierdzić dostawę i płatność przez Vipps.',
     'del-tag':'Dostawa do domu','del-h2':'Przyjeżdżamy do Ciebie.','del-p':'Bez jazdy samochodem, bez kolejki. Pakujemy i dowozimy Kokkens Kassen prosto pod Twoje drzwi.',
     'footer-p':'Domowe jedzenie co tydzień · Strømmen, Norwegia',
+    'curr':'kr',
+    'box-curr':'KR',
+    'box-footer-price':'1 450 kr/tydzień',
+    'pkg1-price':'725 kr',
+    'pkg1-per':'~121 kr za posiłek',
+    'pkg2-price':'1 450 kr',
+    'pkg3-price':'2 900 kr',
     'total-label':'Łącznie:',
     'included':'Wliczone',
+    'dist-d4-price':'+ 50 kr za posiłek',
     'remaining-more':'posiłków pozostało',
     'remaining-all':'✓ Wszystkie posiłki wybrane!',
     'form-dist-lbl':'Podział posiłków',
@@ -2029,8 +2069,16 @@ const translations = {
     'order-tag':'Замовлення','order-h2':'Готові до тижня смачної їжі?','order-p':'Заповніть форму і ми зв\'яжемось для підтвердження доставки та оплати через Vipps.',
     'del-tag':'Доставка додому','del-h2':'Ми приїдемо до вас.','del-p':'Без поїздок, без черг. Ми пакуємо та доставляємо Kokkens Kassen прямо до ваших дверей у Стрьоммен.',
     'footer-p':'Домашній щотижневий тейкаут · Стрьоммен, Норвегія',
+    'curr':'kr',
+    'box-curr':'KR',
+    'box-footer-price':'1 450 kr/тиждень',
+    'pkg1-price':'725 kr',
+    'pkg1-per':'~121 kr за страву',
+    'pkg2-price':'1 450 kr',
+    'pkg3-price':'2 900 kr',
     'total-label':'Разом:',
     'included':'Включено',
+    'dist-d4-price':'+ 50 kr за страву',
     'remaining-more':'страв залишилось',
     'remaining-all':'✓ Усі страви обрано!',
     'form-dist-lbl':'Розподіл страв',
@@ -2057,7 +2105,7 @@ const translations = {
     'form-comment-opt':'(необов\'язково)','form-ph-fname':'Іван','form-ph-lname':'Петренко',
     'form-ph-addr':'Вулиця, Стрьоммен','form-ph-day':'Напр. понеділок або вівторок',
     'form-ph-comment':'Алергії, особливі побажання...',
-    'vipps-txt':'Оплатити через Vipps — 1 450 кр',
+    'vipps-txt':'Оплатити через Vipps — 1 450 kr',
     'order-note-txt':'Ми надішлемо SMS-підтвердження одразу після отримання замовлення.',
     'perk1-h':'Картонне пакування — без мікропластику','perk1-p':'Усі страви доставляються у гігієнічних картонних контейнерах. Без пластику, без мікропластику.',
     'perk2-h':'Доставка до дверей у Стрьоммен','perk2-p':'Доставляємо безпосередньо на вашу адресу. Вам не потрібно виходити з дому.',
@@ -2077,7 +2125,7 @@ const translations = {
     'pkg2-ribbon':'Найпопулярніший','pkg2-h':'Kokkens Kasse','pkg2-sub':'7 днів — 14 страв. Весь тиждень покрито.',
     'pkg2-li1':'2 страви на день протягом 7 днів','pkg2-li2':'150г білка (яловичина/курка/риба) на страву',
     'pkg2-li3':'250г картоплі + 250г овочів на страву','pkg2-li4':'Доставка до дверей включена',
-    'pkg2-per':'~104 кр за страву','pkg2-cta':'Замовити Kokkens Kasse',
+    'pkg2-per':'~104 kr за страву','pkg2-cta':'Замовити Kokkens Kasse',
     'pkg3-h':'Сімейна коробка','pkg3-sub':'7 днів — 14 страв × 2 порції. Для пар або сімей.',
     'pkg3-li1':'2 страви × 2 порції на день — для двох людей','pkg3-li2':'300г білка (яловичина/курка/риба) на порцію на страву',
     'pkg3-li3':'500г картоплі зі солодкою картоплею + 500г овочів','pkg3-li4':'Доставка додому, одна спільна коробка','pkg3-cta':'Замовити сімейну коробку',
@@ -2130,7 +2178,7 @@ const translations = {
     'd4-p2':'🥥 Чисте кокосове молоко — без добавок',
     'd4-p3':'🥕 Морква & 🥔 Картопля',
     'd4-p4':'🌿 Картон · без мікропластику',
-    'd4-surcharge':'+ 50 кр доплата · чисте кокосове молоко без добавок',
+    'd4-surcharge':'+ 50 kr доплата · чисте кокосове молоко без добавок',
     'd5-tag1':'Курка',
     'd5-tag2':'Марокканська',
     'd5-h':'Марокканське рагу',
@@ -2246,10 +2294,12 @@ function refreshSummary(){
   const remaining = cfg.meals - used;
   const surchargeTotal = mealCounts.d4 * SURCHARGE;
   const total = cfg.basePrice + surchargeTotal;
+  const isEn = currentLang === 'en';
+  const displayTotal = isEn ? '$' + Math.round(total * 0.106) : total.toLocaleString('nb-NO') + ' kr';
   document.getElementById('remaining-count').textContent = remaining;
-  document.getElementById('total-price').textContent = total.toLocaleString('nb-NO') + ' kr';
+  document.getElementById('total-price').textContent = displayTotal;
   const priceEl = document.getElementById('vipps-price');
-  if(priceEl) priceEl.textContent = total.toLocaleString('nb-NO') + ' kr';
+  if(priceEl) priceEl.textContent = displayTotal;
   const summaryEl = document.getElementById('price-display');
   if(summaryEl) summaryEl.classList.toggle('over-budget', remaining < 0);
   const remLabel = document.getElementById('remaining-label');
@@ -2335,6 +2385,9 @@ function setLang(lang){
   set('meal1-txt', t['meal1']); set('meal2-txt', t['meal2']);
   set('box-total-txt', t['box-total']); set('box-per-txt', t['box-per']);
   set('box-footer-label-txt', t['box-footer-label']); set('delivery-chip-txt', t['delivery-chip']);
+  set('box-curr', t['box-curr']); set('box-footer-price', t['box-footer-price']);
+  set('pkg1-price-txt', t['pkg1-price']); set('pkg1-per-txt', t['pkg1-per']);
+  set('pkg2-price-txt', t['pkg2-price']); set('pkg3-price-txt', t['pkg3-price']);
   set('how-tag-txt', t['how-tag']); set('how-h2-txt', t['how-h2']); set('how-p-txt', t['how-p']);
   set('step1-h-txt', t['step1-h']); set('step1-p-txt', t['step1-p']);
   set('step2-h-txt', t['step2-h']); set('step2-p-txt', t['step2-p']);
@@ -2372,6 +2425,7 @@ function setLang(lang){
   set('total-label', t['total-label']);
   set('dist-d1-price', t['included']); set('dist-d2-price', t['included']);
   set('dist-d3-price', t['included']); set('dist-d5-price', t['included']);
+  set('dist-d4-price', t['dist-d4-price']);
   set('form-dist-lbl', t['form-dist-lbl']);
   set('form-dist-pre', t['form-dist-pre']); set('form-dist-suf', t['form-dist-suf']);
   if(t['d4-surcharge']) set('d4-surcharge-txt', t['d4-surcharge']);
