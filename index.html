@@ -2170,7 +2170,10 @@ function setLang(lang){
   document.getElementById('langBtn').innerHTML = '<span class="flag">'+flags[lang]+'</span><span class="lang-code">'+labels[lang]+'</span> ▾';
   document.getElementById('langDropdown').classList.remove('open');
   document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
-  document.querySelectorAll('.lang-option').forEach(o => { if(o.onclick.toString().includes("'"+lang+"'")) o.classList.add('active'); });
+  document.querySelectorAll('.lang-option').forEach(o => {
+    const attr = o.getAttribute('onclick') || '';
+    o.classList.toggle('active', attr.includes("'" + lang + "'"));
+  });
   if(lang==='ar') document.documentElement.setAttribute('dir','rtl');
   else document.documentElement.removeAttribute('dir');
 
