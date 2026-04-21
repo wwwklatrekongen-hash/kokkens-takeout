@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fra slakter til dør — Kokkens Takeout Meal</title>
+<meta name="description" content="Vårt kjøtt kommer direkte fra lokale slaktere til kjøkkenet vårt — samme dag. Ingen plastpakking, ingen hylletid, bare ekte ferskhet.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1C1410;
+  --ink2:#4A3728;
+  --paper:#FAF6F0;
+  --card:#FFFFFF;
+  --sage:#4E6651;
+  --sage-light:#D6E5D0;
+  --terra:#C4522A;
+  --terra-pale:#F7E8E2;
+  --butter:#F2C35B;
+  --stroke:#E0D9D0;
+  --blood:#8B1A1A;
+  --blood-pale:#F5E8E8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.7}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5px solid var(--stroke);height:64px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--ink2);text-decoration:none;padding:8px 16px;border-radius:6px;border:1.5px solid var(--stroke);transition:all .2s}
+.nav-back:hover{border-color:var(--terra);color:var(--terra)}
+
+/* PROGRESS */
+.progress-bar{position:fixed;top:64px;left:0;height:3px;background:var(--terra);width:0%;z-index:199;transition:width .1s}
+
+/* HERO */
+.hero{background:var(--ink);color:#fff;padding:6rem 6% 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:rgba(139,26,26,.2);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(242,195,91,.06);pointer-events:none}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(139,26,26,.25);color:#F4845A;border-radius:50px;padding:7px 18px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:580px;line-height:1.75;margin-bottom:2rem}
+.hero-warning{display:inline-flex;align-items:center;gap:10px;background:rgba(139,26,26,.2);border:1px solid rgba(139,26,26,.4);border-radius:10px;padding:.75rem 1.2rem;font-size:.88rem;color:rgba(255,255,255,.8)}
+.hero-warning strong{color:#F4845A}
+
+/* CHAIN */
+.chain-section{background:var(--card);padding:4rem 6%;border-bottom:1.5px solid var(--stroke)}
+.chain-inner{max-width:860px;margin:0 auto}
+.chain{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin:2.5rem 0}
+.chain-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 2rem;position:relative;flex:1;min-width:140px}
+.chain-icon{width:72px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:.9rem;position:relative}
+.chain-icon.butcher{background:var(--blood-pale);border:2px solid rgba(139,26,26,.2)}
+.chain-icon.kitchen{background:var(--terra-pale);border:2px solid rgba(196,82,42,.2)}
+.chain-icon.box{background:var(--sage-light);border:2px solid rgba(78,102,81,.2)}
+.chain-icon.door{background:var(--butter-pale, #FEF8E6);border:2px solid rgba(242,195,91,.3)}
+.chain-step h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink);margin-bottom:.3rem}
+.chain-step p{font-size:.78rem;color:var(--ink2);line-height:1.5;max-width:120px}
+.chain-arrow{font-size:1.4rem;color:var(--stroke);flex-shrink:0;margin:0 .5rem;padding-bottom:2.5rem}
+.chain-time{display:inline-block;background:var(--ink);color:var(--butter);font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-top:.5rem}
+
+/* SECTIONS */
+.section{padding:5rem 6%;border-bottom:1.5px solid var(--stroke)}
+.section:last-of-type{border-bottom:none}
+.section-inner{max-width:860px;margin:0 auto}
+.section-kicker{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem}
+.section h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;margin-bottom:1.2rem;color:var(--ink)}
+.section h2 em{font-style:italic;color:var(--terra)}
+.section p{font-size:1rem;color:var(--ink2);line-height:1.8;margin-bottom:1.2rem;max-width:680px}
+.section p strong{color:var(--ink);font-weight:600}
+
+/* DARK */
+.section-dark{background:var(--ink)}
+.section-dark .section-kicker{color:#F4845A}
+.section-dark h2{color:#fff}
+.section-dark p{color:rgba(255,255,255,.65)}
+.section-dark p strong{color:#fff}
+
+/* HIGHLIGHT */
+.highlight{background:var(--blood-pale);border-left:4px solid var(--blood);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem;margin:2rem 0}
+.highlight p{color:var(--ink2);font-size:.95rem;line-height:1.75;margin:0}
+.highlight p strong{color:var(--blood)}
+.highlight-green{background:var(--sage-light);border-left:4px solid var(--sage);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem;margin:2rem 0}
+.highlight-green p{color:var(--ink2);font-size:.95rem;line-height:1.75;margin:0}
+.highlight-green p strong{color:var(--sage)}
+
+/* COMPARE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2.5rem 0}
+.compare-col{border-radius:16px;padding:1.6rem}
+.compare-bad{background:#FFF0EE;border:2px solid #FFCDC5}
+.compare-good{background:var(--sage-light);border:2px solid #B0CCB2}
+.compare-col h4{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.compare-bad h4{color:var(--blood)}
+.compare-good h4{color:var(--sage)}
+.compare-item{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--ink2);line-height:1.5;margin-bottom:.6rem}
+.compare-item:last-child{margin-bottom:0}
+.compare-item span:first-child{flex-shrink:0}
+
+/* STATS */
+.stat-grid-light{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;margin:2.5rem 0}
+.stat-card-light{background:var(--card);border:1.5px solid var(--stroke);border-radius:16px;padding:1.6rem;text-align:center;box-shadow:0 2px 12px rgba(28,20,16,.06)}
+.stat-card-light .stat-num{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--terra);line-height:1;margin-bottom:.4rem}
+.stat-card-light .stat-lbl{font-size:.8rem;color:var(--ink2);line-height:1.5}
+
+/* PROCESS */
+.process{display:flex;flex-direction:column;gap:0;margin:2.5rem 0;position:relative}
+.process::before{content:'';position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:var(--stroke)}
+.process-step{display:flex;gap:1.4rem;align-items:flex-start;padding:1.2rem 0}
+.process-dot{width:48px;height:48px;border-radius:50%;border:2px solid var(--terra);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;z-index:1;background:var(--paper)}
+.process-body h4{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:.3rem;color:var(--ink)}
+.process-body p{font-size:.9rem;color:var(--ink2);line-height:1.65;margin:0}
+
+/* DARK PROCESS */
+.section-dark .process::before{background:rgba(255,255,255,.1)}
+.section-dark .process-dot{background:var(--ink);border-color:rgba(255,255,255,.2)}
+.section-dark .process-body h4{color:#fff}
+.section-dark .process-body p{color:rgba(255,255,255,.55)}
+
+/* CTA */
+.cta-banner{background:var(--ink);border-radius:20px;padding:3rem 3.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin:3rem 0}
+.cta-banner h3{font-family:'DM Serif Display',serif;font-size:1.7rem;color:#fff;margin-bottom:.5rem}
+.cta-banner p{color:rgba(255,255,255,.55);font-size:.9rem;line-height:1.65}
+.cta-banner p strong{color:var(--butter)}
+.btn-fill{background:var(--terra);color:#fff;border:none;border-radius:8px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .15s;white-space:nowrap}
+.btn-fill:hover{background:#A8431F;transform:translateY(-2px)}
+
+/* SUPERMARKET BOX visual */
+.super-vs{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+.vs-card{border-radius:16px;padding:2rem;position:relative;overflow:hidden}
+.vs-card.bad{background:var(--blood-pale);border:2px solid rgba(139,26,26,.2)}
+.vs-card.good{background:var(--sage-light);border:2px solid rgba(78,102,81,.2)}
+.vs-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
+.vs-card.bad .vs-label{color:var(--blood)}
+.vs-card.good .vs-label{color:var(--sage)}
+.vs-title{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:1rem}
+.vs-card.bad .vs-title{color:var(--blood)}
+.vs-card.good .vs-title{color:var(--sage)}
+.vs-item{display:flex;gap:8px;font-size:.85rem;color:var(--ink2);line-height:1.5;margin-bottom:.5rem}
+
+/* FOOTER */
+footer{background:var(--ink);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,.07)}
+footer p{color:rgba(255,255,255,.3);font-size:.82rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px}
+
+/* FADE IN */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:700px){
+  .hero{padding:4rem 6% 3.5rem}
+  .section{padding:3.5rem 5%}
+  .compare{grid-template-columns:1fr}
+  .super-vs{grid-template-columns:1fr}
+  .cta-banner{grid-template-columns:1fr;padding:2rem}
+  .chain{flex-direction:column;align-items:flex-start;gap:0}
+  .chain-arrow{transform:rotate(90deg);margin:.5rem auto;padding-bottom:0}
+  nav{padding:0 5%}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+      <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+      <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+      <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+    </svg>
+    Kokkens Takeout Meal
+  </a>
+  <a href="index.html" class="nav-back"><span>←</span> Tilbake</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">🥩 Fra slakter til din dør</div>
+    <h1>Kjøttet ditt har aldri<br><em>rørt plast.</em></h1>
+    <p class="hero-sub">Supermarkedet pakker fersk kjøtt i plast samme dag det ankommer. Det ligger der i dager. Vårt kjøtt går direkte fra lokal slakter til kjøkkenet vårt — og til deg.</p>
+    <div class="hero-warning">
+      <span>🔴</span>
+      <span>Det meste du kjøper i butikk har ligget i plast i <strong>2–5 dager</strong> før det når tallerkenen din.</span>
+    </div>
+  </div>
+</section>
+
+<!-- THE CHAIN -->
+<div class="chain-section fade-in">
+  <div class="chain-inner">
+    <div class="section-kicker">🔗 Kjeden vår</div>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:.5rem">Fra kilde til bord — <em style="font-style:italic;color:var(--terra)">samme dag.</em></h2>
+    <p style="color:var(--ink2);font-size:1rem;max-width:560px;margin-bottom:0">Ingen mellomledd. Ingen plastpakking. Ingen hylletid. Bare ekte ferskhet i en ubrutt kjede.</p>
+    <div class="chain">
+      <div class="chain-step">
+        <div class="chain-icon butcher">🥩</div>
+        <h4>Lokal slakter</h4>
+        <p>Kvalitetskjøtt kuttet til bestilling</p>
+        <span class="chain-time">Morgen</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-step">
+        <div class="chain-icon kitchen">👨‍🍳</div>
+        <h4>Kokkens kjøkken</h4>
+        <p>Tilberedt samme dag — aldri frosset</p>
+        <span class="chain-time">Formiddag</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-step">
+        <div class="chain-icon box">📦</div>
+        <h4>Pappemballasje</h4>
+        <p>Pakket i kartong — aldri plast</p>
+        <span class="chain-time">Middag</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-step">
+        <div class="chain-icon door">🚪</div>
+        <h4>Din dør</h4>
+        <p>Levert til deg i Strømmen</p>
+        <span class="chain-time">Samme dag</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUPERMARKET vs KOKKENS -->
+<section class="section fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">🛒 Butikken vs. oss</div>
+    <h2>Det butikken <em>ikke forteller deg</em></h2>
+    <p>Neste gang du plukker opp en pakke kjøtt i butikken — les datostempelet. Det er sjelden kuttet i dag. Det har ligget i plastfolie og absorbert kjemikalier siden det ankom lageret.</p>
+
+    <div class="super-vs">
+      <div class="vs-card bad">
+        <div class="vs-label">🛒 Supermarkedet</div>
+        <div class="vs-title">Kjøtt fra butikk</div>
+        <div class="vs-item"><span>📅</span><span>Kuttet for 2–5 dager siden</span></div>
+        <div class="vs-item"><span>🧴</span><span>Pakket i plastfolie fra første sekund</span></div>
+        <div class="vs-item"><span>🏭</span><span>Industrislakt — ikke lokalt</span></div>
+        <div class="vs-item"><span>☠️</span><span>Ftalater og BPA fra plasten siver inn i kjøttet over tid</span></div>
+        <div class="vs-item"><span>❄️</span><span>Kjølt og lagret i dager — kvaliteten synker for hvert døgn</span></div>
+        <div class="vs-item"><span>🌊</span><span>Plasten havner i naturen etter bruk</span></div>
+      </div>
+      <div class="vs-card good">
+        <div class="vs-label">🥩 Kokkens Takeout Meal</div>
+        <div class="vs-title">Kjøtt fra lokal slakter</div>
+        <div class="vs-item"><span>✅</span><span>Kuttet samme dag det tilberedes</span></div>
+        <div class="vs-item"><span>✅</span><span>Aldri i kontakt med plast</span></div>
+        <div class="vs-item"><span>✅</span><span>Lokalt — kortere vei, mer ferskhet</span></div>
+        <div class="vs-item"><span>✅</span><span>Ingen kjemikalier fra emballasje</span></div>
+        <div class="vs-item"><span>✅</span><span>Aldri frosset — full smak og tekstur</span></div>
+        <div class="vs-item"><span>✅</span><span>Pappemballasje — brytes ned naturlig</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY LOCAL -->
+<section class="section section-dark fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">📍 Hvorfor lokalt</div>
+    <h2>Lokal slakter betyr <em>ekte kvalitet</em></h2>
+    <p>En lokal slakter kjenner sitt håndverk. De vet hvilke dyr som har hatt det bra, hvilke kutt som gir best resultat, og de kutter til bestilling — ikke for å fylle hyller.</p>
+    <p>Kortere avstand betyr ferskere kjøtt. Ferskere kjøtt betyr bedre smak, mer næring og ingen grunn til å gjemme bak kunstige farger eller tilsetningsstoffer.</p>
+
+    <div class="process">
+      <div class="process-step">
+        <div class="process-dot">🤝</div>
+        <div class="process-body">
+          <h4>Et direkte forhold</h4>
+          <p>Vi kjenner slakteren vår. Vi vet hvor kjøttet kommer fra. Det er ikke mulig i et supermarked med industriell forsyningskjede som strekker seg over kontinenter.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">⚡</div>
+        <div class="process-body">
+          <h4>Kuttet til bestilling</h4>
+          <p>Kjøttet kuttes ikke før vi bestiller det. Det betyr at det aldri ligger og venter. Fra slakteren til kjøkkenet vårt — på timer, ikke dager.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🌿</div>
+        <div class="process-body">
+          <h4>Støtter lokalsamfunnet</h4>
+          <p>Pengene dine går til en lokal næringsdrivende i området — ikke til et multinasjonalt matindustrielt konsern. Det er en enkel beslutning med stor effekt.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🔬</div>
+        <div class="process-body">
+          <h4>Ingen plast — ingen mikroplast</h4>
+          <p>Fett i kjøtt er det beste løsningsmiddelet for plastforbindelser. Jo lenger kjøtt ligger i plast, desto mer absorberes. Vårt kjøtt unngår dette helt — fra slakter til deg.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLASTIC PROBLEM WITH MEAT -->
+<section class="section fade-in" style="background:var(--card)">
+  <div class="section-inner">
+    <div class="section-kicker">🧪 Plast møter kjøtt</div>
+    <h2>Fett er plastens <em>beste venn</em></h2>
+    <p>Det er ikke tilfeldig at fettholdige matvarer er mest utsatt for plastforurensning. Fett er et utmerket løsningsmiddel — det trekker aktivt ut BPA, ftalater og andre kjemikalier fra plastfolien og inn i kjøttet.</p>
+
+    <div class="highlight">
+      <p><strong>Studier viser:</strong> Fettholdige matvarer i kontakt med standard plastfolie ved kjøleskapstemperatur viser målbar kjemisk overføring allerede innen 24–48 timer. Supermarkeds-kjøtt som har ligget pakket i 3–5 dager har absorbert betydelige mengder plastforbindelser.</p>
+    </div>
+
+    <div class="stat-grid-light">
+      <div class="stat-card-light">
+        <div class="stat-num">2–5</div>
+        <div class="stat-lbl">Dager gjennomsnittlig kjøtt ligger i plast i supermarkedet før kjøp</div>
+      </div>
+      <div class="stat-card-light">
+        <div class="stat-num">24h</div>
+        <div class="stat-lbl">Nok for målbar kjemisk overføring fra plastfolie til fettholdige matvarer</div>
+      </div>
+      <div class="stat-card-light">
+        <div class="stat-num">0</div>
+        <div class="stat-lbl">Timer vårt kjøtt tilbringer i plast — fra slakter til din tallerken</div>
+      </div>
+    </div>
+
+    <div class="highlight-green">
+      <p><strong>Vår løsning er enkel:</strong> Vi eliminerer kontakten helt. Kjøttet går fra slakteren til vårt kjøkken uten plastfolie, tilberedes samme dag, og leveres til deg i hygienisk pappemballasje. Null eksponering. Null kompromiss.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROMISE -->
+<section class="section fade-in">
+  <div class="section-inner">
+    <div class="section-kicker">🌿 Vår garanti</div>
+    <h2>Det vi lover <em>hver eneste dag</em></h2>
+    <p>Dette er ikke markedsføring. Det er måten vi faktisk driver på — av samme grunn som vi valgte papp fremfor plast fra første dag.</p>
+
+    <div class="process" style="margin-top:1.5rem">
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Kjøtt fra lokal slakter</h4>
+          <p>Vi kjøper aldri fra industrielle leverandører eller pakker kjøtt som har ligget i plastfolie. Alltid lokalt, alltid ferskt.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Kuttet og levert samme dag</h4>
+          <p>Fra slakteren til kjøkkenet til deg — alt skjer innen ett og samme dag. Ingen lagringstid i plast.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">✅</div>
+        <div class="process-body">
+          <h4>Aldri frosset</h4>
+          <p>Frysing endrer tekstur og smak. Vi tilbereder alt ferskt. Det er mer krevende — og det er nøyaktig poenget.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">🥩</div>
+        <div class="process-body">
+          <h4>Du kan smake forskjellen</h4>
+          <p>Ferskt kjøtt fra lokal slakter, tilberedt same dag — det trenger ingen forklaring. Det smaker annerledes. Det er det vi leverer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Ekte råvarer. Levert hjem.</h3>
+        <p>Bestill Kokkens Kasse i dag — <strong>14 ferske måltider</strong> med kjøtt fra lokal slakter, tilberedt og levert samme dag. Ingen plast. Ingen kompromiss.</p>
+      </div>
+      <a href="index.html#bestill" class="btn-fill">Bestill nå →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="22" fill="#C4522A"/>
+      <rect x="13" y="21" width="18" height="5" rx="2" fill="#FAF6F0"/>
+      <ellipse cx="17" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+      <ellipse cx="22" cy="17" rx="5.5" ry="7" fill="#fff"/>
+      <ellipse cx="27" cy="18" rx="5" ry="6" fill="#FAF6F0"/>
+    </svg>
+    Kokkens Takeout Meal
+  </div>
+  <p>Fra lokal slakter · Ingen plast · Strømmen, Norge</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  const pb = document.getElementById('progressBar');
+  if(pb) pb.style.width = (scrolled / total * 100) + '%';
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -721,6 +721,12 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
         <p id="sp4-p-txt">Pappemballasje, ikke plast. Ingen mikroplast i maten din. Ren mat i rene beholdere — slik det alltid burde vært.</p>
         <span class="pillar-read-more">Les mer om mikroplast →</span>
       </div>
+      <div class="pillar pillar-link" onclick="window.location='slakter.html'" style="cursor:pointer">
+        <span class="pillar-icon">🥩</span>
+        <h4 id="sp7-h-txt">Fra lokal slakter</h4>
+        <p id="sp7-p-txt">Kjøttet går direkte fra lokal slakter til kjøkkenet — kuttet og levert samme dag. Aldri i plast, aldri frosset.</p>
+        <span class="pillar-read-more" id="sp7-read-txt">Les mer om kjøttet vårt →</span>
+      </div>
       <div class="pillar">
         <span class="pillar-icon">⛰️</span>
         <h4 id="sp5-h-txt">Supermat kommer</h4>
@@ -986,6 +992,14 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:
             <h5 id="perk1-h-txt">Pappemballasje — ingen mikroplast</h5>
             <p id="perk1-p-txt">Alle måltider leveres i hygieniske pappeske-beholdere. Ingen plastbokser, ingen mikroplast — trygt for deg og bra for miljøet.</p>
             <span style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.4rem;display:inline-block">Les mer om mikroplast →</span>
+          </div>
+        </div>
+        <div class="perk" onclick="window.location='slakter.html'" style="cursor:pointer;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(196,82,42,.4)'" onmouseout="this.style.borderColor=''">
+          <div class="perk-icon">🥩</div>
+          <div>
+            <h5 id="perk4-h-txt">Fra lokal slakter — samme dag</h5>
+            <p id="perk4-p-txt">Kjøttet kuttes hos lokal slakter og leveres til kjøkkenet vårt samme dag. Aldri frosset, aldri i plastfolie.</p>
+            <span style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.4rem;display:inline-block">Les mer om kjøttet vårt →</span>
           </div>
         </div>
         <div class="perk">
@@ -1254,6 +1268,11 @@ const translations = {
     'order-tag':'Bestilling','order-h2':'Klar for en uke med god mat?','order-p':'Fyll ut skjemaet så tar vi kontakt for å bekrefte levering og betaling via Vipps.',
     'del-tag':'Hjemlevering','del-h2':'Vi kommer til deg.','del-p':'Ingen biltur, ingen kø. Vi pakker, kjører og leverer Kokkens Kassen rett til døren din i Strømmen.',
     'footer-p':'Hjemmelaget ukentlig takeout · Strømmen, Norge',
+    'sp7-h':'Fra lokal slakter',
+    'sp7-p':'Kjøttet går direkte fra lokal slakter til kjøkkenet — kuttet og levert samme dag. Aldri i plast, aldri frosset.',
+    'sp7-read':'Les mer om kjøttet vårt →',
+    'perk4-h':'Fra lokal slakter — samme dag',
+    'perk4-p':'Kjøttet kuttes hos lokal slakter og leveres til kjøkkenet vårt samme dag. Aldri frosset, aldri i plastfolie.',
     'curr':'kr',
     'box-curr':'KR',
     'box-footer-price':'1 450 kr/uke',
@@ -1419,6 +1438,11 @@ const translations = {
     'order-tag':'Order','order-h2':'Ready for a week of great food?','order-p':'Fill in the form and we will contact you to confirm delivery and payment via Vipps.',
     'del-tag':'Home delivery','del-h2':'We come to you.','del-p':'No car trip, no queue. We pack, drive and deliver Kokkens Kassen straight to your door in Strømmen.',
     'footer-p':'Homemade weekly takeout · Strømmen, Norway',
+    'sp7-h':'From local butcher',
+    'sp7-p':'Our meat goes directly from a local butcher to our kitchen — cut and delivered the same day. Never in plastic, never frozen.',
+    'sp7-read':'Read more about our meat →',
+    'perk4-h':'From local butcher — same day',
+    'perk4-p':'Meat is cut at our local butcher and delivered to our kitchen the same day. Never frozen, never in plastic film.',
     'curr':'$',
     'box-curr':'$',
     'box-footer-price':'$154/week',
@@ -1584,6 +1608,11 @@ const translations = {
     'order-tag':'Dalbo','order-h2':'Ma diyaar tahay usbuuc cunto fiican?','order-p':'Buuxi foomka, waxaanna kula xiriiri si loo xaqiijiyo gaadhsiinta iyo lacag bixinta Vipps.',
     'del-tag':'Gaadhsiinta guriga','del-h2':'Waxaan kuu imaanaa.','del-p':'Ma jirto socdaal baabuur. Waxaan sindinaa oo wadnaa Kokkens Kassen albaabkaaga Strømmen.',
     'footer-p':'Cunto guriga lagu sameeyo · Strømmen, Norway',
+    'sp7-h':'Xoolaha maxalliga ah',
+    'sp7-p':'Hiilibku wuxuu toos u socdaa xoolaha maxalliga ah ilaa jikadeena — la gooyay oo la keenay maalintaas. Goor dambe baasto, goor dambe barafaysan.',
+    'sp7-read':'Wax badan ka ogow hiilibkeena →',
+    'perk4-h':'Xoolaha maxalliga ah — maalintaas',
+    'perk4-p':'Hiilibku waxaa lagu gooyaa xoolaha maxalliga ah oo lagula keenaa jikadeena maalintaas.',
     'curr':'kr',
     'box-curr':'KR',
     'box-footer-price':'1 450 kr/usbuuc',
@@ -1749,6 +1778,11 @@ const translations = {
     'order-tag':'الطلب','order-h2':'مستعد لأسبوع من الطعام الجيد؟','order-p':'املأ النموذج وسنتواصل معك لتأكيد التوصيل والدفع عبر Vipps.',
     'del-tag':'توصيل منزلي','del-h2':'نأتي إليك.','del-p':'لا سيارة، لا طابور. نعبئ ونوصّل كوكنز كاسه مباشرة إلى بابك.',
     'footer-p':'وجبات منزلية أسبوعية · ستروميـن، النرويج',
+    'sp7-h':'من الجزار المحلي',
+    'sp7-p':'ينتقل اللحم مباشرة من جزار محلي إلى مطبخنا — يُقطع ويُسلَّم في نفس اليوم. لا يلمس البلاستيك أبداً، لا يُجمَّد أبداً.',
+    'sp7-read':'اقرأ المزيد عن لحومنا →',
+    'perk4-h':'من الجزار المحلي — نفس اليوم',
+    'perk4-p':'يُقطع اللحم عند الجزار المحلي ويُسلَّم إلى مطبخنا في نفس اليوم. لا تجميد، لا غلاف بلاستيكي.',
     'curr':'kr',
     'box-curr':'KR',
     'box-footer-price':'1 450 kr/أسبوع',
@@ -1914,6 +1948,11 @@ const translations = {
     'order-tag':'Zamówienie','order-h2':'Gotowy na tydzień pysznego jedzenia?','order-p':'Wypełnij formularz, a my skontaktujemy się, aby potwierdzić dostawę i płatność przez Vipps.',
     'del-tag':'Dostawa do domu','del-h2':'Przyjeżdżamy do Ciebie.','del-p':'Bez jazdy samochodem, bez kolejki. Pakujemy i dowozimy Kokkens Kassen prosto pod Twoje drzwi.',
     'footer-p':'Domowe jedzenie co tydzień · Strømmen, Norwegia',
+    'sp7-h':'Od lokalnego rzeźnika',
+    'sp7-p':'Mięso trafia bezpośrednio od lokalnego rzeźnika do naszej kuchni — krojone i dostarczone tego samego dnia. Nigdy w plastiku, nigdy mrożone.',
+    'sp7-read':'Dowiedz się więcej o naszym mięsie →',
+    'perk4-h':'Od lokalnego rzeźnika — tego samego dnia',
+    'perk4-p':'Mięso jest krojone u lokalnego rzeźnika i dostarczane do naszej kuchni tego samego dnia.',
     'curr':'kr',
     'box-curr':'KR',
     'box-footer-price':'1 450 kr/tydzień',
@@ -2079,6 +2118,11 @@ const translations = {
     'order-tag':'Замовлення','order-h2':'Готові до тижня смачної їжі?','order-p':'Заповніть форму і ми зв\'яжемось для підтвердження доставки та оплати через Vipps.',
     'del-tag':'Доставка додому','del-h2':'Ми приїдемо до вас.','del-p':'Без поїздок, без черг. Ми пакуємо та доставляємо Kokkens Kassen прямо до ваших дверей у Стрьоммен.',
     'footer-p':'Домашній щотижневий тейкаут · Стрьоммен, Норвегія',
+    'sp7-h':'Від місцевого мясника',
+    'sp7-p':'Мясо йде безпосередньо від місцевого мясника до нашої кухні — нарізане і доставлене того ж дня. Ніколи в пластику, ніколи заморожене.',
+    'sp7-read':'Дізнатися більше про наше мясо →',
+    'perk4-h':'Від місцевого мясника — того ж дня',
+    'perk4-p':'Мясо нарізається у місцевого мясника і доставляється на нашу кухню того ж дня.',
     'curr':'kr',
     'box-curr':'KR',
     'box-footer-price':'1 450 kr/тиждень',
@@ -2482,6 +2526,8 @@ function setLang(lang){
   set('sp4-h-txt', t['sp4-h']); set('sp4-p-txt', t['sp4-p']);
   set('sp5-h-txt', t['sp5-h']); set('sp5-p-txt', t['sp5-p']);
   set('sp6-h-txt', t['sp6-h']); set('sp6-p-txt', t['sp6-p']);
+  set('sp7-h-txt', t['sp7-h']); set('sp7-p-txt', t['sp7-p']); set('sp7-read-txt', t['sp7-read']);
+  set('perk4-h-txt', t['perk4-h']); set('perk4-p-txt', t['perk4-p']);
   set('super-banner-h-txt', t['super-banner-h']);
   set('super-banner-p-txt', t['super-banner-p']);
   set('super-banner-btn-txt', t['super-banner-btn']);
