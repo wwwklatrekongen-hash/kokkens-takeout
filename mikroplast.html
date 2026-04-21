@@ -448,6 +448,9 @@ document.addEventListener('click', e => {
 });
 
 function setLang(lang) {
+  // Translation coming soon
+  document.getElementById('langDropdown').classList.remove('open');
+  return;
   const t = translations[lang];
   localStorage.setItem('kokkens-lang', lang);
   document.getElementById('langBtn').innerHTML = '<span class="flag">'+flags[lang]+'</span><span class="lang-code">'+labels[lang]+'</span> ▾';
