@@ -21,7 +21,7 @@
   --stroke:#E0D9D0;
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.7}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.8}
 
 /* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5px solid var(--stroke);height:64px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
@@ -51,7 +51,7 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(196,82,42,.2);color:#F4845A;border-radius:50px;padding:7px 18px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;margin-bottom:1.4rem}
 .hero h1 em{font-style:italic;color:var(--terra)}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:580px;line-height:1.75;margin-bottom:2rem}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.82);max-width:580px;line-height:1.75;margin-bottom:2rem}
 .hero-warning{display:inline-flex;align-items:center;gap:10px;background:rgba(196,82,42,.15);border:1px solid rgba(196,82,42,.3);border-radius:10px;padding:.75rem 1.2rem;font-size:.88rem;color:rgba(255,255,255,.8)}
 .hero-warning strong{color:#F4845A}
 
@@ -65,7 +65,7 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .section-kicker{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem}
 .section h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;margin-bottom:1.2rem;color:var(--ink)}
 .section h2 em{font-style:italic;color:var(--terra)}
-.section p{font-size:1rem;color:var(--ink2);line-height:1.8;margin-bottom:1.2rem;max-width:680px}
+.section p{font-size:1.02rem;color:var(--ink2);line-height:1.85;margin-bottom:1.2rem;max-width:680px}
 .section p:last-child{margin-bottom:0}
 .section p strong{color:var(--ink);font-weight:600}
 
@@ -73,14 +73,14 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .section-dark{background:var(--ink);color:#fff;border-bottom:none}
 .section-dark .section-kicker{color:#F4845A}
 .section-dark h2{color:#fff}
-.section-dark p{color:rgba(255,255,255,.65)}
+.section-dark p{color:rgba(255,255,255,.88)}
 .section-dark p strong{color:#fff}
 
 /* ── STAT CARDS ── */
 .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin:2.5rem 0}
 .stat-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:16px;padding:1.6rem;text-align:center}
 .stat-card .stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--butter);line-height:1;margin-bottom:.4rem}
-.stat-card .stat-lbl{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5}
+.stat-card .stat-lbl{font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
 .stat-grid-light{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin:2.5rem 0}
 .stat-card-light{background:var(--card);border:1.5px solid var(--stroke);border-radius:16px;padding:1.6rem;text-align:center;box-shadow:0 2px 12px rgba(28,20,16,.06)}
 .stat-card-light .stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--terra);line-height:1;margin-bottom:.4rem}
@@ -93,6 +93,8 @@ nav{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1.5p
 .process-dot{width:48px;height:48px;border-radius:50%;background:var(--terra-pale);border:2px solid var(--terra);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;z-index:1;background:var(--paper)}
 .process-body h4{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:.3rem;color:var(--ink)}
 .process-body p{font-size:.9rem;color:var(--ink2);line-height:1.65;margin:0}
+.section-dark .process-body p{color:rgba(255,255,255,.82)}
+.section-dark .process-body h4{color:#fff}
 
 /* ── HIGHLIGHT BOX ── */
 .highlight{background:var(--terra-pale);border-left:4px solid var(--terra);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem;margin:2rem 0}
